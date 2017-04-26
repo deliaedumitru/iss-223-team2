@@ -1,0 +1,73 @@
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\ApplicationInsights.config
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\roslyn\csc.exe
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\roslyn\csc.exe.config
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\roslyn\csc.rsp
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\roslyn\csi.exe
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\roslyn\csi.rsp
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\roslyn\System.AppContext.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\roslyn\System.Collections.Immutable.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\roslyn\System.Diagnostics.StackTrace.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\roslyn\System.IO.FileSystem.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\roslyn\System.IO.FileSystem.Primitives.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\roslyn\vbc.exe
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\roslyn\vbc.exe.config
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\roslyn\vbc.rsp
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\roslyn\VBCSCompiler.exe
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\roslyn\VBCSCompiler.exe.config
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\Conference Management System.dll.config
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\Conference Management System.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\Conference Management System.pdb
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\Antlr3.Runtime.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\Microsoft.AI.Web.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\Microsoft.AI.WindowsServer.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\Microsoft.ApplicationInsights.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\Microsoft.Web.Infrastructure.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\Newtonsoft.Json.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\System.Net.Http.Formatting.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\System.Web.Helpers.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\System.Web.Http.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\System.Web.Http.WebHost.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\System.Web.Mvc.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\System.Web.Optimization.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\System.Web.Razor.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\System.Web.WebPages.Deployment.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\System.Web.WebPages.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\System.Web.WebPages.Razor.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\WebGrease.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\Newtonsoft.Json.xml
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\System.Net.Http.Formatting.xml
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\System.Web.Helpers.xml
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\System.Web.Http.xml
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\System.Web.Http.WebHost.xml
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\System.Web.Mvc.xml
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\System.Web.Optimization.xml
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\System.Web.Razor.xml
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\System.Web.WebPages.xml
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\System.Web.WebPages.Deployment.xml
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\System.Web.WebPages.Razor.xml
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\Antlr3.Runtime.pdb
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\Microsoft.ApplicationInsights.xml
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\Microsoft.AI.WindowsServer.xml
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\bin\Microsoft.AI.Web.xml
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\obj\Debug\Conference Management System.csprojResolveAssemblyReference.cache
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\obj\Debug\Conference Management System.dll
+c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\obj\Debug\Conference Management System.pdb
