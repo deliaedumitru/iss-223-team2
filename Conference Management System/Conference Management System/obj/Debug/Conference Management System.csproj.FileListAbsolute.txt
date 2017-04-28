@@ -71,3 +71,76 @@ c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management Sys
 c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\obj\Debug\Conference Management System.csprojResolveAssemblyReference.cache
 c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\obj\Debug\Conference Management System.dll
 c:\users\deliaed\documents\visual studio 2017\Projects\Conference Management System\Conference Management System\obj\Debug\Conference Management System.pdb
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\ApplicationInsights.config
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\roslyn\csc.exe
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\roslyn\csc.exe.config
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\roslyn\csc.rsp
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\roslyn\csi.exe
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\roslyn\csi.rsp
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\roslyn\System.AppContext.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\roslyn\vbc.exe
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\roslyn\vbc.exe.config
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\roslyn\vbc.rsp
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\roslyn\VBCSCompiler.exe
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\Conference Management System.dll.config
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\Conference Management System.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\Conference Management System.pdb
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\Antlr3.Runtime.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\Microsoft.AI.Web.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\Microsoft.ApplicationInsights.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\Newtonsoft.Json.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\System.Net.Http.Formatting.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\System.Web.Helpers.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\System.Web.Http.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\System.Web.Http.WebHost.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\System.Web.Mvc.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\System.Web.Optimization.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\System.Web.Razor.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\System.Web.WebPages.Deployment.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\System.Web.WebPages.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\System.Web.WebPages.Razor.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\WebGrease.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\Newtonsoft.Json.xml
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\System.Net.Http.Formatting.xml
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\System.Web.Helpers.xml
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\System.Web.Http.xml
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\System.Web.Http.WebHost.xml
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\System.Web.Mvc.xml
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\System.Web.Optimization.xml
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\System.Web.Razor.xml
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\System.Web.WebPages.xml
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\System.Web.WebPages.Deployment.xml
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\System.Web.WebPages.Razor.xml
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\Antlr3.Runtime.pdb
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\Microsoft.ApplicationInsights.xml
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\bin\Microsoft.AI.Web.xml
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\obj\Debug\Conference Management System.csprojResolveAssemblyReference.cache
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\obj\Debug\Conference Management System.dll
+C:\Users\deliaed\Documents\proiect iss\iss-223-team2\Conference Management System\Conference Management System\obj\Debug\Conference Management System.pdb
