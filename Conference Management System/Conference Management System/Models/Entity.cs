@@ -8,7 +8,7 @@ namespace Conference_Management_System.Models
     public abstract class Entity<T> : IHasId<T>
     {
 
-        private T _id;
+        protected T _id;
 
         public T Id
         {
