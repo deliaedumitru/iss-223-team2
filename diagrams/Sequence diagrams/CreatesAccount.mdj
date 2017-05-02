@@ -627,7 +627,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": ":CmsController",
+													"text": ":AccountController",
 													"horizontalAlignment": 2,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -3657,7 +3657,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFbyBSowiuMqyI="
 							},
-							"name": ":CmsController",
+							"name": ":AccountController",
 							"visibility": "public",
 							"isMultiInstance": false
 						},
