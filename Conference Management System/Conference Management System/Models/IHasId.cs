@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Conference_Management_System.Models
 {
-    interface IHasId<T>
+    public interface IHasId<T>
     {
 
         T Id { get; set; }
