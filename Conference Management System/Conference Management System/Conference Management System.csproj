@@ -181,6 +181,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Conference.cs" />
     <Compile Include="Models\Entity.cs" />
     <Compile Include="Models\IHasId.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
