@@ -11,17 +11,17 @@ namespace Conference_Management_System.Models
         int id;
         Entity<int> reviewer;
         Entity<int> paper;
-        QalifierValues value;
+        QualifierValues value;
 
         public Qualifier()
         {
             id = 0;
-            reviewer = new Reviewer();
+            //reviewer = new Reviewer();
             paper = new Submission();
-            value = QualifierValues.Reject;
+            value = QualifierValues.REJECT;
         }
 
-        public Qualifier(int id, Reviewer reviewer, Submission paper, QalifierValues value)
+        public Qualifier(int id, Entity<int> reviewer, Submission paper, QualifierValues value)
         {
             this.id = id;
             this.reviewer = reviewer;
