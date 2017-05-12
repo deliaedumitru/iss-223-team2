@@ -18,7 +18,7 @@ namespace Conference_Management_System.Models
             id = 0;
             reviewer = new Reviewer();
             paper = new Submission();
-            value = QualifierValues.Reject;
+            value = QualifierValues.REJECT;
         }
 
         public Qualifier(int id, Reviewer reviewer, Submission paper, QalifierValues value)
