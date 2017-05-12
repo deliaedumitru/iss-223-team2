@@ -181,11 +181,18 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Bid.cs" />
+    <Compile Include="Models\BidValues.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Conference.cs" />
     <Compile Include="Models\Entity.cs" />
     <Compile Include="Models\IHasId.cs" />
     <Compile Include="Models\Qualifier.cs" />
+    <Compile Include="Models\QualifierValues.cs" />
+    <Compile Include="Models\Recommendation.cs" />
+    <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\Submission.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ICrudRepo.cs" />
   </ItemGroup>
