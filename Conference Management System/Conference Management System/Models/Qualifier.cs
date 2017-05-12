@@ -9,19 +9,19 @@ namespace Conference_Management_System.Models
     {
 
         int id;
-        Entity<int> reviewer;
+        User reviewer;
         Entity<int> paper;
-        QalifierValues value;
+        QualifierValues value;
 
         public Qualifier()
         {
             id = 0;
-            reviewer = new Reviewer();
+            reviewer = new User();
             paper = new Submission();
             value = QualifierValues.REJECT;
         }
 
-        public Qualifier(int id, Reviewer reviewer, Submission paper, QalifierValues value)
+        public Qualifier(int id, User reviewer, Submission paper, QualifierValues value)
         {
             this.id = id;
             this.reviewer = reviewer;
@@ -29,7 +29,7 @@ namespace Conference_Management_System.Models
             this.value = value;
         }
 
-        public Entity<int> Reviewer { get { return reviewer; } set { reviewer = value; } }
+        public User Reviewer { get { return reviewer; } set { reviewer = value; } }
         public Entity<int> Paper { get { return paper; } set { paper = value; } }
         public QualifierValues Value { get { return value; } set { this.value = value; } }
 
