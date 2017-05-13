@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Conference_Management_System.Models;
 
 namespace Conference_Management_System.Controllers
 {
@@ -14,5 +15,6 @@ namespace Conference_Management_System.Controllers
 
             return View();
         }
+
     }
 }
