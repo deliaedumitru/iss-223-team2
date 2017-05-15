@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Conference_Management_System.Models;
 
 namespace RecommandationApp
 {

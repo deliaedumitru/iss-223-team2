@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Create new account";
+}
+
+<h2>SignUp</h2>
+
+@using (Html.BeginForm())
+{
+
+    <div>
+        @Html.LabelFor(model => model.Username)
+        @Html.TextBoxFor(model => model.Username)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Password)
+        @Html.TextBoxFor(model => model.Password)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Name)
+        @Html.TextBoxFor(model => model.Name)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Email)
+        @Html.TextBoxFor(model => model.Email)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Affiliation)
+        @Html.TextBoxFor(model => model.Affiliation)
+    </div>
+    
+    <input id="sign-up-submit" type="submit" value="Create account" />
+
+}
