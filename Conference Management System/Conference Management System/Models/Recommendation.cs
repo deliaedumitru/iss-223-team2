@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace RecommandationApp
+namespace Conference_Management_System.Models
 {
     public class Recommendation:Entity<int>
     {
@@ -42,3 +42,4 @@ namespace RecommandationApp
 
     }
 }
+
