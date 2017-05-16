@@ -10,14 +10,20 @@ using System.Web.Mvc;
 
 namespace Conference_Management_System.Controllers
 {
-    public class LoginController
+    public class LoginController:Controller
     {
-        private ICrudRepository<String, User> _UserRepository;
+        private ICrudRepository<Int32, User> _UserRepository;
 
-        public LoginController(ICrudRepository<String, User> UserRepository)
+        public LoginController(ICrudRepository<Int32, User> UserRepository)
         {
             _UserRepository = UserRepository;
         }
+
+        public LoginController()
+        {
+           
+        }
+
 
         [HttpGet]
         public ActionResult FindUserBy()
@@ -38,8 +44,8 @@ namespace Conference_Management_System.Controllers
             { return s.Username.Equals(username) & s.Password.Equals(password); };
 
             if (_UserRepository.FindBy(Expression.Lambda<Func<User, bool>>(Expression.Call(findRole.Method))).Count()!=0)
-                return Redirect('/');  //redirect to user page after login
-                //return View();
+                return Redirect("/");  //redirect to user page after login
+            return View();
             //return ErrorView();   //redirect to error page
 
         }
