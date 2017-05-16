@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace Conference_Management_System.Models
 {
-    public class User : Entity<String>
+    public class User : Entity<int>
     {
         private String username;
         private String password;
