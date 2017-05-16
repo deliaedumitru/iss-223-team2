@@ -11,17 +11,26 @@ namespace Conference_Management_System.Controllers
 {
     public class SignupController:Controller
     {
-        ICrudRepository<String,User> repo;
+        ICrudRepository<Int32,User> repo;
 
         public SignupController()
         {
             //repo = new UserRepository();
         }
 
-        public SignupController(ICrudRepository<String,User> repo)
+        public SignupController(ICrudRepository<Int32,User> repo)
         {
             this.repo = repo;
         }
+
+        [HttpGet]
+        public ActionResult Add()
+        {
+            //repo.Add(user);
+            //repo.Save();
+            return View();
+        }
+
 
 
         /* <summary>
