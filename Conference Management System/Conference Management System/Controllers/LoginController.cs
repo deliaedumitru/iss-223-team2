@@ -34,10 +34,10 @@ namespace Conference_Management_System.Controllers
         [HttpPost]
         public ActionResult FindUserBy(String username, String password)
         {
-            Func<User, bool> findRole = delegate (User s)
+            Func<User, bool> findUser = delegate (User s)
             { return s.Username.Equals(username) & s.Password.Equals(password); };
 
-            if (_UserRepository.FindBy(Expression.Lambda<Func<User, bool>>(Expression.Call(findRole.Method))).Count()!=0)
+            if(_UserRepository.FindBy(u=>findUser(u)).Count()!=0)
                 return Redirect('/');  //redirect to user page after login
                 //return View();
             //return ErrorView();   //redirect to error page
