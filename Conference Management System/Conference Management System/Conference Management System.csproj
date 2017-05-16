@@ -197,8 +197,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Bid.cs" />
-    <Compile Include="Models\BidValues.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Conference.cs" />
     <Compile Include="Models\Entity.cs" />
@@ -263,7 +261,6 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\SignUp.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
