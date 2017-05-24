@@ -7,37 +7,29 @@ namespace Conference_Management_System.Models
 {
     public class Recommendation:Entity<int>
     {
-        private int id;
-        private String text;
-        private int reviewerId;
-        private int submissionId;
-
-        public Recommendation() { }
+        public Recommendation()
+        {
+        }
 
         public Recommendation(int id,String text, int reviewerId, int submissionId) {
-            this.id = id;
-            this.text = text;
-            this.reviewerId = reviewerId;
-            this.submissionId = submissionId;
+            this.Id = id;
+            this.Text = text;
+            this.ReviewerId = reviewerId;
+            this.SubmissionId = submissionId;
         }
 
         public String  Text
-        {
-            get { return text; }
-            set { text = value; }
-        }
+        { get; set; }
 
         public int ReviewerId
-        {
-            get { return reviewerId; }
-            set { reviewerId = value; }
-        }
+        { get; set; }
 
         public int SubmissionId
-        {
-            get { return submissionId; }
-            set { submissionId = value; }
-        }
+        { get; set; }
+
+        public virtual Submission Submission { get; set; }
+
+        public virtual User Rewiever { get; set; }
 
 
     }

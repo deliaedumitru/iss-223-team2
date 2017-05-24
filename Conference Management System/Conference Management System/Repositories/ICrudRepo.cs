@@ -15,7 +15,7 @@ namespace Conference_Management_System.Repositories
         public RepositoryException(String mess, Exception e) : base(mess, e) { }
     }
 
-    public interface ICrudRepository<ID, E> where E : IHasId<ID>
+    public interface ICrudRepository<ID, E> where E : Entity<ID>
     {
         /// <summary>
         /// Gets all the items of the repository

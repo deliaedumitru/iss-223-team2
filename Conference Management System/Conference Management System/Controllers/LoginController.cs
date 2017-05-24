@@ -7,14 +7,15 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI.WebControls;
 
 namespace Conference_Management_System.Controllers
 {
     public class LoginController
     {
-        private ICrudRepository<String, User> _UserRepository;
+        private ICrudRepository<int, User> _UserRepository;
 
-        public LoginController(ICrudRepository<String, User> UserRepository)
+        public LoginController(ICrudRepository<int, User> UserRepository)
         {
             _UserRepository = UserRepository;
         }
@@ -22,7 +23,8 @@ namespace Conference_Management_System.Controllers
         [HttpGet]
         public ActionResult FindUserBy()
         {
-            return View();
+//            return View();
+            return null;
         }
 
         /*<summary>
@@ -30,19 +32,19 @@ namespace Conference_Management_System.Controllers
       * </summary>
       * <returns> ActionResult,redirecting the user to its own page </returns> 
       */
-
-        [HttpPost]
-        public ActionResult FindUserBy(String username, String password)
-        {
-            Func<User, bool> findRole = delegate (User s)
-            { return s.Username.Equals(username) & s.Password.Equals(password); };
-
-            if (_UserRepository.FindBy(Expression.Lambda<Func<User, bool>>(Expression.Call(findRole.Method))).Count()!=0)
-                return Redirect('/');  //redirect to user page after login
-                //return View();
-            //return ErrorView();   //redirect to error page
-
-        }
+//
+//        [HttpPost]
+//        public ActionResult FindUserBy(String username, String password)
+//        {
+//            Func<User, bool> findRole = delegate (User s)
+//            { return s.Username.Equals(username) & s.Password.Equals(password); };
+//
+//            if (_UserRepository.FindBy(u => findRole(u)).Count()!=0)
+//                return Redirect('/');  //redirect to user page after login
+//                //return View();
+//            return ErrorView();   //redirect to error page
+//
+//        }
 
     }
 }

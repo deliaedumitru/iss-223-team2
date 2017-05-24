@@ -7,28 +7,27 @@ namespace Conference_Management_System.Models
 {
     public class Comment: Entity<int>
     {
-        private String _text;
-        private DateTime _date;
-        private Entity<int> _reviewer;
-        private Entity<int> _submission;
-
-        public Comment(int id, String text, DateTime date, Entity<int> reviewer, Entity<int> submission)
+        public Comment()
         {
-            Id = id;
-            _text = text;
-            _date = date;
-            _reviewer = reviewer;
-            _submission = submission;
         }
 
-        public String Text { get { return _text; } set { _text = value; } }
-        public DateTime Date { get { return _date; } set { _date = value; } }
-        public Entity<int> Reviewer { get { return _reviewer; } }
-        public Entity<int> Submission { get { return _submission; } }
+        public Comment(int id, String text, DateTime date, User reviewer, Submission submission)
+        {
+            Id = id;
+            Text = text;
+            Date = date;
+            Reviewer = reviewer;
+            Submission = submission;
+        }
+
+        public String Text { get; set; }
+        public DateTime Date { get; set; }
+        public virtual User Reviewer { get; set; }
+        public virtual Submission Submission { get; set; }
 
         public override string ToString()
         {
-            return string.Format("Text: {0}, Date: {1}, Reviewer: {2}, Submission: {3}", _text, _date, _reviewer, _submission);
+            return string.Format("Text: {0}, Date: {1}, Reviewer: {2}, Submission: {3}", Text, Date, Reviewer.Name, Submission.Id);
         }
     }
 }

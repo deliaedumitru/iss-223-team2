@@ -7,59 +7,37 @@ namespace Conference_Management_System.Models
 {
     public class Conference : Entity<int>
     {
-
-        private String _name;
-        private DateTime _date;
-        private DateTime _startTime;
-        private DateTime _endTime;
-        private DateTime _submissionDeadline;
-        private String _location;
+        public Conference()
+        {
+        }
 
         public Conference(int id, string name, DateTime date, DateTime startTime, DateTime endTime, DateTime submissionDeadline, string location)
         {
-            _id = id;
-            _name = name;
-            _date = date;
-            _startTime = startTime;
-            _endTime = endTime;
-            _submissionDeadline = submissionDeadline;
-            _location = location;
+            Id = id;
+            Name = name;
+            Date = date;
+            StartTime = startTime;
+            EndTime = endTime;
+            SubmissionDeadline = submissionDeadline;
+            Location = location;
         }
 
         public string Name
-        {
-            get { return _name; }
-            set { _name = value; }
-        }
+        { get; set; }
 
         public DateTime Date
-        {
-            get { return _date; }
-            set { _date = value; }
-        }
+        { get; set; }
 
         public DateTime StartTime
-        {
-            get { return _startTime; }
-            set { _startTime = value; }
-        }
+        { get; set; }
 
         public DateTime EndTime
-        {
-            get { return _endTime; }
-            set { _endTime = value; }
-        }
+        { get; set; }
 
         public DateTime SubmissionDeadline
-        {
-            get { return _submissionDeadline; }
-            set { _submissionDeadline = value; }
-        }
+        { get; set; }
 
         public string Location
-        {
-            get { return _location; }
-            set { _location = value; }
-        }
+        { get; set; }
     }
 }

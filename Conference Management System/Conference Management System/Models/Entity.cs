@@ -5,16 +5,17 @@ using System.Web;
 
 namespace Conference_Management_System.Models
 {
-    public abstract class Entity<T> : IHasId<T>
+    public interface IHasID<T>
     {
+        T Id { get; set; }
+    }
 
-        protected T _id;
-
+    public abstract class Entity<T> : IHasID<T>
+    {
         public T Id
-        {
-            get { return _id; }
-            set { _id = value; }
-        }
+        { get; set; }
 
     }
+
+   
 }
