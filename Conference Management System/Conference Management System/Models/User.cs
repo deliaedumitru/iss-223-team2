@@ -28,6 +28,11 @@ namespace Conference_Management_System.Models
         public String Name { get; set; }
         public String Email { get; set; }
         public String Affiliation { get; set; }
+
+        public virtual List<Submission> Submissions { get; set; }
+        public virtual List<Comment> Comments { get; set; }
+        public virtual List<Bid> Bids { get; set; }
         public String ToString() { return Username + " " + Password + " " + Role + " " + Name + " " + Email + " " + Affiliation; }
+
     }
 }
