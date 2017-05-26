@@ -25,7 +25,7 @@ namespace Conference_Management_System.Models
         public String Room { get; set; }
         public int SeatNumber { get; set; }
 
-        public virtual Conference Conference;
+        public virtual Conference Conference { get; set; }
         
         public virtual List<User> Listeners
         { get; set; }
