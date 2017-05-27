@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Conference_Management_System.Models
 {
@@ -42,5 +43,14 @@ namespace Conference_Management_System.Models
         public String Email { get { return email; } set { email = value; } }
         public String Affiliation { get { return affiliation; } set { affiliation = value; } }
         public String ToString() { return username + " " + password + " " + role + " " + name + " " + email + " " + affiliation; }
+
+        [InverseProperty("Reviewers")] // required when more than one many-to-many relationships are present
+        public virtual List<Submission> ReviewedSubmissions { get; set; }
+
+        [InverseProperty("Authors")]
+        public virtual List<Submission> AuthoredSubmissions { get; set; }
+
+
+
     }
 }

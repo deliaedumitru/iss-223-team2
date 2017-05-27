@@ -23,8 +23,8 @@ namespace Conference_Management_System.Models
 
         public String Text { get { return _text; } set { _text = value; } }
         public DateTime Date { get { return _date; } set { _date = value; } }
-        public Entity<int> Reviewer { get { return _reviewer; } }
-        public Entity<int> Submission { get { return _submission; } }
+        public virtual User Reviewer { get; set; }
+        public virtual Submission Submission { get; set; }
 
         public override string ToString()
         {
