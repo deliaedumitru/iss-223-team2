@@ -1,0 +1,23 @@
+@model Conference_Management_System.Models.Qualifier
+@{
+    ViewBag.Title = "ModifyQualifier";
+}
+
+<h2>ModifyQualifier</h2>
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(m => m.Paper)
+        @Html.TextBoxFor(m => m.Paper)
+    </div>
+    <br/>
+    <div>
+        @Html.LabelFor(m => m.Reviewer)
+        @Html.TextBoxFor(m => m.Reviewer)
+    </div>
+    <br/>
+    <div>
+        @Html.LabelFor(m=>m.Value)
+        @Html.TextBoxFor(m=>m.Value)
+    </div>
+}
