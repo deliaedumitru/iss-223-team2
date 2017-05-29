@@ -40,14 +40,24 @@ namespace Conference_Management_System.Controllers
         [HttpPost]
         public ActionResult FindUserBy(String username, String password)
         {
-            Func<User, bool> findRole = delegate (User s)
-            { return s.Username.Equals(username) & s.Password.Equals(password); };
+            using (var context = new CMS())
+            {
+                var userRepo = new AbstractCrudRepo<int, User>(context);
 
-            if (_UserRepository.FindBy(x=>findRole(x)).Count()!=0)
-                return Redirect("/");  //redirect to user page after login
-            return View();
-            //return ErrorView();   //redirect to error page
-
+                Func<User, bool> findRole = delegate (User s)
+                { return s.Username.Equals(username) & s.Password.Equals(password); };
+                IQueryable<User> result = userRepo.FindBy(s => s.Username.Equals(username) && s.Password.Equals(password));
+                if (result.Count() != 0)
+                {
+                    User user = result.First();
+                    Response.Cookies["user"]["username"] = user.Username;
+                    Response.Cookies["user"]["id"] = user.Id.ToString();
+                    Response.Cookies["user"]["role"] = user.Role.ToString();
+                    Response.Cookies["user"].Expires = DateTime.Now.AddDays(1);
+                    return Redirect("/");  //redirect to user page after login
+                }
+                return View();
+            }
         }
 
     }

@@ -1,7 +1,8 @@
 
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+ using System.ComponentModel.DataAnnotations.Schema;
+ using System.Linq;
 using System.Web;
 
 namespace Conference_Management_System.Models
@@ -24,8 +25,12 @@ namespace Conference_Management_System.Models
 
         public string Type { get; set; }
 
-        public virtual List<User> Authors
-        { get; set; }
+
+        [InverseProperty("Submissions")] // required when more than one many-to-many relationships are present
+        public virtual List<User> Authors { get; set; }
+
+        [InverseProperty("ReviewedSubmissions")]
+        public virtual List<User> Reviewers { get; set; }
 
         public virtual List<Bid> Bids
         { get; set; }
