@@ -54,9 +54,26 @@ namespace Conference_Management_System.Controllers
                     Response.Cookies["user"]["id"] = user.Id.ToString();
                     Response.Cookies["user"]["role"] = user.Role.ToString();
                     Response.Cookies["user"].Expires = DateTime.Now.AddDays(1);
-                    return Redirect("/");  //redirect to user page after login
+                    switch (user.Role)
+                    {
+                        case Role.ADMIN:
+                            return View("AdminView");
+                        case Role.AUTHOR:
+                            return View("AuthorView");
+                        case Role.CHAIR:
+                            return View("ChairView");
+                        case Role.CO_CHAIR:
+                            return View("CoChairView");
+                        case Role.LISTENER:
+                            return View("ListenerView");
+                        case Role.PCM:
+                            return View("PcmView");
+                        case Role.SCM:
+                            return View("ScmView");
+                    }
+                    return View();  //redirect to user page after login
                 }
-                return View();
+                return View(FindUserBy());
             }
         }
 

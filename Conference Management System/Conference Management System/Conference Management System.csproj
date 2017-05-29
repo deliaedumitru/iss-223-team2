@@ -267,6 +267,13 @@
     <Content Include="Views\Login\FindUserBy.cshtml" />
     <Content Include="Views\Proposals\Bid.cshtml" />
     <Content Include="Views\AssignProposals\GetAllBids.cshtml" />
+    <Content Include="Views\Login\AdminView.cshtml" />
+    <Content Include="Views\Login\AuthorView.cshtml" />
+    <Content Include="Views\Login\ChairView.cshtml" />
+    <Content Include="Views\Login\CoChairView.cshtml" />
+    <Content Include="Views\Login\ListenerView.cshtml" />
+    <Content Include="Views\Login\PcmView.cshtml" />
+    <Content Include="Views\Login\ScmView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
