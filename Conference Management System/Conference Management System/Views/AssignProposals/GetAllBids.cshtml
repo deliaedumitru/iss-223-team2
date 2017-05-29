@@ -1,0 +1,86 @@
+﻿@model IEnumerable<Conference_Management_System.Models.Submission>
+@{
+    ViewBag.Title = "GetAllBids";
+}
+
+<h2>Assign proposals for review</h2>
+
+@foreach (var item in Model)
+{
+    <h4 style="text-align:center">
+        Submission: @item.Meta <br />
+        Type : @item.Type
+    </h4>
+    <div style="display:inline-flex;width:100%">
+        <table style="float:left;">
+            <tr>
+                <th>Reviewer</th>
+                <th>Bid</th>
+                <th></th>
+            </tr>
+            @foreach (var bid in @item.Bids)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => bid.Reviewer.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => bid.Value)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Add", "Add","AssignProposals", new { reviewerId = @bid.Reviewer.Id, submissionId = @item.Id }, null)
+                    </td>
+                </tr>
+            }
+        </table>
+
+        <table style="text-align: center;">
+            <tr>
+                <th style="text-align: center;">Reviewer</th>
+                <th></th>
+            </tr>
+            @foreach (var reviewer in @item.Reviewers)
+            {
+                <tr>
+                    <td style="text-align: center;">
+                        @Html.DisplayFor(modelItem => reviewer.Name)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Delete", "Delete", "AssignProposals", new { reviewerId = @reviewer.Id, submissionId = @item.Id }, null)
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <hr />
+}
+<script>
+
+</script>
+
+<style>
+    table, td, th {
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 45%;
+        margin: 30px;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    th {
+        background-color: #ADD8E6;
+        color: white;
+    }
+</style>
