@@ -10,17 +10,10 @@ using System.Web.Mvc;
 namespace Conference_Management_System.Controllers
 {
     public class SignupController:Controller
-    {
-        ICrudRepository<Int32,User> repo;
-
+    { 
         public SignupController()
         {
-            //repo = new UserRepository();
-        }
-
-        public SignupController(ICrudRepository<Int32,User> repo)
-        {
-            this.repo = repo;
+          
         }
 
         [HttpGet]
@@ -42,8 +35,13 @@ namespace Conference_Management_System.Controllers
         [HttpPost]
         public ActionResult Add(User user)
         {
-            repo.Add(user);
-            //repo.Save();
+            using (var context = new CMS())
+            {
+                var repo = new AbstractCrudRepo<int, User>(context);
+                repo.Add(user);
+                repo.Save();
+            }
+
             return Redirect("/");
         }
 
