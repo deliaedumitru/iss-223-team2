@@ -44,6 +44,8 @@ namespace Conference_Management_System.Models
         public virtual List<Comment> Comments
         { get; set; }
 
+        public virtual Conference Conference { get; set; }
+
         public override string ToString()
         {
             return string.Format("Id: {0}, Meta: {1}, Type: {2}", this.Id, this.Meta, this.Type);

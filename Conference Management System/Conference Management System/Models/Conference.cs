@@ -39,5 +39,7 @@ namespace Conference_Management_System.Models
 
         public string Location
         { get; set; }
+
+        public virtual IQueryable<Submission> Submissions { get; set; }
     }
 }

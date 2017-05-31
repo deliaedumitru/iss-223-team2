@@ -188,6 +188,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AssignProposalsController.cs" />
+    <Compile Include="Controllers\ConferencesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProposalsController.cs" />
     <Compile Include="Controllers\SignupController.cs" />
@@ -196,6 +197,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705121723396_added_users_table.cs" />
+    <Compile Include="Migrations\201705121723396_added_users_table.Designer.cs">
+      <DependentUpon>201705121723396_added_users_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705311620005_added realtionship between submissions and conferences.cs" />
+    <Compile Include="Migrations\201705311620005_added realtionship between submissions and conferences.Designer.cs">
+      <DependentUpon>201705311620005_added realtionship between submissions and conferences.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Bid.cs" />
     <Compile Include="Models\BidValues.cs" />
     <Compile Include="Models\CMS.cs" />
@@ -269,7 +279,7 @@
     <Content Include="Views\AssignProposals\GetAllBids.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="App_Start\App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -285,6 +295,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201705121723396_added_users_table.resx">
+      <DependentUpon>201705121723396_added_users_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705311620005_added realtionship between submissions and conferences.resx">
+      <DependentUpon>201705311620005_added realtionship between submissions and conferences.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
