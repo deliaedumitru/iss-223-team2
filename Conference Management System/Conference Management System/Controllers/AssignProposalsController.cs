@@ -70,7 +70,7 @@ namespace Conference_Management_System.Controllers
                 {
                     if(sub.Id == submissionId)
                     {
-                        List<User> reviewers = sub.Reviewers;
+                        List<User> reviewers = sub.Reviewers.ToList();
                         reviewers.Add(reviewer);
                         sub.Reviewers = reviewers;
                         submissionRepo.Update(sub);
@@ -106,7 +106,7 @@ namespace Conference_Management_System.Controllers
                 {
                     if (sub.Id == submissionId)
                     {
-                        List<User> reviewers = sub.Reviewers;
+                        List<User> reviewers = sub.Reviewers.ToList();
                         reviewers.Remove(reviewer);
                         sub.Reviewers = reviewers;
                         submissionRepo.Update(sub);

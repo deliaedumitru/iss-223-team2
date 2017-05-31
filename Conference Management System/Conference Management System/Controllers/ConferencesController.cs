@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using Conference_Management_System.Models;
+using Conference_Management_System.Models.DTO;
 
 namespace Conference_Management_System.Controllers
 {
@@ -17,16 +18,33 @@ namespace Conference_Management_System.Controllers
         private CMS db = new CMS();
 
         // GET: api/Conferences
-        public IQueryable<Conference> GetConferences()
+        public IQueryable<ConferenceDTO> GetConferences()
         {
-            return db.Conferences;
+            return from conf in db.Conferences
+                   select new ConferenceDTO()
+                   {
+                      Id = conf.Id,
+                      Name = conf.Name,
+                      Date = conf.Date,
+                      StartTime = conf.StartTime,
+                      EndTime = conf.EndTime,
+                      SubmissionDeadline = conf.EndTime
+                   };
         }
 
         // GET: api/Conferences/5
-        [ResponseType(typeof(Conference))]
+        [ResponseType(typeof(ConferenceDTO))]
         public IHttpActionResult GetConference(int id)
         {
-            Conference conference = db.Conferences.Find(id);
+            ConferenceDTO conference = db.Conferences.Select(conf => new ConferenceDTO()
+            {
+                Id = conf.Id,
+                Name = conf.Name,
+                Date = conf.Date,
+                StartTime = conf.StartTime,
+                EndTime = conf.EndTime,
+                SubmissionDeadline = conf.EndTime
+            }).SingleOrDefault(conf => conf.Id == id);
             if (conference == null)
             {
                 return NotFound();

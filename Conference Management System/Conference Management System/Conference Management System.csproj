@@ -211,6 +211,7 @@
     <Compile Include="Models\CMS.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Conference.cs" />
+    <Compile Include="Models\DTO\ConferenceDTO.cs" />
     <Compile Include="Models\Entity.cs" />
     <Compile Include="Models\Qualifier.cs" />
     <Compile Include="Models\QualifierValues.cs" />
