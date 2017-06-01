@@ -13,12 +13,15 @@ namespace Conference_Management_System.Models
         {
         }
 
-        public Submission(int id, string meta, string type)
+        public Submission(int id, string title, string meta, string type)
         {
             base.Id = id;
+            this.Title = title;
             this.Meta = meta;
             this.Type = type;
         }
+        public string Title
+        { get; set; }
 
         public string Meta
         { get; set; }
@@ -46,7 +49,7 @@ namespace Conference_Management_System.Models
 
         public override string ToString()
         {
-            return string.Format("Id: {0}, Meta: {1}, Type: {2}", this.Id, this.Meta, this.Type);
+            return string.Format("Id: {0}, Title: {1}, Meta: {2}, Type: {3}", this.Id, this.Title, this.Meta, this.Type);
         }
     }
 }
