@@ -34,9 +34,9 @@ namespace Conference_Management_System.Models
         [InverseProperty("Reviewers")] // required when more than one many-to-many relationships are present
         public virtual List<Submission> ReviewedSubmissions { get; set; }
         [InverseProperty("Authors")]
-        public virtual List<Submission> Submissions { get; set; }
-        public virtual List<Comment> Comments { get; set; }
-        public virtual List<Bid> Bids { get; set; }
+        public virtual ICollection<Submission> Submissions { get; set; }
+        public virtual ICollection<Comment> Comments { get; set; }
+        public virtual ICollection<Bid> Bids { get; set; }
         public String ToString() { return Username + " " + Password + " " + Role + " " + Name + " " + Email + " " + Affiliation; }
 
     }

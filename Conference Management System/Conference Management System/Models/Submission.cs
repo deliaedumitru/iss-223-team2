@@ -30,19 +30,21 @@ namespace Conference_Management_System.Models
         public virtual List<User> Authors { get; set; }
 
         [InverseProperty("ReviewedSubmissions")]
-        public virtual List<User> Reviewers { get; set; }
+        public virtual ICollection<User> Reviewers { get; set; }
 
-        public virtual List<Bid> Bids
+        public virtual ICollection<Bid> Bids
         { get; set; }
 
-        public virtual List<Qualifier> Qualifiers
+        public virtual ICollection<Qualifier> Qualifiers
         { get; set; }
 
-        public virtual List<Recommendation> Recommendations
+        public virtual ICollection<Recommendation> Recommendations
         { get; set; }
 
-        public virtual List<Comment> Comments
+        public virtual ICollection<Comment> Comments
         { get; set; }
+
+        public virtual Conference Conference { get; set; }
 
         public override string ToString()
         {
