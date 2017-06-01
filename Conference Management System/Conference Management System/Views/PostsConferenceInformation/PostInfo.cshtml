@@ -1,0 +1,44 @@
+﻿@model Conference_Management_System.Models.Conference
+@{
+    ViewBag.Title = "PostInfo";
+}
+
+<h2>Post Conference Information</h2>
+
+@using (Html.BeginForm())
+{
+
+    <div>
+        @Html.LabelFor(model => model.Name)
+        @Html.TextBoxFor(model => model.Name)
+    </div>
+    <br />
+    <div>
+        @Html.LabelFor(model => model.Location)
+        @Html.TextBoxFor(model => model.Location)
+    </div>
+    <br />
+    <div>
+        @Html.LabelFor(model => model.Date)
+        @Html.TextBoxFor(model => model.Date)
+    </div>
+    <br />
+    <div>
+        @Html.LabelFor(model => model.StartTime)
+        @Html.TextBoxFor(model => model.StartTime)
+    </div>
+    <br />
+    <div>
+        @Html.LabelFor(model => model.EndTime)
+        @Html.TextBoxFor(model => model.EndTime)
+    </div>
+    <br />
+    <div>
+        @Html.LabelFor(model => model.SubmissionDeadline)
+        @Html.TextBoxFor(model => model.SubmissionDeadline)
+    </div>
+    <br />
+    <input id="postInfo-submit" type="submit" value="Post" />
+}
+
+
