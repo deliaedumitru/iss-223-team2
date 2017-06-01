@@ -1,4 +1,5 @@
-﻿@model IEnumerable<Conference_Management_System.Models.Submission>
+﻿ @model IEnumerable<Conference_Management_System.Models.Submission>
+ 
 @{
     ViewBag.Title = "GetAllBids";
 }
@@ -28,7 +29,7 @@
                         @Html.DisplayFor(modelItem => bid.Value)
                     </td>
                     <td>
-                        @Html.ActionLink("Add", "Add","AssignProposals", new { reviewerId = @bid.Reviewer.Id, submissionId = @item.Id }, null)
+                        @Html.ActionLink("Add", "Add", "AssignProposals", new { reviewerId = @bid.Reviewer.Id, submissionId = @item.Id }, null)
                     </td>
                 </tr>
             }
