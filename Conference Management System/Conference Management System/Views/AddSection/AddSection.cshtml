@@ -1,0 +1,32 @@
+﻿@model Conference_Management_System.Models.SectionConference
+@{
+    ViewBag.Title = "AddSection";
+}
+
+<h2>Section</h2>
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(m => m.Section.Name)
+        @Html.TextBoxFor(m => m.Section.Name)
+    </div>
+    <br />
+    <div>
+        @Html.LabelFor(m => m.Section.Room)
+        @Html.TextBoxFor(m => m.Section.Room)
+    </div>
+    <br />
+    <div>
+        @Html.LabelFor(m => m.Section.SeatNumber)
+        @Html.TextBoxFor(m => m.Section.SeatNumber)
+    </div>
+    <br />
+    <div>
+        @Html.LabelFor(m => m.Conferences)
+        @Html.DropDownListFor(m => m.selectedId, Model.Conferences)
+      
+    </div>
+    <br />
+    <input type="submit" id="add_btn" value="Add Section" />
+}
+
