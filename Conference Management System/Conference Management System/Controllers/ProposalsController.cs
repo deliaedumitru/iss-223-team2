@@ -12,7 +12,6 @@ namespace Conference_Management_System.Controllers
 {
     public class ProposalsController : Controller
     {
-          
         public ActionResult Bid()
         {
             using (var context = new CMS())

@@ -13,12 +13,15 @@ namespace Conference_Management_System.Models
         {
         }
 
-        public Submission(int id, string meta, string type)
+        public Submission(int id, string title, string meta, string type)
         {
             base.Id = id;
+            this.Title = title;
             this.Meta = meta;
             this.Type = type;
         }
+        public string Title
+        { get; set; }
 
         public string Meta
         { get; set; }
@@ -30,23 +33,25 @@ namespace Conference_Management_System.Models
         public virtual List<User> Authors { get; set; }
 
         [InverseProperty("ReviewedSubmissions")]
-        public virtual List<User> Reviewers { get; set; }
+        public virtual ICollection<User> Reviewers { get; set; }
 
-        public virtual List<Bid> Bids
+        public virtual ICollection<Bid> Bids
         { get; set; }
 
-        public virtual List<Qualifier> Qualifiers
+        public virtual ICollection<Qualifier> Qualifiers
         { get; set; }
 
-        public virtual List<Recommendation> Recommendations
+        public virtual ICollection<Recommendation> Recommendations
         { get; set; }
 
-        public virtual List<Comment> Comments
+        public virtual ICollection<Comment> Comments
         { get; set; }
+
+        public virtual Conference Conference { get; set; }
 
         public override string ToString()
         {
-            return string.Format("Id: {0}, Meta: {1}, Type: {2}", this.Id, this.Meta, this.Type);
+            return string.Format("Id: {0}, Title: {1}, Meta: {2}, Type: {3}", this.Id, this.Title, this.Meta, this.Type);
         }
     }
 }
