@@ -12,11 +12,6 @@ namespace Conference_Management_System.Controllers
 {
     public class ProposalsController : Controller
     {
-<<<<<<< HEAD
-        //get images for the user that has id as ident.
-=======
-          
->>>>>>> 024110af38a36c0a307b5aac99cade56129cb0bb
         public ActionResult Bid()
         {
             using (var context = new CMS())
