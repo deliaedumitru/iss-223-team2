@@ -1,4 +1,4 @@
-@model Conference_Management_System.Models.Qualifier
+@model Tuple<Conference_Management_System.Models.Qualifier, Conference_Management_System.Models.Recommendation>
 @{
     ViewBag.Title = "GiveQualifier";
 }
@@ -8,16 +8,23 @@
 @using (Html.BeginForm())
 {
     <div>
-        @Html.LabelFor(m=>m.Paper)
-        @Html.TextBoxFor(m=>m.Paper)
+        @Html.LabelFor(tuple=>tuple.Item1.Paper)
+        @Html.TextBoxFor(tuple => tuple.Item1.Paper)
     </div><br/>
     <div>
-        @Html.LabelFor(m=>m.Reviewer)
-        @Html.TextBoxFor(m=>m.Reviewer)
+        @Html.LabelFor(tuple=>tuple.Item1.Reviewer)
+        @Html.TextBoxFor(tuple=>tuple.Item1.Reviewer)
     </div><br/>
     <div>
-        @Html.LabelFor(m=>m.Value)
-        @Html.TextBoxFor(m=>m.Value)
+        @Html.LabelFor(tuple=>tuple.Item1.Value)
+        @Html.TextBoxFor(tuple => tuple.Item1.Value)
     </div>
+    <br/>
+    <div>
+        @Html.LabelFor(tuple => tuple.Item2.Text)
+        @Html.TextAreaFor(tuple => tuple.Item2.Text)
+    </div>
+    <br/>
+    <input type="submit" value="Add" />
 }
 
