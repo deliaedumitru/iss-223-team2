@@ -6,6 +6,10 @@
 <h2>ModifyQualifier</h2>
 @using (Html.BeginForm())
 {
+    <table>
+
+    </table>
+    <br/>
     <div>
         @Html.LabelFor(m => m.Paper)
         @Html.TextBoxFor(m => m.Paper)
@@ -20,4 +24,6 @@
         @Html.LabelFor(m=>m.Value)
         @Html.TextBoxFor(m=>m.Value)
     </div>
+    <br/>
+    <input id="Button1" type="button" value="Update" />
 }
