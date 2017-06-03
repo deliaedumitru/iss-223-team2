@@ -13,13 +13,14 @@ namespace Conference_Management_System.Models
         {
         }
 
-        public Submission(int id, string title, string meta, string type)
+        public Submission(int id, string title, string meta, string type, string fileName)
         {
             base.Id = id;
             this.Title = title;
             this.Meta = meta;
             this.Type = type;
         }
+
         public string Title
         { get; set; }
 
