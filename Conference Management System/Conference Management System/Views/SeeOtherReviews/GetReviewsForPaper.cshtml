@@ -1,0 +1,17 @@
+﻿@model List<Conference_Management_System.Models.Recommendation>
+
+@{
+    ViewBag.Title = "GetReviewsForPaper";
+}
+
+<h2>Other Reviews for @Model.First().Submission.Title</h2>
+
+<form>
+    @foreach(var item in Model)
+    {
+        <fieldset>
+            <legend>@item.Rewiever.Name</legend>
+            @item.Text
+        </fieldset>
+    }
+</form>
