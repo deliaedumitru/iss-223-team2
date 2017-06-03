@@ -13,7 +13,7 @@ namespace Conference_Management_System.Models
         {
         }
 
-        public Submission(int id, string title, string meta, string type)
+        public Submission(int id, string title, string meta, string type, string fileName)
         {
             base.Id = id;
             this.Title = title;
@@ -21,6 +21,7 @@ namespace Conference_Management_System.Models
             this.Type = type;
             this.Status = StatusValues.PENDING;
         }
+
         public string Title
         { get; set; }
 
