@@ -19,6 +19,7 @@ namespace Conference_Management_System.Models
             this.Title = title;
             this.Meta = meta;
             this.Type = type;
+            this.Status = StatusValues.PENDING;
         }
         public string Title
         { get; set; }
@@ -27,6 +28,8 @@ namespace Conference_Management_System.Models
         { get; set; }
 
         public string Type { get; set; }
+        
+        public StatusValues Status { get; set; }
 
 
         [InverseProperty("Submissions")] // required when more than one many-to-many relationships are present
