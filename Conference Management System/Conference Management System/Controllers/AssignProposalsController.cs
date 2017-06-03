@@ -11,10 +11,7 @@ namespace Conference_Management_System.Controllers
     public class AssignProposalsController : Controller
     {
        
-        public AssignProposalsController()
-        {
-
-        }
+        public AssignProposalsController() { }
 
 
         [HttpGet]
@@ -51,7 +48,6 @@ namespace Conference_Management_System.Controllers
         {
             
             List<Submission> submissions;
-            List<User> users;
             using (var context = new CMS())
             {
                 var submissionRepo = new AbstractCrudRepo<int, Submission>(context);
@@ -87,7 +83,6 @@ namespace Conference_Management_System.Controllers
         {
 
             List<Submission> submissions;
-            List<User> users;
             using (var context = new CMS())
             {
                 var submissionRepo = new AbstractCrudRepo<int, Submission>(context);
