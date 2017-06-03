@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Conference_Management_System.Models.Submission>
+
+@{
+    ViewBag.Title = "GetFinalPapers";
+}
+<h2>Papers</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            Title
+        </th>
+        <th>
+            Qualifiers
+        </th>
+        <th>
+            Status
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Qualifiers.ToList().ToString())
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @if (item.Status == Conference_Management_System.Models.StatusValues.PENDING)
+                {
+                    @Html.ActionLink("Accept", "ChangeStatus", "AcceptRefuseProposal", new { id = item.Id, status = Conference_Management_System.Models.StatusValues.ACCEPT },null)
+                    @Html.ActionLink("Refuse", "ChangeStatus", "AcceptRefuseProposal", new { id = item.Id, status = Conference_Management_System.Models.StatusValues.REFUSE },null)
+                }
+            </td>
+        </tr>
+                }
+
+</table>
