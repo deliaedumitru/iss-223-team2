@@ -190,6 +190,7 @@
     <Compile Include="Controllers\AcceptRefuseProposalController.cs" />
     <Compile Include="Controllers\AddSectionController.cs" />
     <Compile Include="Controllers\AssignProposalsController.cs" />
+    <Compile Include="Controllers\CommentsController.cs" />
     <Compile Include="Controllers\ConferencesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PostsConferenceInformationController.cs" />
