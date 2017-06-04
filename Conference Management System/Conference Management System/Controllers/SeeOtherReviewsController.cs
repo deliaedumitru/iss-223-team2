@@ -16,7 +16,7 @@ namespace Conference_Management_System.Controllers
             return View();
         }
 
-        [ActionName("PaperList"), HttpPost]
+        [ActionName("PaperList"), HttpGet]
         public ActionResult GetPapers()
         {
             List<Submission> submissions = new List<Submission>();
@@ -40,21 +40,25 @@ namespace Conference_Management_System.Controllers
         [HttpGet]
         public ActionResult GetReviewsForPaper(int paperId)
         {
-          
+
             List<Recommendation> recommendations = new List<Recommendation>();
 
             using (var context = new CMS())
             {
                 int userId = Int32.Parse(Request.Cookies["user"]["id"]);
                 var recommendationRepo = new AbstractCrudRepo<int, Recommendation>(context);
-                              
+
                 recommendations = recommendationRepo.FindBy(rec => rec.SubmissionId == paperId).ToList();
                 recommendations = recommendations.Where(r => r.ReviewerId != userId).ToList();
-                             
+                foreach (Recommendation r in recommendations)
+                {
+                    r.Rewiever = r.Rewiever;
+                }
+
             }
-            
+
             return View(recommendations);
         }
 
-        }
+    }
 }
