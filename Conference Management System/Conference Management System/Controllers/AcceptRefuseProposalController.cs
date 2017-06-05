@@ -60,7 +60,7 @@ namespace Conference_Management_System.Controllers
         }
 
 
-        [ HttpPost]
+        [HttpGet]
         public ActionResult GetFinalPapers()
         {
             List<Submission> submissions = new List<Submission>();
@@ -72,7 +72,11 @@ namespace Conference_Management_System.Controllers
 
                 foreach (Submission submission in submissions)
                 {
-                    submission.Qualifiers = submission.Qualifiers.ToList();
+                    submission.Qualifiers = submission.Qualifiers;
+                    foreach(Qualifier q in submission.Qualifiers)
+                    {
+                        q.Reviewer = q.Reviewer;
+                    }
                 }
 
             }
@@ -96,6 +100,8 @@ namespace Conference_Management_System.Controllers
 
                 submissionRepo.Update(currentsubmission);
                 submissionRepo.Save();
+
+                Response.Redirect("/AcceptRefuseProposal/GetFinalPapers");
 
             }
             return GetFinalPapers();
