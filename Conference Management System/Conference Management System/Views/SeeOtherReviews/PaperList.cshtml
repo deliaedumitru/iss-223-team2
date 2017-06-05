@@ -24,7 +24,7 @@
                     @Html.DisplayFor(modelItem => item.Title)
                 </td>
                 <td>
-                    @Html.ActionLink("SeeOtherReviews", "GetReviewsForPaper", "SeeOtherReviews", new { paperId = item.Id })
+                    <a href="@Url.Action("GetReviewsForPaper", "SeeOtherReviews" , new { paperId=item.Id })">@item.Title</a>
                 </td>
                 
             </tr>
