@@ -196,6 +196,9 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\SubmitProposalController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\PostsConferenceInformationController.cs" />
+    <Compile Include="Controllers\AcceptRefuseProposalController.cs" />
+    <Compile Include="Controllers\SeeOtherReviewsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -228,7 +231,7 @@
     <Compile Include="Models\Submission.cs" />
     <Compile Include="Models\SubmissionType.cs" />
     <Compile Include="Models\User.cs" />
-    <Compile Include="Models\Section.cs" />
+    <Compile Include="Models\StatusValues.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\AbstractCrudRepo.cs" />
     <Compile Include="Repositories\ICrudRepo.cs" />
@@ -290,6 +293,12 @@
     <Content Include="Views\AssignProposals\GetAllBids.cshtml" />
     <Content Include="Views\SubmitProposal\Submit.cshtml" />
     <Content Include="Views\AddSection\AddSection.cshtml" />
+    <Content Include="Views\AcceptRefuseProposal\GetFinalPapers.cshtml" />
+    <Content Include="Views\PostsConferenceInformation\PostInfo.cshtml" />
+    <Content Include="Views\Proposals\Bid.cshtml" />
+    <Content Include="Views\SeeOtherReviews\GetReviewsForPaper.cshtml" />
+    <Content Include="Views\SeeOtherReviews\PaperList.cshtml" />
+    <Content Include="Views\Submissions\Bid.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Start\App_Data\" />
