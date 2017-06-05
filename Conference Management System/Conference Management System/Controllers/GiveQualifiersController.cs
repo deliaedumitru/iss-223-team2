@@ -13,114 +13,139 @@ namespace Conference_Management_System.Controllers
     {
         public ActionResult Proposals()
         {
-            using (var context = new CMS())
+            try
             {
-                int userId = Int32.Parse(Request.Cookies["user"]["id"]);
-                var usersRepo = new AbstractCrudRepo<int, User>(context);
-                var submissionsRepo = new AbstractCrudRepo<int, Submission>(context);
-
-                User user = usersRepo.FindBy(u => u.Id == userId).First();
-
-                List<Submission> submissions = submissionsRepo.FindAll().ToList();
-                List<Submission> assignedSubmissions = new List<Submission>();
-                foreach (var submission in submissions)
+                using (var context = new CMS())
                 {
+                    int userId = Int32.Parse(Request.Cookies["user"]["id"]);
+                    var usersRepo = new AbstractCrudRepo<int, User>(context);
+                    var submissionsRepo = new AbstractCrudRepo<int, Submission>(context);
 
-                    foreach (var reviewer in submission.Reviewers)
+                    User user = usersRepo.FindBy(u => u.Id == userId).First();
+
+                    List<Submission> submissions = submissionsRepo.FindAll().ToList();
+                    List<Submission> assignedSubmissions = new List<Submission>();
+                    foreach (var submission in submissions)
                     {
-                        if (reviewer.Id == userId)
+                        submission.Authors = submission.Authors;
+                        foreach (var reviewer in submission.Reviewers)
                         {
-                            //doar qualifier-ul dat de userul logat
-                            submission.Qualifiers = submission.Qualifiers.Where(b => b.Reviewer.Id == userId).ToList();
-                            //doar recommendation-ul dat de userul logat
-                            submission.Recommendations = submission.Recommendations.Where(r => r.Rewiever.Id == userId).ToList();
+                            if (reviewer.Id == userId)
+                            {
+                                //doar qualifier-ul dat de userul logat
+                                submission.Qualifiers = submission.Qualifiers.Where(b => b.Reviewer.Id == userId).ToList();
+                                //doar recommendation-ul dat de userul logat
+                                submission.Recommendations = submission.Recommendations.Where(r => r.Rewiever.Id == userId).ToList();
 
-                            assignedSubmissions.Add(submission);
+                                assignedSubmissions.Add(submission);
+                            }
                         }
                     }
-                }
 
-                ViewBag.userId = userId;
-                return View(assignedSubmissions);
+                    ViewBag.userId = userId;
+                    return View(assignedSubmissions);
+                }
             }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                Response.Redirect("/Shared/Error");
+            }
+            return null;
         }
 
         public void UpdateQualifier(CMS context, int submissionId, int userId, String value)
         {
-            var submissionsRepo = new AbstractCrudRepo<int, Submission>(context);
-            Submission submission = submissionsRepo.FindBy(s => s.Id == submissionId).First();
-            bool updated = false;
-            foreach (var qualifier in submission.Qualifiers)
+            try
             {
-                if (qualifier.Reviewer.Id == userId)
-                {
-                    //exista deja un qualifier acordat de userul logat, deci trebuie sa se faca update
-                    submission.Qualifiers.Where(b => b.Reviewer.Id == userId).First().Value = (QualifierValues)System.Enum.Parse(typeof(QualifierValues), value);
-                    updated = true;
-                }
-            }
-
-            if (updated == false)
-            {
-                //nu exista un qualifier anterior acordat de userul logat, deci facem add
-                var usersRepo = new AbstractCrudRepo<int, User>(context);
-                User user = usersRepo.FindBy(u => u.Id == userId).First();
-
-                Qualifier qualifier = new Qualifier(-1, user, submission, (QualifierValues)System.Enum.Parse(typeof(QualifierValues), value));
-                submission.Qualifiers.Add(qualifier);
-
-            }
-
-            submissionsRepo.Update(submission);
-            submissionsRepo.Save();
-        }
-
-        public void UpdateRecommendation(CMS context, int submissionId, int userId, String value)
-        {
-            var submissionsRepo = new AbstractCrudRepo<int, Submission>(context);
-            Submission submission = submissionsRepo.FindBy(s => s.Id == submissionId).First();
-
-            if (value == null || value.CompareTo("") == 0)
-            {
-                List<Recommendation> recomendations = submission.Recommendations.Where(b => b.Rewiever.Id == userId).ToList();
-                if (recomendations.Count != 0)
-                {
-                    var recommendationRepo = new AbstractCrudRepo<int, Recommendation>(context);
-                    recommendationRepo.Delete(recomendations.First().Id);
-                    recommendationRepo.Save();
-
-                    //trebuie stearsa recomandarea anterioara
-                    submission.Recommendations.Remove(recomendations.First());
-                    submissionsRepo.Update(submission);
-                    submissionsRepo.Save();
-                }
-            }
-            else
-            {
+                var submissionsRepo = new AbstractCrudRepo<int, Submission>(context);
+                Submission submission = submissionsRepo.FindBy(s => s.Id == submissionId).First();
                 bool updated = false;
-                foreach (var recommendation in submission.Recommendations)
+                foreach (var qualifier in submission.Qualifiers)
                 {
-                    if (recommendation.Rewiever.Id == userId)
+                    if (qualifier.Reviewer.Id == userId)
                     {
-                        //exista deja un recommendation acordat de userul logat, deci trebuie sa se faca update
-                        submission.Recommendations.Where(b => b.Rewiever.Id == userId).First().Text = value;
+                        //exista deja un qualifier acordat de userul logat, deci trebuie sa se faca update
+                        submission.Qualifiers.Where(b => b.Reviewer.Id == userId).First().Value = (QualifierValues)System.Enum.Parse(typeof(QualifierValues), value);
                         updated = true;
                     }
                 }
 
                 if (updated == false)
                 {
-                    //nu exista un recommendation anterior acordat de userul logat, deci facem add
+                    //nu exista un qualifier anterior acordat de userul logat, deci facem add
                     var usersRepo = new AbstractCrudRepo<int, User>(context);
                     User user = usersRepo.FindBy(u => u.Id == userId).First();
 
-                    Recommendation recommendation = new Recommendation(-1, value, user, submission);
-                    submission.Recommendations.Add(recommendation);
+                    Qualifier qualifier = new Qualifier(-1, user, submission, (QualifierValues)System.Enum.Parse(typeof(QualifierValues), value));
+                    submission.Qualifiers.Add(qualifier);
 
                 }
 
                 submissionsRepo.Update(submission);
                 submissionsRepo.Save();
+            } 
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                Response.Redirect("/Shared/Error");
+            }
+        }
+
+        public void UpdateRecommendation(CMS context, int submissionId, int userId, String value)
+        {
+            try
+            {
+                var submissionsRepo = new AbstractCrudRepo<int, Submission>(context);
+                Submission submission = submissionsRepo.FindBy(s => s.Id == submissionId).First();
+
+                if (value == null || value.CompareTo("") == 0)
+                {
+                    List<Recommendation> recomendations = submission.Recommendations.Where(b => b.Rewiever.Id == userId).ToList();
+                    if (recomendations.Count != 0)
+                    {
+                        var recommendationRepo = new AbstractCrudRepo<int, Recommendation>(context);
+                        recommendationRepo.Delete(recomendations.First().Id);
+                        recommendationRepo.Save();
+
+                        //trebuie stearsa recomandarea anterioara
+                        submission.Recommendations.Remove(recomendations.First());
+                        submissionsRepo.Update(submission);
+                        submissionsRepo.Save();
+                    }
+                }
+                else
+                {
+                    bool updated = false;
+                    foreach (var recommendation in submission.Recommendations)
+                    {
+                        if (recommendation.Rewiever.Id == userId)
+                        {
+                            //exista deja un recommendation acordat de userul logat, deci trebuie sa se faca update
+                            submission.Recommendations.Where(b => b.Rewiever.Id == userId).First().Text = value;
+                            updated = true;
+                        }
+                    }
+
+                    if (updated == false)
+                    {
+                        //nu exista un recommendation anterior acordat de userul logat, deci facem add
+                        var usersRepo = new AbstractCrudRepo<int, User>(context);
+                        User user = usersRepo.FindBy(u => u.Id == userId).First();
+
+                        Recommendation recommendation = new Recommendation(-1, value, user, submission);
+                        submission.Recommendations.Add(recommendation);
+
+                    }
+
+                    submissionsRepo.Update(submission);
+                    submissionsRepo.Save();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                Response.Redirect("/Shared/Error");
             }
         }
 
@@ -128,25 +153,58 @@ namespace Conference_Management_System.Controllers
         [ActionName("Proposals"), HttpPost]
         public ActionResult UpdateQualifier()
         {
-            using (var context = new CMS())
+            try
             {
-                int userId = Int32.Parse(Request.Cookies["user"]["id"]);
-                int reviewerId = Int32.Parse(Request.Form["userId"]);
-
-                if(userId != reviewerId)
+                using (var context = new CMS())
                 {
-                    throw new Exception("The request was not made by the logged in user!");
+                    int userId = Int32.Parse(Request.Cookies["user"]["id"]);
+                    int reviewerId = Int32.Parse(Request.Form["userId"]);
+
+                    if (userId != reviewerId)
+                    {
+                        throw new Exception("The request was not made by the logged in user!");
+                    }
+                    String value = Request.Form["qualifierValue"];
+                    int submissionId = Int32.Parse(Request.Form["submissionId"]);
+
+                    UpdateQualifier(context, submissionId, userId, value);
+
+                    String recommendation = Request.Form["recommendation"];
+                    UpdateRecommendation(context, submissionId, userId, recommendation);
+
+                    Response.Redirect("/GiveQualifiers/Proposals");
+                    return null;
                 }
-                String value = Request.Form["qualifierValue"];
-                int submissionId = Int32.Parse(Request.Form["submissionId"]);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                Response.Redirect("/Shared/Error");
+            }
+            return null;
+        }
 
-                UpdateQualifier(context, submissionId, userId, value);
+        public void openProposal(int submissionId)
+        {
+            try
+            {
+                using (var context = new CMS())
+                {
+                    var submissionsRepo = new AbstractCrudRepo<int, Submission>(context);
+                    Submission submission = submissionsRepo.FindBy(s => s.Id == submissionId).First();
 
-                String recommendation = Request.Form["recommendation"];
-                UpdateRecommendation(context, submissionId, userId, recommendation);
-
-                Response.Redirect("/GiveQualifiers/Proposals");
-                return null;
+                    string pdfPath = Server.MapPath("~/Submissions/" + submission.Title + submission.Authors.First().Id.ToString() + ".pdf");
+                    WebClient client = new WebClient();
+                    Byte[] buffer = client.DownloadData(pdfPath);
+                    Response.ContentType = "application/pdf";
+                    Response.AddHeader("content-length", buffer.Length.ToString());
+                    Response.BinaryWrite(buffer);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                Response.Redirect("/Shared/Error");
             }
         }
     }
