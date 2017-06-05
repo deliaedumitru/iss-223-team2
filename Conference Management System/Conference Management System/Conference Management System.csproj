@@ -191,9 +191,8 @@
     <Compile Include="Controllers\AddSectionController.cs" />
     <Compile Include="Controllers\AssignProposalsController.cs" />
     <Compile Include="Controllers\CommentsController.cs" />
-    <Compile Include="Controllers\ConferencesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PostsConferenceInformationController.cs" />
+    <Compile Include="Controllers\ConferenceController.cs" />
     <Compile Include="Controllers\ProposalsController.cs" />
     <Compile Include="Controllers\SeeOtherReviewsController.cs" />
     <Compile Include="Controllers\SignupController.cs" />
@@ -287,10 +286,11 @@
     <Content Include="Views\SubmitProposal\Submit.cshtml" />
     <Content Include="Views\AddSection\AddSection.cshtml" />
     <Content Include="Views\AcceptRefuseProposal\GetFinalPapers.cshtml" />
-    <Content Include="Views\PostsConferenceInformation\PostInfo.cshtml" />
+    <Content Include="Views\Conference\PostInfo.cshtml" />
     <Content Include="Views\SeeOtherReviews\GetReviewsForPaper.cshtml" />
     <Content Include="Views\SeeOtherReviews\PaperList.cshtml" />
     <Content Include="Views\Submissions\Bid.cshtml" />
+    <Content Include="Views\Conference\GetAll.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Start\App_Data\" />
