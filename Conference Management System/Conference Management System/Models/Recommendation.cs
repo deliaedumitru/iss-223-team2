@@ -18,6 +18,14 @@ namespace Conference_Management_System.Models
             this.SubmissionId = submissionId;
         }
 
+        public Recommendation(int id, String text, User reviewer, Submission submission)
+        {
+            this.Id = id;
+            this.Text = text;
+            this.Rewiever = reviewer;
+            this.Submission = submission;
+        }
+
         public String  Text
         { get; set; }
 

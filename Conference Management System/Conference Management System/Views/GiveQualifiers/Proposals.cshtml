@@ -1,0 +1,83 @@
+﻿@model List<Conference_Management_System.Models.Submission>
+@{
+    ViewBag.Title = "Proposals";
+}
+
+<h2>Assigned proposals</h2>
+
+@foreach (var submission in Model)
+{
+    <form method="post">
+        <div class='container'>
+            <div class='row'>
+                <div class='col-md-offset-3 col-md-6'>
+                    <div class='panel panel-default'>
+                        <div class='panel-heading' style='background: #fff;'>
+                            <div class="row">
+                                <div class="col-xs-9">
+                                    <h3 class='panel-title'>
+                                        @submission.Title
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='panel-body'>
+                            body
+                        </div>
+                        <div class='panel-footer' style='background: #fff;'>
+                            <div class="form-group" novalidate>
+                                <input type="hidden" class="form-control" name="submissionId" value="@submission.Id">
+                            </div>
+                            <div class="form-group" novalidate>
+                                <input type="hidden" class="form-control" name="userId" value="@ViewBag.userId">
+                            </div>
+                            <div class="form-group" novalidate>
+                                <label for="qualifierValue">Qualifier value</label> <br />
+                                <select name="qualifierValue" id="qualifierValue">
+                                    @if (@submission.Qualifiers.Count == 0)
+                                    {
+                                        <option disabled selected></option>
+                                        foreach (String i in Enum.GetNames(typeof(Conference_Management_System.Models.QualifierValues)))
+                                        {
+                                            <option value="@i">@i</option>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        foreach (String i in Enum.GetNames(typeof(Conference_Management_System.Models.QualifierValues)))
+                                        {
+                                            if (@submission.Qualifiers.First().Value.ToString().CompareTo(i) == 0)
+                                            {
+                                                <option value="@i" selected>@i</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@i">@i</option>
+                                            }
+                                        }
+                                    }
+                                </select>
+                             </div>
+                            <div class="form-group" novalidate>
+                                <label for="recommendation">Recommendations</label>
+                                @if (@submission.Recommendations.Count == 0)
+                                {
+                                    <textarea class="form-control" name="recommendation" rows="4"
+                                            placeholder="Here you can give any recommendations to the author of this paper. This is optional."></textarea>
+                                }
+                                else
+                                {
+                                    <textarea class="form-control" name="recommendation" rows="4"
+                                              placeholder="Here you can give any recommendations to the author of this paper. This is optional.">@submission.Recommendations.First().Text</textarea>
+                                }
+                            </div>
+
+                            <input type="submit" class="btn btn-default" value="Update qualifier">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+}
+

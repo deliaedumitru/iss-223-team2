@@ -192,6 +192,7 @@
     <Compile Include="Controllers\AssignProposalsController.cs" />
     <Compile Include="Controllers\CommentsController.cs" />
     <Compile Include="Controllers\ConferencesController.cs" />
+    <Compile Include="Controllers\GiveQualifiersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PostsConferenceInformationController.cs" />
     <Compile Include="Controllers\ProposalsController.cs" />
@@ -299,6 +300,7 @@
     <Content Include="Views\SeeOtherReviews\GetReviewsForPaper.cshtml" />
     <Content Include="Views\SeeOtherReviews\PaperList.cshtml" />
     <Content Include="Views\Submissions\Bid.cshtml" />
+    <Content Include="Views\GiveQualifiers\Proposals.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Start\App_Data\" />
