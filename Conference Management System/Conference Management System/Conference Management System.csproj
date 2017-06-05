@@ -214,6 +214,10 @@
     <Compile Include="Migrations\201706011557153_added title filed for submission.Designer.cs">
       <DependentUpon>201706011557153_added title filed for submission.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706051446530_migrate.cs" />
+    <Compile Include="Migrations\201706051446530_migrate.Designer.cs">
+      <DependentUpon>201706051446530_migrate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Bid.cs" />
     <Compile Include="Models\BidValues.cs" />
@@ -327,6 +331,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706011557153_added title filed for submission.resx">
       <DependentUpon>201706011557153_added title filed for submission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706051446530_migrate.resx">
+      <DependentUpon>201706051446530_migrate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
