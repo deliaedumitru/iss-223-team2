@@ -215,6 +215,10 @@
     <Compile Include="Migrations\201706061830114_made-fee-per-conference.Designer.cs">
       <DependentUpon>201706061830114_made-fee-per-conference.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706062118389_user-section-mtm.cs" />
+    <Compile Include="Migrations\201706062118389_user-section-mtm.Designer.cs">
+      <DependentUpon>201706062118389_user-section-mtm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Bid.cs" />
     <Compile Include="Models\BidValues.cs" />
@@ -331,6 +335,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706061830114_made-fee-per-conference.resx">
       <DependentUpon>201706061830114_made-fee-per-conference.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706062118389_user-section-mtm.resx">
+      <DependentUpon>201706062118389_user-section-mtm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
