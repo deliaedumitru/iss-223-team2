@@ -191,6 +191,7 @@
     <Compile Include="Controllers\AddSectionController.cs" />
     <Compile Include="Controllers\AssignProposalsController.cs" />
     <Compile Include="Controllers\CommentsController.cs" />
+    <Compile Include="Controllers\FeesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ConferenceController.cs" />
     <Compile Include="Controllers\ProposalsController.cs" />
@@ -206,6 +207,14 @@
     <Compile Include="Migrations\201706051501387_Initial.Designer.cs">
       <DependentUpon>201706051501387_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706061757145_added-fees.cs" />
+    <Compile Include="Migrations\201706061757145_added-fees.Designer.cs">
+      <DependentUpon>201706061757145_added-fees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706061830114_made-fee-per-conference.cs" />
+    <Compile Include="Migrations\201706061830114_made-fee-per-conference.Designer.cs">
+      <DependentUpon>201706061830114_made-fee-per-conference.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Bid.cs" />
     <Compile Include="Models\BidValues.cs" />
@@ -214,6 +223,8 @@
     <Compile Include="Models\Conference.cs" />
     <Compile Include="Models\DTO\ConferenceDTO.cs" />
     <Compile Include="Models\Entity.cs" />
+    <Compile Include="Models\Fee.cs" />
+    <Compile Include="Models\FeeType.cs" />
     <Compile Include="Models\Qualifier.cs" />
     <Compile Include="Models\QualifierValues.cs" />
     <Compile Include="Models\Recommendation.cs" />
@@ -291,6 +302,7 @@
     <Content Include="Views\SeeOtherReviews\PaperList.cshtml" />
     <Content Include="Views\Submissions\Bid.cshtml" />
     <Content Include="Views\Conference\GetAll.cshtml" />
+    <Content Include="Views\Conferences\View.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Start\App_Data\" />
@@ -313,6 +325,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201706051501387_Initial.resx">
       <DependentUpon>201706051501387_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706061757145_added-fees.resx">
+      <DependentUpon>201706061757145_added-fees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706061830114_made-fee-per-conference.resx">
+      <DependentUpon>201706061830114_made-fee-per-conference.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
