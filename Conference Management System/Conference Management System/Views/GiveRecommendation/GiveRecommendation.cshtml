@@ -1,0 +1,23 @@
+﻿@model Conference_Management_System.Models.Recommendation
+@{
+    ViewBag.Title = "GiveRecommendation";
+}
+
+<h2>GiveRecommendation</h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(model => model.Text)
+        @Html.TextBoxFor(model => model.Text)
+    </div><br />
+    <div>
+        @Html.LabelFor(model => model.Reviewer)
+        @Html.TextBoxFor(model => model.Reviewer)
+    </div><br />
+    <div>
+        @Html.LabelFor(model => model.Submission)
+        @Html.TextBoxFor(model => model.Submission)
+    </div> <br />
+    <input type="submit" value="Add" />
+}

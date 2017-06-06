@@ -2,44 +2,42 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Conference_Management_System.Models
 {
-    public class User : Entity<String>
+    public class User : Entity<int>
     {
-        private String username;
-        private String password;
-        private Role role;
-        private String name;
-        private String email;
-        private String affiliation;
-
         public User()
         {
-            username = "";
-            password = "";
-            role = Role;
-            name = "";
-            email = "";
-            affiliation = "";
         }
 
         public User(String username, String password, Role role, String name, String email, String affiliation)
         {
-            this.username = username;
-            this.password = password;
-            this.role = role;
-            this.name = name;
-            this.email = email;
-            this.affiliation = affiliation;
+            this.Username = username;
+            this.Password = password;
+            this.Role = role;
+            this.Name = name;
+            this.Email = email;
+            this.Affiliation = affiliation;
         }
 
-        public String Username { get { return username; } set { username = value; } }
-        public String Password { get { return password; } set { password = value; } }
-        public Role Role { get { return role; } set { role = value; } }
-        public String Name { get { return name; } set { name = value; } }
-        public String Email { get { return email; } set { email = value; } }
-        public String Affiliation { get { return affiliation; } set { affiliation = value; } }
-        public String ToString() { return username + " " + password + " " + role + " " + name + " " + email + " " + affiliation; }
+        public String Username { get; set; }
+        public String Password { get; set; }
+        public Role Role { get; set; }
+        public String Name { get; set; }
+        public String Email { get; set; }
+        public String Affiliation { get; set; }
+
+
+        [InverseProperty("Reviewers")] // required when more than one many-to-many relationships are present
+        public virtual List<Submission> ReviewedSubmissions { get; set; }
+        [InverseProperty("Authors")]
+        public virtual List<Submission> Submissions { get; set; }
+        public virtual List<Comment> Comments { get; set; }
+        public virtual List<Bid> Bids { get; set; }
+        public String ToString() { return Username + " " + Password + " " + Role + " " + Name + " " + Email + " " + Affiliation; }
+
     }
 }

@@ -1,29 +1,18 @@
 
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+ using System.ComponentModel.DataAnnotations.Schema;
+ using System.Linq;
 using System.Web;
 
 namespace Conference_Management_System.Models
 {
     public class Submission : Entity<int>
     {
-        private string _meta;
-        private string _type;
-        private List<Entity<int>> _authors;
-        private List<Entity<int>> _bids;
-        private List<Entity<int>> _qualifiers;
-        private List<Entity<int>> _recommendations;
-        private List<Entity<int>> _comments;
-
         public Submission()
         {
-            this.Authors = new List<Entity<int>>();
-            this.Bids = new List<Entity<int>>();
-            this.Qualifiers = new List<Entity<int>>();
-            this.Recommendations = new List<Entity<int>>();
-            this.Comments = new List<Entity<int>>();
         }
+
         public Submission(int id, string meta, string type)
         {
             base.Id = id;
@@ -32,46 +21,28 @@ namespace Conference_Management_System.Models
         }
 
         public string Meta
-        {
-            get { return _meta; }
-            set { _meta = value; }
-        }
+        { get; set; }
 
-        public string Type
-        {
-            get { return _type; }
-            set { _type = value; }
-        }
+        public string Type { get; set; }
 
-        public List<Entity<int>> Authors
-        {
-            get { return _authors; }
-            set { _authors = value; }
-        }
 
-        public List<Entity<int>> Bids
-        {
-            get { return _bids; }
-            set { _bids = value; }
-        }
+        [InverseProperty("Submissions")] // required when more than one many-to-many relationships are present
+        public virtual List<User> Authors { get; set; }
 
-        public List<Entity<int>> Qualifiers
-        {
-            get { return _qualifiers; }
-            set { _qualifiers = value; }
-        }
+        [InverseProperty("ReviewedSubmissions")]
+        public virtual List<User> Reviewers { get; set; }
 
-        public List<Entity<int>> Recommendations
-        {
-            get { return _recommendations; }
-            set { _recommendations = value; }
-        }
+        public virtual List<Bid> Bids
+        { get; set; }
 
-        public List<Entity<int>> Comments
-        {
-            get { return _comments; }
-            set { _comments = value; }
-        }
+        public virtual List<Qualifier> Qualifiers
+        { get; set; }
+
+        public virtual List<Recommendation> Recommendations
+        { get; set; }
+
+        public virtual List<Comment> Comments
+        { get; set; }
 
         public override string ToString()
         {
