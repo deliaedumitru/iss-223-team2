@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Conference_Management_System.Models.Section>
+@{
+    ViewBag.Title = "GetAllSections";
+}
+
+<h2 style="text-align:center">
+    Sign up for Sections
+</h2>
+<p style="float:left;">Available sections</p>
+<p style="float:left;">Your sections</p>
+<div style="display:inline-flex;width:100%;">
+    <table >
+        <tr>
+            <th>Name</th>
+            <th>Room</th>
+            <th>Seats</th>
+            <th>Conference</th>
+            <th></th>
+        </tr>
+        @foreach (var section in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => section.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => section.Room)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => section.SeatNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => section.Conference.Name)
+                </td>
+                <td>
+                    @Html.ActionLink("Add", "Add", "SignupForSection", new { sectionId = section.Id }, null)
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+<style>
+    table, td, th {
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 45%;
+        margin: 30px;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    th {
+        background-color: #ADD8E6;
+        color: white;
+    }
+</style>
