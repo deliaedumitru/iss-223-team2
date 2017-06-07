@@ -24,7 +24,7 @@ namespace Conference_Management_System.Controllers
                 try
                 {
                     var userRepository = new AbstractCrudRepo<int, User>(context);
-                    int userId = Int32.Parse(Request.Cookies["user"]["id"]);
+                    int? userId = Helpers.GetUserId(Request);
                     IQueryable<User> result = userRepository.FindBy(u => u.Id == userId);
                     submission.Authors = new List<User>();
                     submission.Authors.Add(result.First());

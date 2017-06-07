@@ -15,6 +15,8 @@ namespace Conference_Management_System.Controllers
         [HttpGet]
         public ActionResult AddSection()
         {
+            if (!Helpers.DoesUserHaveRoles(Request, new Role[] { Role.CHAIR, Role.CO_CHAIR, Role.SCM, Role.PCM }))
+                return View("~/Views/Shared/Forbidden.cshtml");
             Section section = new Section();
 
             List<Conference> conferences;
@@ -33,6 +35,8 @@ namespace Conference_Management_System.Controllers
         [HttpPost]
         public ActionResult AddSection(SectionConference sc)
         {
+            if (!Helpers.DoesUserHaveRoles(Request, new Role[] {Role.CHAIR, Role.CO_CHAIR, Role.SCM, Role.PCM}))
+                return View("~/Views/Shared/Forbidden.cshtml");
             using (var context = new CMS())
             {
                 var conferenceRepo = new AbstractCrudRepo<int, Conference>(context);

@@ -22,7 +22,7 @@ namespace Conference_Management_System.Controllers
             List<Submission> submissions = new List<Submission>();
             using (var context = new CMS())
             {
-                int userId = Int32.Parse(Request.Cookies["user"]["id"]);
+                int? userId = Helpers.GetUserId(Request);
                 var qualifierRepo = new AbstractCrudRepo<int, Qualifier>(context);
                 var submissionRepo = new AbstractCrudRepo<int, Submission>(context);
 
@@ -47,7 +47,7 @@ namespace Conference_Management_System.Controllers
             {
                 try
                 { 
-                    int userId = Int32.Parse(Request.Cookies["user"]["id"]);
+                    int? userId = Helpers.GetUserId(Request);
                     ViewBag.userId = userId;
                     var recommendationRepo = new AbstractCrudRepo<int, Recommendation>(context);
 

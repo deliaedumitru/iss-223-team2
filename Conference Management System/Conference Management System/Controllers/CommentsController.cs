@@ -20,7 +20,7 @@ namespace Conference_Management_System.Controllers
             {
                 try
                 {
-                    int loggedUserId = Int32.Parse(Request.Cookies["user"]["id"]);
+                    int? loggedUserId = Helpers.GetUserId(Request);
 
                     var usersRepo = new AbstractCrudRepo<int, User>(context);
                     var commentsRepo = new AbstractCrudRepo<int, Comment>(context);
