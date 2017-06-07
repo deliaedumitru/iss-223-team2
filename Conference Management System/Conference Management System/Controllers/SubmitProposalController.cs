@@ -11,14 +11,24 @@ namespace Conference_Management_System.Controllers
 {
     public class SubmitProposalController : Controller
     {
+
+        private bool HasPermission()
+        {
+            return Helpers.DoesUserHaveRoles(Request, new Role[] { Role.AUTHOR });
+        }
+
         [HttpGet]
         public ActionResult Submit()
         {
+            if (!HasPermission())
+                return View("~/Views/Shared/Forbidden.cshtml");
             return View();
         }
 
         public void AddProposal(Submission submission)
         {
+            if (!HasPermission())
+                return View("~/Views/Shared/Forbidden.cshtml");
             using (var context = new CMS())
             {
                 try

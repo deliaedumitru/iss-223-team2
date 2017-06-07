@@ -12,10 +12,15 @@ namespace Conference_Management_System.Controllers
     {
         public AddSectionController() { }
 
+        private bool HasPermission()
+        {
+            return Helpers.DoesUserHaveRoles(Request, new Role[] { Role.CHAIR, Role.CO_CHAIR, Role.SCM });
+        }
+
         [HttpGet]
         public ActionResult AddSection()
         {
-            if (!Helpers.DoesUserHaveRoles(Request, new Role[] { Role.CHAIR, Role.CO_CHAIR, Role.SCM, Role.PCM }))
+            if (!HasPermission())
                 return View("~/Views/Shared/Forbidden.cshtml");
             Section section = new Section();
 
@@ -32,10 +37,11 @@ namespace Conference_Management_System.Controllers
             return View(sc);
         }
 
+
         [HttpPost]
         public ActionResult AddSection(SectionConference sc)
         {
-            if (!Helpers.DoesUserHaveRoles(Request, new Role[] {Role.CHAIR, Role.CO_CHAIR, Role.SCM, Role.PCM}))
+            if (!HasPermission())
                 return View("~/Views/Shared/Forbidden.cshtml");
             using (var context = new CMS())
             {

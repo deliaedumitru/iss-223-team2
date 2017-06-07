@@ -12,8 +12,15 @@ namespace Conference_Management_System.Controllers
 {
     public class ProposalsController : Controller
     {
+        private bool HasPermission()
+        {
+            return Helpers.DoesUserHaveRoles(Request, new Role[] { Role.PCM });
+        }
+
         public ActionResult Bid()
         {
+            if (!HasPermission())
+                return View("~/Views/Shared/Forbidden.cshtml");
             using (var context = new CMS())
             {
                 int? userId = Helpers.GetUserId(Request);
@@ -35,6 +42,8 @@ namespace Conference_Management_System.Controllers
         [ActionName("Bid"), HttpPost]
         public ActionResult Save()
         {
+            if (!HasPermission())
+                return View("~/Views/Shared/Forbidden.cshtml");
             using (var context = new CMS())
             {
                 int? userId = Helpers.GetUserId(Request);

@@ -12,11 +12,16 @@ namespace Conference_Management_System.Controllers
     {
        
         public AssignProposalsController() { }
-
+        private bool HasPermission()
+        {
+            return Helpers.DoesUserHaveRoles(Request, new Role[] { Role.CHAIR, Role.CO_CHAIR });
+        }
 
         [HttpGet]
         public ActionResult GetAllBids()
         {
+            if (!HasPermission())
+                return View("~/Views/Shared/Forbidden.cshtml");
             List<Bid> bids;
             List<Submission> submissions;
             using (var context = new CMS())
@@ -46,7 +51,8 @@ namespace Conference_Management_System.Controllers
         [HttpGet]
         public ActionResult Add(int reviewerId, int submissionId)
         {
-            
+            if (!HasPermission())
+                return View("~/Views/Shared/Forbidden.cshtml");
             List<Submission> submissions;
             using (var context = new CMS())
             {
@@ -81,7 +87,8 @@ namespace Conference_Management_System.Controllers
         [HttpGet]
         public ActionResult Delete(int reviewerId, int submissionId)
         {
-
+            if (!HasPermission())
+                return View("~/Views/Shared/Forbidden.cshtml");
             List<Submission> submissions;
             using (var context = new CMS())
             {

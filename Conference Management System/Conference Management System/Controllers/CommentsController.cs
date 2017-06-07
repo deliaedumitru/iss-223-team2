@@ -13,9 +13,15 @@ namespace Conference_Management_System.Controllers
 {
     public class CommentsController : Controller
     {
+        private bool HasPermission()
+        {
+            return Helpers.DoesUserHaveRoles(Request, new Role[] { Role.PCM });
+        }
         [HttpPost]
         public ActionResult Post()
         {
+            if (!HasPermission())
+                return View("~/Views/Shared/Forbidden.cshtml");
             using (var context = new CMS())
             {
                 try

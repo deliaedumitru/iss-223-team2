@@ -15,9 +15,14 @@ namespace Conference_Management_System.Controllers
         {
             return View();
         }
+        private bool HasPermission()
+        {
+            return Helpers.DoesUserHaveRoles(Request, new Role[] { Role.SCM });
+        }
 
         public void updatePapersStatus()
         {
+
             using (var context = new CMS())
             {
                 var submissionRepo = new AbstractCrudRepo<int, Submission>(context);
