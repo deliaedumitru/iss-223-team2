@@ -8,12 +8,30 @@ using Conference_Management_System.Repositories;
 
 namespace Conference_Management_System.Controllers
 {
-    public class PostsConferenceInformationController : Controller
+    public class ConferenceController : Controller
     {
-        public PostsConferenceInformationController()
+        public ConferenceController()
         {
 
         }
+
+        [HttpGet]
+        public ActionResult Index()
+        {
+            return RedirectToAction("GetAll");
+        }
+
+        [HttpGet]
+        public ActionResult GetAll()
+        {
+            using (var context = new CMS())
+            {
+                var repo = new AbstractCrudRepo<int, Conference>(context);
+                return View(repo.FindAll().ToList());
+            }
+        }
+
+
 
         [HttpGet]
         public ActionResult PostInfo()

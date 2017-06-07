@@ -26,7 +26,7 @@ namespace Conference_Management_System.Models
         public virtual DbSet<Recommendation> Recommendatons { get; set; }
         public virtual DbSet<Submission> Submissions { get; set; }
         public virtual DbSet<Section> Sections { get; set; }
-
+        public virtual DbSet<Fee> Fees { get; set; }
     }
 
     //public class MyEntity

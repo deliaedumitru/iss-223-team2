@@ -37,6 +37,9 @@ namespace Conference_Management_System.Models
         public virtual ICollection<Submission> Submissions { get; set; }
         public virtual ICollection<Comment> Comments { get; set; }
         public virtual ICollection<Bid> Bids { get; set; }
+        [InverseProperty("Listeners")]
+        public virtual ICollection<Section> ListenedSections { get; set; }
+
         public String ToString() { return Username + " " + Password + " " + Role + " " + Name + " " + Email + " " + Affiliation; }
 
     }

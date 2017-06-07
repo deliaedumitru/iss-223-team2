@@ -7,18 +7,18 @@ namespace Conference_Management_System.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class addedtitlefiledforsubmission : IMigrationMetadata
+    public sealed partial class addedfees : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addedtitlefiledforsubmission));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(addedfees));
         
         string IMigrationMetadata.Id
         {
-            get { return "201706011557153_added title filed for submission"; }
+            get { return "201706061757145_added-fees"; }
         }
         
         string IMigrationMetadata.Source
         {
-            get { return Resources.GetString("Source"); }
+            get { return null; }
         }
         
         string IMigrationMetadata.Target
