@@ -236,6 +236,7 @@
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\Section.cs" />
     <Compile Include="Models\SectionConference.cs" />
+    <Compile Include="Models\SectionsListeners.cs" />
     <Compile Include="Models\StatusValues.cs" />
     <Compile Include="Models\Submission.cs" />
     <Compile Include="Models\SubmissionType.cs" />

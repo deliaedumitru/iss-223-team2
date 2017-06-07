@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Conference_Management_System.Models.Section>
+﻿@model Conference_Management_System.Models.SectionsListeners
 @{
     ViewBag.Title = "GetAllSections";
 }
@@ -6,10 +6,9 @@
 <h2 style="text-align:center">
     Sign up for Sections
 </h2>
-<p style="float:left;">Available sections</p>
-<p style="float:left;">Your sections</p>
 <div style="display:inline-flex;width:100%;">
     <table >
+        <caption>Available sections</caption>
         <tr>
             <th>Name</th>
             <th>Room</th>
@@ -17,7 +16,7 @@
             <th>Conference</th>
             <th></th>
         </tr>
-        @foreach (var section in Model)
+        @foreach (var section in Model.AllSections)
         {
             <tr>
                 <td>
@@ -33,7 +32,39 @@
                     @Html.DisplayFor(modelItem => section.Conference.Name)
                 </td>
                 <td>
-                    @Html.ActionLink("Add", "Add", "SignupForSection", new { sectionId = section.Id }, null)
+                    @Html.ActionLink("Sign up", "Add", "SignupForSection", new { sectionId = section.Id }, null)
+                </td>
+            </tr>
+        }
+    </table>
+
+
+    <table>
+        <caption>Your sections</caption>
+        <tr>
+            <th>Name</th>
+            <th>Room</th>
+            <th>Seats</th>
+            <th>Conference</th>
+            <th></th>
+        </tr>
+        @foreach (var section in Model.UserSections)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => section.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => section.Room)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => section.SeatNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => section.Conference.Name)
+                </td>
+                <td>
+                    @Html.ActionLink("Withdraw", "Delete", "SignupForSection", new { sectionId = section.Id }, null)
                 </td>
             </tr>
         }
