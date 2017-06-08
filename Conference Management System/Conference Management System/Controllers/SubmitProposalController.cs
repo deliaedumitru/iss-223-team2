@@ -25,7 +25,7 @@ namespace Conference_Management_System.Controllers
             return View();
         }
 
-        public void AddProposal(Submission submission)
+        public ActionResult AddProposal(Submission submission)
         {
             if (!HasPermission())
                 return View("~/Views/Shared/Forbidden.cshtml");
@@ -48,7 +48,8 @@ namespace Conference_Management_System.Controllers
                     ViewBag.Message = "Something went wrong";
                     Console.WriteLine(e.Message);
                 }
-            }           
+            }
+            return null;      
         }
 
         [HttpPost]

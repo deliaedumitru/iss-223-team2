@@ -7,13 +7,13 @@ namespace Conference_Management_System.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class addedfees : IMigrationMetadata
+    public sealed partial class Initialmigration : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addedfees));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Initialmigration));
         
         string IMigrationMetadata.Id
         {
-            get { return "201706061757145_added-fees"; }
+            get { return "201706081023278_Initial migration"; }
         }
         
         string IMigrationMetadata.Source
