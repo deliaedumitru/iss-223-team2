@@ -1,0 +1,54 @@
+﻿@using Conference_Management_System.Models
+@model Conference_Management_System.Models.Submission
+
+@{
+    ViewBag.Title = "Submit Proposal";
+}
+
+<h2>Submit Proposal</h2>
+
+@using (Html.BeginForm("Submit", "SubmitProposal", FormMethod.Post,
+    new { enctype = "multipart/form-data" }))
+{
+
+    <div>
+        @Html.LabelFor(model => model.Title)
+        @Html.TextBoxFor(model => model.Title)
+    </div>
+    <br />
+    <div>
+        @Html.LabelFor(model => model.Meta)
+        @Html.TextBoxFor(model => model.Meta)
+    </div>
+    <br />
+    <div>
+        @Html.Label("Abstract")
+        @Html.RadioButtonFor(model => model.Type, SubmissionType.ABSTRACT)
+        @Html.Label("Full paper")
+        @Html.RadioButtonFor(model => model.Type, SubmissionType.FULL_PAPER)
+    </div>
+    <br />
+    <div>
+        @Html.Label("File")
+        <input type="file" id="proposal" name="proposal" />
+    </div>
+    <br />
+    <input id="submit-proposal" type="submit" value="Submit proposal" />
+
+
+}
+
+@*@using (Html.BeginForm("Add", "Sp", FormMethod.Post,
+    new { enctype = "multipart/form-data" }))
+{
+    <div>
+        @Html.Label("File")
+        <input type="file" id="proposal" name="proposal" />
+    </div>
+    <br />
+    <input id="upload" type="submit" value="upload" />
+}*@
+
+
+
+

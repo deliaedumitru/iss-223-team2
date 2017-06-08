@@ -15,7 +15,7 @@ namespace Conference_Management_System.Repositories
         public RepositoryException(String mess, Exception e) : base(mess, e) { }
     }
 
-    public interface ICrudRepository<ID, E> where E : IHasId<ID>
+    public interface ICrudRepository<ID, E> where E : Entity<ID>
     {
         /// <summary>
         /// Gets all the items of the repository
@@ -35,7 +35,8 @@ namespace Conference_Management_System.Repositories
         /// Raises a RespositoryException if the operation fails
         /// </summary>
         /// <param name="entity">the entity to add</param>
-        void Add(E entity);
+        /// <returns>The added object</returns>
+        E Add(E entity);
 
         /// <summary>
         /// Delete the entity with the given id
@@ -49,7 +50,8 @@ namespace Conference_Management_System.Repositories
         /// Raises a RespositoryException if the operation fails(ie. the give id doesn't exist)
         /// </summary>
         /// <param name="entity">The new value for the entity</param>
-        void Update(E entity);
+        /// <returns>the new entity</returns>
+        E Update(E entity);
 
         /// <summary>
         /// Commits the operations.

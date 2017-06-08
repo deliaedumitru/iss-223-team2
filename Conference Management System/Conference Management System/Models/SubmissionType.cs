@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
 namespace Conference_Management_System.Models
 {
-    public interface IHasId<T>
+    public enum SubmissionType
     {
-
-        T Id { get; set; }
-
+        ABSTRACT,
+        FULL_PAPER
     }
 }

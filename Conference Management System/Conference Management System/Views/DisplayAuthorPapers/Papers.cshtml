@@ -1,0 +1,15 @@
+﻿@model List<Conference_Management_System.Models.Submission>
+@{
+    ViewBag.Title = "Papers";
+}
+
+<h3>Author's Papers</h3>
+
+<table border="0">
+    @foreach (var submission in Model)
+    {
+        <tr><td>
+            <a href="@Url.Action("openPaper", "DisplayAuthorPapers", new { submissionTitle = @submission.Title })"/>
+        </td></tr>
+    }
+</table>
