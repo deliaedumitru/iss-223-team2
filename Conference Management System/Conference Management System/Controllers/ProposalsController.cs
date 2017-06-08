@@ -34,7 +34,6 @@ namespace Conference_Management_System.Controllers
                     //doar bid-urile user-ului logat
                     submission.Bids = submission.Bids.Where(b => b.Reviewer.Id == userId).ToList();
                 }
-
                 return View(submisions);
             }
         }

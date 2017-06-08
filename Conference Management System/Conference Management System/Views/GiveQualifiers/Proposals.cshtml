@@ -1,0 +1,96 @@
+﻿@model List<Conference_Management_System.Models.Submission>
+@{
+    ViewBag.Title = "Proposals";
+}
+
+<h3>Assigned proposals</h3>
+These proposals were assigned to you and should be evaluated. <br />
+
+@foreach (var submission in Model)
+{ <br />
+    <form method="post">
+        <div class='container'>
+            <div class='row'>
+                <div class='col-md-offset-2 col-md-8'>
+                    <div class='panel panel-default'>
+                        <div class='panel-heading' style='background: #EFF8F8;'>
+                            <div class="row">
+                                <div class="col-xs-9">
+                                    <h3 class='panel-title'>
+                                       <b>Proposal:</b> @submission.Title
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='panel-body'>
+                            <b>Author: </b>
+                            @foreach (var author in @submission.Authors)
+                            {
+                                @author.Name 
+                            } <br />
+                            <b>Meta: </b> @submission.Meta <br />
+                            <b>Type: </b> @submission.Type <br />
+                            <div style="text-align:center">
+                                <a href="@Url.Action("openProposal", "GiveQualifiers", new { submissionId = @submission.Id })">
+                                    <button type="button" class="btn">Open proposal</button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class='panel-footer' style='background: #F7FBFB;'>
+                            <h4><b>Review proposal:</b> @submission.Title</h4>
+                            <div class="form-group" novalidate>
+                                <input type="hidden" class="form-control" name="submissionId" value="@submission.Id">
+                            </div>
+                            <div class="form-group" novalidate>
+                                <input type="hidden" class="form-control" name="userId" value="@ViewBag.userId">
+                            </div>
+                            <div class="form-group" novalidate>
+                                <label for="qualifierValue">Qualifier value</label> <br />
+                                <select name="qualifierValue" id="qualifierValue">
+                                    @if (@submission.Qualifiers.Count == 0)
+                                    {
+                                        <option disabled selected></option>
+                                        foreach (String i in Enum.GetNames(typeof(Conference_Management_System.Models.QualifierValues)))
+                                        {
+                                            <option value="@i">@i</option>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        foreach (String i in Enum.GetNames(typeof(Conference_Management_System.Models.QualifierValues)))
+                                        {
+                                            if (@submission.Qualifiers.First().Value.ToString().CompareTo(i) == 0)
+                                            {
+                                                <option value="@i" selected>@i</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@i">@i</option>
+                                            }
+                                        }
+                                    }
+                                </select>
+                             </div>
+                            <div class="form-group" novalidate>
+                                <label for="recommendation">Recommendations</label>
+                                @if (@submission.Recommendations.Count == 0)
+                                {
+                                    <textarea class="form-control" name="recommendation" rows="4"
+                                            placeholder="Here you can give any recommendations to the author of this paper. This is optional."></textarea>
+                                }
+                                else
+                                {
+                                    <textarea class="form-control" name="recommendation" rows="4"
+                                              placeholder="Here you can give any recommendations to the author of this paper. This is optional.">@submission.Recommendations.First().Text</textarea>
+                                }
+                            </div>
+
+                            <input type="submit" class="btn btn-default" value="Update qualifier">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+}
+

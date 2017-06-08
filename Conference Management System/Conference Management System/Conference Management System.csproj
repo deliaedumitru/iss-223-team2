@@ -191,6 +191,8 @@
     <Compile Include="Controllers\AddSectionController.cs" />
     <Compile Include="Controllers\AssignProposalsController.cs" />
     <Compile Include="Controllers\CommentsController.cs" />
+    <Compile Include="Controllers\ConferencesController.cs" />
+    <Compile Include="Controllers\GiveQualifiersController.cs" />
     <Compile Include="Controllers\FeesController.cs" />
     <Compile Include="Controllers\Helpers.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -199,6 +201,7 @@
     <Compile Include="Controllers\SeeOtherReviewsController.cs" />
     <Compile Include="Controllers\SignupController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\SignupForSectionController.cs" />
     <Compile Include="Controllers\SubmitProposalController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -236,6 +239,7 @@
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\Section.cs" />
     <Compile Include="Models\SectionConference.cs" />
+    <Compile Include="Models\SectionsListeners.cs" />
     <Compile Include="Models\StatusValues.cs" />
     <Compile Include="Models\Submission.cs" />
     <Compile Include="Models\SubmissionType.cs" />
@@ -306,9 +310,11 @@
     <Content Include="Views\SeeOtherReviews\GetReviewsForPaper.cshtml" />
     <Content Include="Views\SeeOtherReviews\PaperList.cshtml" />
     <Content Include="Views\Submissions\Bid.cshtml" />
+    <Content Include="Views\GiveQualifiers\Proposals.cshtml" />
     <Content Include="Views\Conference\GetAll.cshtml" />
     <Content Include="Views\Conferences\View.cshtml" />
     <Content Include="Views\Shared\Forbidden.cshtml" />
+    <Content Include="Views\SignupForSection\GetAllSections.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Start\App_Data\" />

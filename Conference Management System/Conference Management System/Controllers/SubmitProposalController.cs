@@ -61,8 +61,9 @@ namespace Conference_Management_System.Controllers
                 {
                     Directory.CreateDirectory(folder);
                 }
+                int userId = Int32.Parse(Request.Cookies["user"]["id"]);
                 string path = System.IO.Path.Combine(folder,
-                    submission.Title + submission.Id.ToString() + System.IO.Path.GetExtension(proposal.FileName));
+                    submission.Title + userId + System.IO.Path.GetExtension(proposal.FileName));
                 proposal.SaveAs(path);
                 ViewBag.Message = "File uploaded successfully";
                 AddProposal(submission);
