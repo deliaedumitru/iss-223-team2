@@ -68,6 +68,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
@@ -191,21 +192,25 @@
     <Compile Include="Controllers\AddSectionController.cs" />
     <Compile Include="Controllers\AssignProposalsController.cs" />
     <Compile Include="Controllers\CommentsController.cs" />
-    <Compile Include="Controllers\ConferencesController.cs" />
+    <Compile Include="Controllers\GiveQualifiersController.cs" />
+    <Compile Include="Controllers\FeesController.cs" />
+    <Compile Include="Controllers\Helpers.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PostsConferenceInformationController.cs" />
+    <Compile Include="Controllers\ConferenceController.cs" />
+    <Compile Include="Controllers\LogoutController.cs" />
     <Compile Include="Controllers\ProposalsController.cs" />
     <Compile Include="Controllers\SeeOtherReviewsController.cs" />
     <Compile Include="Controllers\SignupController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\SignupForSectionController.cs" />
     <Compile Include="Controllers\SubmitProposalController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201706051501387_Initial.cs" />
-    <Compile Include="Migrations\201706051501387_Initial.Designer.cs">
-      <DependentUpon>201706051501387_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201706081023278_Initial migration.cs" />
+    <Compile Include="Migrations\201706081023278_Initial migration.Designer.cs">
+      <DependentUpon>201706081023278_Initial migration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Bid.cs" />
@@ -215,12 +220,15 @@
     <Compile Include="Models\Conference.cs" />
     <Compile Include="Models\DTO\ConferenceDTO.cs" />
     <Compile Include="Models\Entity.cs" />
+    <Compile Include="Models\Fee.cs" />
+    <Compile Include="Models\FeeType.cs" />
     <Compile Include="Models\Qualifier.cs" />
     <Compile Include="Models\QualifierValues.cs" />
     <Compile Include="Models\Recommendation.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\Section.cs" />
     <Compile Include="Models\SectionConference.cs" />
+    <Compile Include="Models\SectionsListeners.cs" />
     <Compile Include="Models\StatusValues.cs" />
     <Compile Include="Models\Submission.cs" />
     <Compile Include="Models\SubmissionType.cs" />
@@ -287,10 +295,16 @@
     <Content Include="Views\SubmitProposal\Submit.cshtml" />
     <Content Include="Views\AddSection\AddSection.cshtml" />
     <Content Include="Views\AcceptRefuseProposal\GetFinalPapers.cshtml" />
-    <Content Include="Views\PostsConferenceInformation\PostInfo.cshtml" />
+    <Content Include="Views\Conference\PostInfo.cshtml" />
     <Content Include="Views\SeeOtherReviews\GetReviewsForPaper.cshtml" />
     <Content Include="Views\SeeOtherReviews\PaperList.cshtml" />
     <Content Include="Views\Submissions\Bid.cshtml" />
+    <Content Include="Views\GiveQualifiers\Proposals.cshtml" />
+    <Content Include="Views\Conference\GetAll.cshtml" />
+    <Content Include="Views\Conferences\View.cshtml" />
+    <Content Include="Views\Fees\Pay.cshtml" />
+    <Content Include="Views\Shared\Forbidden.cshtml" />
+    <Content Include="Views\SignupForSection\GetAllSections.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Start\App_Data\" />
@@ -311,8 +325,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706051501387_Initial.resx">
-      <DependentUpon>201706051501387_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706081023278_Initial migration.resx">
+      <DependentUpon>201706081023278_Initial migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
