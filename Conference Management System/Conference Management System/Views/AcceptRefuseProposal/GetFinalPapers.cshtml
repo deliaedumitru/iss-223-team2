@@ -27,7 +27,14 @@
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Qualifiers.ToList().ToString())
+                <ul>
+                    @foreach (var qualifier in item.Qualifiers)
+                    {
+                        <li>
+                            @qualifier.Value by @qualifier.Reviewer.Name
+                        </li>
+                    }
+                </ul>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Status)
@@ -36,6 +43,7 @@
                 @if (item.Status == Conference_Management_System.Models.StatusValues.PENDING)
                 {
                     @Html.ActionLink("Accept", "ChangeStatus", "AcceptRefuseProposal", new { id = item.Id, status = Conference_Management_System.Models.StatusValues.ACCEPT },null)
+                    <br />
                     @Html.ActionLink("Refuse", "ChangeStatus", "AcceptRefuseProposal", new { id = item.Id, status = Conference_Management_System.Models.StatusValues.REFUSE },null)
                 }
             </td>

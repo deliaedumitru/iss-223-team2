@@ -52,7 +52,7 @@ namespace Conference_Management_System.Controllers
                     Directory.CreateDirectory(folder);
                 }
                 string path = System.IO.Path.Combine(folder,
-                    submission.Title + submission.Id.ToString() + System.IO.Path.GetExtension(proposal.FileName));
+                    submission.Title + Request.Cookies["user"]["id"] + System.IO.Path.GetExtension(proposal.FileName));
                 proposal.SaveAs(path);
                 ViewBag.Message = "File uploaded successfully";
                 AddProposal(submission);

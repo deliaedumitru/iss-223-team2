@@ -7,18 +7,18 @@ namespace Conference_Management_System.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class addedrealtionshipbetweensubmissionsandconferences : IMigrationMetadata
+    public sealed partial class migrate : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addedrealtionshipbetweensubmissionsandconferences));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(migrate));
         
         string IMigrationMetadata.Id
         {
-            get { return "201705311620005_added realtionship between submissions and conferences"; }
+            get { return "201706051446530_migrate"; }
         }
         
         string IMigrationMetadata.Source
         {
-            get { return null; }
+            get { return Resources.GetString("Source"); }
         }
         
         string IMigrationMetadata.Target

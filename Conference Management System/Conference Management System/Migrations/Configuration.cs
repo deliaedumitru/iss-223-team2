@@ -9,8 +9,7 @@ namespace Conference_Management_System.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
-            ContextKey = "Conference_Management_System.Models.CMS";
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(Conference_Management_System.Models.CMS context)
