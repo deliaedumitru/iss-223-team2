@@ -5,6 +5,10 @@
 
 <h2>Log In</h2>
 
+@if (TempData["notice"] != null)
+{
+    <p>@TempData["notice"]</p>
+}
 @using (Html.BeginForm())
 {
     <div>
