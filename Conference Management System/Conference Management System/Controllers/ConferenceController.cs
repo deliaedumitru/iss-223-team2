@@ -15,6 +15,11 @@ namespace Conference_Management_System.Controllers
 
         }
 
+        private bool HasPermission()
+        {
+            return Helpers.DoesUserHaveRoles(Request, new Role[] { Role.SCM });
+        }
+
         [HttpGet]
         public ActionResult Index()
         {
@@ -36,12 +41,16 @@ namespace Conference_Management_System.Controllers
         [HttpGet]
         public ActionResult PostInfo()
         {
+            if (!HasPermission())
+                return View("~/Views/Shared/Forbidden.cshtml");
             return View();
         }
 
         [HttpPost]
         public ActionResult PostInfo(Conference conference)
         {
+            if (!HasPermission())
+                return View("~/Views/Shared/Forbidden.cshtml");
             using (var context = new CMS())
             {
                 var repo = new AbstractCrudRepo<int, Conference>(context);

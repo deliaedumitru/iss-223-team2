@@ -11,20 +11,30 @@ namespace Conference_Management_System.Controllers
 {
     public class SubmitProposalController : Controller
     {
+
+        private bool HasPermission()
+        {
+            return Helpers.DoesUserHaveRoles(Request, new Role[] { Role.AUTHOR });
+        }
+
         [HttpGet]
         public ActionResult Submit()
         {
+            if (!HasPermission())
+                return View("~/Views/Shared/Forbidden.cshtml");
             return View();
         }
 
-        public void AddProposal(Submission submission)
+        public ActionResult AddProposal(Submission submission)
         {
+            if (!HasPermission())
+                return View("~/Views/Shared/Forbidden.cshtml");
             using (var context = new CMS())
             {
                 try
                 {
                     var userRepository = new AbstractCrudRepo<int, User>(context);
-                    int userId = Int32.Parse(Request.Cookies["user"]["id"]);
+                    int? userId = Helpers.GetUserId(Request);
                     IQueryable<User> result = userRepository.FindBy(u => u.Id == userId);
                     submission.Authors = new List<User>();
                     submission.Authors.Add(result.First());
@@ -38,7 +48,8 @@ namespace Conference_Management_System.Controllers
                     ViewBag.Message = "Something went wrong";
                     Console.WriteLine(e.Message);
                 }
-            }           
+            }
+            return null;      
         }
 
         [HttpPost]
@@ -51,8 +62,9 @@ namespace Conference_Management_System.Controllers
                 {
                     Directory.CreateDirectory(folder);
                 }
+                int userId = Int32.Parse(Request.Cookies["user"]["id"]);
                 string path = System.IO.Path.Combine(folder,
-                    submission.Title + submission.Id.ToString() + System.IO.Path.GetExtension(proposal.FileName));
+                    submission.Title + userId + System.IO.Path.GetExtension(proposal.FileName));
                 proposal.SaveAs(path);
                 ViewBag.Message = "File uploaded successfully";
                 AddProposal(submission);
