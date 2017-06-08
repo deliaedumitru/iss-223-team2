@@ -68,6 +68,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
@@ -191,9 +192,9 @@
     <Compile Include="Controllers\AddSectionController.cs" />
     <Compile Include="Controllers\AssignProposalsController.cs" />
     <Compile Include="Controllers\CommentsController.cs" />
-    <Compile Include="Controllers\ConferencesController.cs" />
     <Compile Include="Controllers\GiveQualifiersController.cs" />
     <Compile Include="Controllers\FeesController.cs" />
+    <Compile Include="Controllers\Helpers.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ConferenceController.cs" />
     <Compile Include="Controllers\ConferencesController.cs" />
@@ -207,21 +208,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201706051501387_Initial.cs" />
-    <Compile Include="Migrations\201706051501387_Initial.Designer.cs">
-      <DependentUpon>201706051501387_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706061757145_added-fees.cs" />
-    <Compile Include="Migrations\201706061757145_added-fees.Designer.cs">
-      <DependentUpon>201706061757145_added-fees.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706061830114_made-fee-per-conference.cs" />
-    <Compile Include="Migrations\201706061830114_made-fee-per-conference.Designer.cs">
-      <DependentUpon>201706061830114_made-fee-per-conference.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706062118389_user-section-mtm.cs" />
-    <Compile Include="Migrations\201706062118389_user-section-mtm.Designer.cs">
-      <DependentUpon>201706062118389_user-section-mtm.cs</DependentUpon>
+    <Compile Include="Migrations\201706081023278_Initial migration.cs" />
+    <Compile Include="Migrations\201706081023278_Initial migration.Designer.cs">
+      <DependentUpon>201706081023278_Initial migration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Bid.cs" />
@@ -313,6 +302,8 @@
     <Content Include="Views\GiveQualifiers\Proposals.cshtml" />
     <Content Include="Views\Conference\GetAll.cshtml" />
     <Content Include="Views\Conferences\View.cshtml" />
+    <Content Include="Views\Fees\Pay.cshtml" />
+    <Content Include="Views\Shared\Forbidden.cshtml" />
     <Content Include="Views\SignupForSection\GetAllSections.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -334,17 +325,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706051501387_Initial.resx">
-      <DependentUpon>201706051501387_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706061757145_added-fees.resx">
-      <DependentUpon>201706061757145_added-fees.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706061830114_made-fee-per-conference.resx">
-      <DependentUpon>201706061830114_made-fee-per-conference.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706062118389_user-section-mtm.resx">
-      <DependentUpon>201706062118389_user-section-mtm.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706081023278_Initial migration.resx">
+      <DependentUpon>201706081023278_Initial migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

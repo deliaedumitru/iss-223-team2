@@ -12,11 +12,18 @@ namespace Conference_Management_System.Controllers
 {
     public class ProposalsController : Controller
     {
+        private bool HasPermission()
+        {
+            return Helpers.DoesUserHaveRoles(Request, new Role[] { Role.PCM });
+        }
+
         public ActionResult Bid()
         {
+            if (!HasPermission())
+                return View("~/Views/Shared/Forbidden.cshtml");
             using (var context = new CMS())
             {
-                int userId = Int32.Parse(Request.Cookies["user"]["id"]);
+                int? userId = Helpers.GetUserId(Request);
 
                 var submissionsRepo = new AbstractCrudRepo<int, Submission>(context);
                 var usersRepo = new AbstractCrudRepo<int, User>(context);
@@ -34,9 +41,11 @@ namespace Conference_Management_System.Controllers
         [ActionName("Bid"), HttpPost]
         public ActionResult Save()
         {
+            if (!HasPermission())
+                return View("~/Views/Shared/Forbidden.cshtml");
             using (var context = new CMS())
             {
-                int userId = Int32.Parse(Request.Cookies["user"]["id"]);
+                int? userId = Helpers.GetUserId(Request);
                 var usersRepo = new AbstractCrudRepo<int, User>(context);
                 var submissionsRepo = new AbstractCrudRepo<int, Submission>(context);
                 var bidsRepo = new AbstractCrudRepo<int, Bid>(context);

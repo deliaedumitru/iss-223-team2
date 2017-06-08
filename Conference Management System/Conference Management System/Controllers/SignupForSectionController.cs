@@ -21,6 +21,7 @@ namespace Conference_Management_System.Controllers
             using (var context = new CMS())
             {
                 var sectionRepo = new AbstractCrudRepo<int, Section>(context);
+
                 int userId = Int32.Parse(Request.Cookies["user"]["id"]);
                 // get all the sections
                 sections = sectionRepo.FindAll().ToList();

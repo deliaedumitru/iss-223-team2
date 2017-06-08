@@ -13,14 +13,20 @@ namespace Conference_Management_System.Controllers
 {
     public class CommentsController : Controller
     {
+        private bool HasPermission()
+        {
+            return Helpers.DoesUserHaveRoles(Request, new Role[] { Role.PCM });
+        }
         [HttpPost]
         public ActionResult Post()
         {
+            if (!HasPermission())
+                return View("~/Views/Shared/Forbidden.cshtml");
             using (var context = new CMS())
             {
                 try
                 {
-                    int loggedUserId = Int32.Parse(Request.Cookies["user"]["id"]);
+                    int? loggedUserId = Helpers.GetUserId(Request);
 
                     var usersRepo = new AbstractCrudRepo<int, User>(context);
                     var commentsRepo = new AbstractCrudRepo<int, Comment>(context);
@@ -48,7 +54,6 @@ namespace Conference_Management_System.Controllers
                 catch (Exception e)
                 {
                     Console.WriteLine(e.Message);
-                    Response.Redirect("/Shared/Error");
                 }
             }
             return View();
