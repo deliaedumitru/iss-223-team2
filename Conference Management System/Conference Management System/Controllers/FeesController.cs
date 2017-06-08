@@ -15,6 +15,7 @@ namespace Conference_Management_System.Controllers
     {
         public ActionResult Pay()
         {
+            ViewBag.Role = Helpers.GetUserRole(Request);
             using (var context = new CMS())
             {
                 try

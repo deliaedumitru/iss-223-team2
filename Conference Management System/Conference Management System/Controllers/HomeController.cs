@@ -11,6 +11,7 @@ namespace Conference_Management_System.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.Role = Helpers.GetUserRole(Request);
             ViewBag.Title = "Home Page";
 
             return View();

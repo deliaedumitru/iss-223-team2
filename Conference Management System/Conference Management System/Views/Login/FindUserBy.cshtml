@@ -1,27 +1,51 @@
 ﻿@model Conference_Management_System.Models.User
 @{
-    ViewBag.Title = "FindUserBy";
+    ViewBag.Title = "Login";
 }
 
-<h2>Log In</h2>
-
-@if (TempData["notice"] != null)
-{
-    <p>@TempData["notice"]</p>
-}
-@using (Html.BeginForm())
-{
-    <div>
-        @Html.LabelFor(m => m.Username)
-        @Html.TextBoxFor(m => m.Username)
+<nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand logo"></a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav header-nav">
+                @{Html.RenderPartial("~/Views/Menus/NotLoggedIn.cshtml"); }
+            </ul>
+        </div>
     </div>
-    <br />
-    <div>
-        @Html.LabelFor(m => m.Password)
-        @Html.TextBoxFor(m => m.Password)
+</nav>
+
+
+<div class="container body-content">
+
+    <div style="text-align:center">
+        <h3>Log In</h3>
+
+        @if (TempData["notice"] != null)
+        {
+            <p>@TempData["notice"]</p>
+        }
+        @using (Html.BeginForm())
+        {
+            <div>
+                @Html.LabelFor(m => m.Username)
+                @Html.TextBoxFor(m => m.Username)
+            </div>
+            <br />
+            <div>
+                @Html.LabelFor(m => m.Password)
+                @Html.TextBoxFor(m => m.Password)
+            </div>
+            <br />
+
+            <input type="submit" id="LogInButton" value="Log In" class="btn btn-default" />
+        }
     </div>
-    <br />
-
-    <input type="submit" id="LogInButton" value="Log In" />
-}
-
+</div>

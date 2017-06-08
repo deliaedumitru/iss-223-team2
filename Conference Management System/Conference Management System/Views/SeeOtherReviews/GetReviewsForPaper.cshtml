@@ -1,68 +1,123 @@
 ﻿@model List<Conference_Management_System.Models.Recommendation>
 
     @{
-    ViewBag.Title = "GetReviewsForPaper";
+    ViewBag.Title = "Paper reviews";
     }
+
+
+
+<nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand logo"></a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav header-nav">
+                @if (ViewBag.Role == null)
+                {
+                    Html.RenderPartial("~/Views/Menus/NotLoggedIn.cshtml");
+                }
+                else
+                {
+                    if ((Conference_Management_System.Models.Role)ViewBag.Role.CompareTo(Conference_Management_System.Models.Role.AUTHOR) == 0)
+                    {
+                        Html.RenderPartial("~/Views/Menus/Author.cshtml");
+                    }
+                    if ((Conference_Management_System.Models.Role)ViewBag.Role.CompareTo(Conference_Management_System.Models.Role.LISTENER) == 0)
+                    {
+                        Html.RenderPartial("~/Views/Menus/Listener.cshtml");
+                    }
+                    if ((Conference_Management_System.Models.Role)ViewBag.Role.CompareTo(Conference_Management_System.Models.Role.PCM) == 0)
+                    {
+                        Html.RenderPartial("~/Views/Menus/PCM.cshtml");
+                    }
+                    if ((Conference_Management_System.Models.Role)ViewBag.Role.CompareTo(Conference_Management_System.Models.Role.CHAIR) == 0)
+                    {
+                        Html.RenderPartial("~/Views/Menus/Chair.cshtml");
+                    }
+                    if ((Conference_Management_System.Models.Role)ViewBag.Role.CompareTo(Conference_Management_System.Models.Role.CO_CHAIR) == 0)
+                    {
+                        Html.RenderPartial("~/Views/Menus/CoChair.cshtml");
+                    }
+                    if ((Conference_Management_System.Models.Role)ViewBag.Role.CompareTo(Conference_Management_System.Models.Role.SCM) == 0)
+                    {
+                        Html.RenderPartial("~/Views/Menus/SCM.cshtml");
+                    }
+                }
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container body-content">
 
     @*<h2>Other Reviews for @Model</h2>*@
 
     <form>
-        @foreach(var item in Model)
+        @foreach (var item in Model)
         {
-        <fieldset>
-            <legend>@item.Rewiever.Name</legend>
-            @item.Text
-        </fieldset>
+            <fieldset>
+                <legend>@item.Rewiever.Name</legend>
+                @item.Text
+            </fieldset>
         }
     </form>
 
-<h2>Comments:</h2>
+    <h2>Comments:</h2>
 
-@foreach (var comment in ViewBag.comments)
-{
-    <div class='container'>
-        <div class='row'>
-            <div class='col-md-6'>
-                <div class='panel panel-default'>
-                    <div class='panel-heading' style='background: #fff;'>
-                        <div class="row">
-                            <div class="col-xs-9">
-                                <h3 class='panel-title'>
-                                    @comment.Reviewer.Username
-                                </h3>
+    @foreach (var comment in ViewBag.comments)
+    {
+        <div class='container'>
+            <div class='row'>
+                <div class='col-md-6'>
+                    <div class='panel panel-default'>
+                        <div class='panel-heading' style='background: #fff;'>
+                            <div class="row">
+                                <div class="col-xs-9">
+                                    <h3 class='panel-title'>
+                                        @comment.Reviewer.Username
+                                    </h3>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class='panel-body'>
-                        @comment.Text
+                        <div class='panel-body'>
+                            @comment.Text
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-}
+    }
 
-<b>Add new comment: </b> <br>
+    <b>Add new comment: </b> <br>
 
 
-<div class="container">
-    <div class="col-md-6">
-        <form method="post" action="../comments/post">
-            <div class="form-group">
-                <div class="form-group" novalidate>
-                    <input type="hidden" class="form-control" name="idSubmission" value="@Model.First().SubmissionId" >
+    <div class="container">
+        <div class="col-md-6">
+            <form method="post" action="../comments/post">
+                <div class="form-group">
+                    <div class="form-group" novalidate>
+                        <input type="hidden" class="form-control" name="idSubmission" value="@Model.First().SubmissionId">
+                    </div>
+
+                    <div class="form-group" novalidate>
+                        <input type="hidden" class="form-control" name="idUser" value="@ViewBag.userId">
+                    </div>
+
+                    <input type="text" class="form-control" name="content" placeholder="Comment text" />
                 </div>
 
-                <div class="form-group" novalidate>
-                    <input type="hidden" class="form-control" name="idUser" value="@ViewBag.userId" >
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default">Add comment</button>
                 </div>
-
-                <input type="text" class="form-control" name="content" placeholder="Comment text" />
-            </div>
-
-            <div class="form-group">
-                <button type="submit" class="btn btn-default">Add comment</button>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
 </div>

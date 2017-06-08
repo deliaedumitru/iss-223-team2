@@ -8,7 +8,6 @@ namespace Conference_Management_System.Models
     public class Bid : Entity<int>
     {
         int id;
-        BidValues value;
 
         public Bid()
         {
@@ -17,7 +16,7 @@ namespace Conference_Management_System.Models
         public Bid(int id, BidValues value)
         {
             base.Id = id;
-            this.value = value;
+            this.Value = value;
         }
         public BidValues Value { get; set; }
 

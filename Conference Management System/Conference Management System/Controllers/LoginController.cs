@@ -29,6 +29,7 @@ namespace Conference_Management_System.Controllers
         [HttpGet]
         public ActionResult FindUserBy()
         {
+            ViewBag.Role = Helpers.GetUserRole(Request);
             return View();
         }
 
