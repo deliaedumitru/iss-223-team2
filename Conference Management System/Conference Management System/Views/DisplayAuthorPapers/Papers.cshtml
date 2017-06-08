@@ -1,0 +1,55 @@
+﻿@model List<Conference_Management_System.Models.Submission>
+@{
+    ViewBag.Title = "Papers";
+}
+
+<h3>Author's Papers</h3>
+
+<table border="0">
+    <tr>
+        <th>
+            Paper
+        </th>
+        <th>
+            Status
+        </th>
+    </tr>
+    @foreach (var submission in Model)
+    {
+       <tr>
+           <td>
+               <a href="@Url.Action("openPaper", "DisplayAuthorPapers", new { submissionTitle = @submission.Title })"> @submission.Title </a>
+           </td>
+           <td>
+               @submission.Status
+           </td>
+       </tr>
+         
+    }
+</table>
+<style>
+    table, td, th {
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 45%;
+        margin: 30px;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    th {
+        background-color: #ADD8E6;
+        color: white;
+    }
+</style>

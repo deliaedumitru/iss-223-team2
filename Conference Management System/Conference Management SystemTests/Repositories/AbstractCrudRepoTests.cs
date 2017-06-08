@@ -15,6 +15,7 @@ namespace Conference_Management_System.Repositories.Tests
         [TestMethod()]
         public void AddTest()
         {
+            
             using (var context = new CMS())
             {
                 var userRepo = new AbstractCrudRepo<int, User>(context);
@@ -73,6 +74,7 @@ namespace Conference_Management_System.Repositories.Tests
         [TestInitialize]
         public void SetupTest()
         {
+
             var _db = new CMS();
             _db.Database.Initialize(force: true);
             var _dbResults = new CMS();

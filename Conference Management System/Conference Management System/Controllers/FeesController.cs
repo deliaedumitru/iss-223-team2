@@ -56,24 +56,28 @@ namespace Conference_Management_System.Controllers
                     Conference conference = conferencesRepo.FindBy(c => c.Id == conferenceId).First();
                     Fee fee = null;
                     var fees = feeRepo.FindBy(f => f.User.Id == userId && f.Conference.Id == conferenceId).ToList();
-                    if (fees.Count != 0)
+                    if (fees.Count() != 0)
                         fee = fees.First();
                     if(fee != null)
                     {
-                        Response.Redirect("/");
+                        TempData["notice"] = "You already paid the fee for conference "+fees.First().Conference.Name;
                     }
-                    if (user.Role.CompareTo(Role.AUTHOR) == 0)
+                    else
                     {
-                        fee = new Fee(FeeType.AUTHOR_FEE, user, conference);
-                    } else
-                    {
-                        fee = new Fee(FeeType.LISTENER_FEE, user, conference);
+                        if (user.Role.CompareTo(Role.AUTHOR) == 0)
+                        {
+                            fee = new Fee(FeeType.AUTHOR_FEE, user, conference);
+                        }
+                        else
+                        {
+                            fee = new Fee(FeeType.LISTENER_FEE, user, conference);
+                        }
+
+                        feeRepo.Add(fee);
+                        feeRepo.Save();
+                        TempData["notice"] = "Succes! The fee for conference "+fee.Conference.Name+" is paid";
                     }
-
-                    feeRepo.Add(fee);
-                    feeRepo.Save();
-
-                    Response.Redirect("/");
+                    Response.Redirect("/Fees/Pay");
                 }
             }
             catch (Exception e)
