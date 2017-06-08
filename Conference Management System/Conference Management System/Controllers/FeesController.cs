@@ -15,6 +15,7 @@ namespace Conference_Management_System.Controllers
     {
         public ActionResult Pay()
         {
+            ViewBag.Role = Helpers.GetUserRole(Request);
             using (var context = new CMS())
             {
                 try
@@ -55,19 +56,9 @@ namespace Conference_Management_System.Controllers
                     Conference conference = conferencesRepo.FindBy(c => c.Id == conferenceId).First();
                     Fee fee = null;
                     var fees = feeRepo.FindBy(f => f.User.Id == userId && f.Conference.Id == conferenceId).ToList();
-<<<<<<< HEAD
+
 
                     if (fees.Count() != 0)
-
-                        if (fees.Count != 0)
-                            fee = fees.First();
-                    if (fee != null)
-
-=======
-                    if (fees.Count() != 0)
-                        fee = fees.First();
-                    if(fee != null)
->>>>>>> 85e76d7e35321816d4cf4b0fa0a5878abf2e7321
                     {
                         TempData["notice"] = "You already paid the fee for conference " + fees.First().Conference.Name;
                     }

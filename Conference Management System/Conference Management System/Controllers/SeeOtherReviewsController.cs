@@ -13,6 +13,7 @@ namespace Conference_Management_System.Controllers
         // GET: SeeOtherReviews
         public ActionResult Index()
         {
+            ViewBag.Role = Helpers.GetUserRole(Request);
             return View();
         }
 
@@ -24,6 +25,7 @@ namespace Conference_Management_System.Controllers
         [ActionName("PaperList"), HttpGet]
         public ActionResult GetPapers()
         {
+            ViewBag.Role = Helpers.GetUserRole(Request);
             if (!HasPermission())
                 return View("~/Views/Shared/Forbidden.cshtml");
             List<Submission> submissions = new List<Submission>();
@@ -47,6 +49,7 @@ namespace Conference_Management_System.Controllers
         [HttpGet]
         public ActionResult GetReviewsForPaper(int paperId)
         {
+            ViewBag.Role = Helpers.GetUserRole(Request);
             if (!HasPermission())
                 return View("~/Views/Shared/Forbidden.cshtml");
             List<Recommendation> recommendations = new List<Recommendation>();

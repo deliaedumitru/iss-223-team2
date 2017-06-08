@@ -19,6 +19,7 @@ namespace Conference_Management_System.Controllers
         [HttpGet]
         public ActionResult Add()
         {
+            ViewBag.Role = Helpers.GetUserRole(Request);
             //repo.Add(user);
             //repo.Save();
             return View();
@@ -35,6 +36,7 @@ namespace Conference_Management_System.Controllers
         [HttpPost]
         public ActionResult Add(User user)
         {
+
             using (var context = new CMS())
             {
                 var repo = new AbstractCrudRepo<int, User>(context);

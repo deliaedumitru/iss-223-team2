@@ -16,6 +16,16 @@ namespace Conference_Management_System.Controllers
             return Int32.Parse(id); // only if present, try to parse value
         }
 
+        public static Role? GetUserRole(HttpRequestBase request)
+        {
+            String value = null;
+            if (request.Cookies["user"] != null)
+                value = request.Cookies["user"]["role"]; // check if cookie is really set 
+            if (value == null)
+                return null;
+            return (Role)System.Enum.Parse(typeof(Role), value); // only if present, try to parse value
+        }
+
         public static User GetUser(HttpRequestBase request)
         {
             var id = Helpers.GetUserId(request);

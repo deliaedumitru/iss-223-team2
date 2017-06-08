@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -23,7 +23,7 @@ namespace Conference_Management_System.Controllers
                 Response.ContentType = "application/pdf";
                 Response.AddHeader("content-length", buffer.Length.ToString());
                 Response.BinaryWrite(buffer);
-                
+
             }
             catch (Exception e)
             {
@@ -42,7 +42,7 @@ namespace Conference_Management_System.Controllers
                 List<Submission> submissionsAuthor = new List<Submission>();
                 using (var context = new CMS())
                 {
-                    var submissionsRepo = new AbstractCrudRepo<int, Submission>(context);               
+                    var submissionsRepo = new AbstractCrudRepo<int, Submission>(context);
                     var allSubmissions = submissionsRepo.FindAll().ToList();
 
                     foreach (Submission submission in allSubmissions)
@@ -57,7 +57,7 @@ namespace Conference_Management_System.Controllers
                 }
 
                 return View(submissionsAuthor);
-                
+
             }
             catch (Exception e)
             {

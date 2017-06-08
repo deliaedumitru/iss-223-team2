@@ -1,32 +1,86 @@
 ﻿@model Conference_Management_System.Models.SectionConference
 @{
-    ViewBag.Title = "AddSection";
+    ViewBag.Title = "Add section";
 }
 
-<h2>Section</h2>
-@using (Html.BeginForm())
-{
-    <div>
-        @Html.LabelFor(m => m.Section.Name)
-        @Html.TextBoxFor(m => m.Section.Name)
-    </div>
-    <br />
-    <div>
-        @Html.LabelFor(m => m.Section.Room)
-        @Html.TextBoxFor(m => m.Section.Room)
-    </div>
-    <br />
-    <div>
-        @Html.LabelFor(m => m.Section.SeatNumber)
-        @Html.TextBoxFor(m => m.Section.SeatNumber)
-    </div>
-    <br />
-    <div>
-        @Html.LabelFor(m => m.Conferences)
-        @Html.DropDownListFor(m => m.selectedId, Model.Conferences)
-      
-    </div>
-    <br />
-    <input type="submit" id="add_btn" value="Add Section" />
-}
 
+<nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand logo"></a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav header-nav">
+                @if (ViewBag.Role == null)
+                {
+                    Html.RenderPartial("~/Views/Menus/NotLoggedIn.cshtml");
+                }
+                else
+                {
+                    if ((Conference_Management_System.Models.Role)ViewBag.Role.CompareTo(Conference_Management_System.Models.Role.AUTHOR) == 0)
+                    {
+                        Html.RenderPartial("~/Views/Menus/Author.cshtml");
+                    }
+                    if ((Conference_Management_System.Models.Role)ViewBag.Role.CompareTo(Conference_Management_System.Models.Role.LISTENER) == 0)
+                    {
+                        Html.RenderPartial("~/Views/Menus/Listener.cshtml");
+                    }
+                    if ((Conference_Management_System.Models.Role)ViewBag.Role.CompareTo(Conference_Management_System.Models.Role.PCM) == 0)
+                    {
+                        Html.RenderPartial("~/Views/Menus/PCM.cshtml");
+                    }
+                    if ((Conference_Management_System.Models.Role)ViewBag.Role.CompareTo(Conference_Management_System.Models.Role.CHAIR) == 0)
+                    {
+                        Html.RenderPartial("~/Views/Menus/Chair.cshtml");
+                    }
+                    if ((Conference_Management_System.Models.Role)ViewBag.Role.CompareTo(Conference_Management_System.Models.Role.CO_CHAIR) == 0)
+                    {
+                        Html.RenderPartial("~/Views/Menus/CoChair.cshtml");
+                    }
+                    if ((Conference_Management_System.Models.Role)ViewBag.Role.CompareTo(Conference_Management_System.Models.Role.SCM) == 0)
+                    {
+                        Html.RenderPartial("~/Views/Menus/SCM.cshtml");
+                    }
+                }
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container body-content">
+
+    <h2>Section</h2>
+    @using (Html.BeginForm())
+    {
+        <div>
+            @Html.LabelFor(m => m.Section.Name)
+            @Html.TextBoxFor(m => m.Section.Name)
+        </div>
+        <br />
+        <div>
+            @Html.LabelFor(m => m.Section.Room)
+            @Html.TextBoxFor(m => m.Section.Room)
+        </div>
+        <br />
+        <div>
+            @Html.LabelFor(m => m.Section.SeatNumber)
+            @Html.TextBoxFor(m => m.Section.SeatNumber)
+        </div>
+        <br />
+        <div>
+            @Html.LabelFor(m => m.Conferences)
+            @Html.DropDownListFor(m => m.selectedId, Model.Conferences)
+
+        </div>
+        <br />
+        <input type="submit" id="add_btn" value="Add Section" />
+    }
+
+</div>

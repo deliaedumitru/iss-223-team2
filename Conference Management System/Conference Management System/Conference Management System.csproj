@@ -299,7 +299,6 @@
     <Content Include="Views\Conference\PostInfo.cshtml" />
     <Content Include="Views\SeeOtherReviews\GetReviewsForPaper.cshtml" />
     <Content Include="Views\SeeOtherReviews\PaperList.cshtml" />
-    <Content Include="Views\Submissions\Bid.cshtml" />
     <Content Include="Views\GiveQualifiers\Proposals.cshtml" />
     <Content Include="Views\Conference\GetAll.cshtml" />
     <Content Include="Views\Conferences\View.cshtml" />
@@ -307,6 +306,13 @@
     <Content Include="Views\Shared\Forbidden.cshtml" />
     <Content Include="Views\SignupForSection\GetAllSections.cshtml" />
     <Content Include="Views\DisplayAuthorPapers\Papers.cshtml" />
+    <Content Include="Views\Menus\NotLoggedIn.cshtml" />
+    <Content Include="Views\Menus\Author.cshtml" />
+    <Content Include="Views\Menus\Listener.cshtml" />
+    <Content Include="Views\Menus\PCM.cshtml" />
+    <Content Include="Views\Menus\Chair.cshtml" />
+    <Content Include="Views\Menus\CoChair.cshtml" />
+    <Content Include="Views\Menus\SCM.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Start\App_Data\" />

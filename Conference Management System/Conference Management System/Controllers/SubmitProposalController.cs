@@ -20,6 +20,7 @@ namespace Conference_Management_System.Controllers
         [HttpGet]
         public ActionResult Submit()
         {
+            ViewBag.Role = Helpers.GetUserRole(Request);
             if (!HasPermission())
                 return View("~/Views/Shared/Forbidden.cshtml");
             return View();
@@ -51,7 +52,9 @@ namespace Conference_Management_System.Controllers
                     Console.WriteLine(e.Message);
                 }
             }
+
             return null;      
+
 
         }
 

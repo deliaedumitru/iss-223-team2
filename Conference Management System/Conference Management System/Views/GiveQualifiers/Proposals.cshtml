@@ -1,13 +1,66 @@
 ﻿@model List<Conference_Management_System.Models.Submission>
 @{
-    ViewBag.Title = "Proposals";
+    ViewBag.Title = "Give qualifiers";
 }
 
-<h3>Assigned proposals</h3>
-These proposals were assigned to you and should be evaluated. <br />
 
-@foreach (var submission in Model)
-{ <br />
+<nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand logo"></a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav header-nav">
+                @if (ViewBag.Role == null)
+                {
+                    Html.RenderPartial("~/Views/Menus/NotLoggedIn.cshtml");
+                }
+                else
+                {
+                    if ((Conference_Management_System.Models.Role)ViewBag.Role.CompareTo(Conference_Management_System.Models.Role.AUTHOR) == 0)
+                    {
+                        Html.RenderPartial("~/Views/Menus/Author.cshtml");
+                    }
+                    if ((Conference_Management_System.Models.Role)ViewBag.Role.CompareTo(Conference_Management_System.Models.Role.LISTENER) == 0)
+                    {
+                        Html.RenderPartial("~/Views/Menus/Listener.cshtml");
+                    }
+                    if ((Conference_Management_System.Models.Role)ViewBag.Role.CompareTo(Conference_Management_System.Models.Role.PCM) == 0)
+                    {
+                        Html.RenderPartial("~/Views/Menus/PCM.cshtml");
+                    }
+                    if ((Conference_Management_System.Models.Role)ViewBag.Role.CompareTo(Conference_Management_System.Models.Role.CHAIR) == 0)
+                    {
+                        Html.RenderPartial("~/Views/Menus/Chair.cshtml");
+                    }
+                    if ((Conference_Management_System.Models.Role)ViewBag.Role.CompareTo(Conference_Management_System.Models.Role.CO_CHAIR) == 0)
+                    {
+                        Html.RenderPartial("~/Views/Menus/CoChair.cshtml");
+                    }
+                    if ((Conference_Management_System.Models.Role)ViewBag.Role.CompareTo(Conference_Management_System.Models.Role.SCM) == 0)
+                    {
+                        Html.RenderPartial("~/Views/Menus/SCM.cshtml");
+                    }
+                }
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container body-content">
+
+    <h3>Assigned proposals</h3>
+    These proposals were assigned to you and should be evaluated. <br />
+
+    @foreach (var submission in Model)
+    { <br />
     <form method="post">
         <div class='container'>
             <div class='row'>
@@ -17,7 +70,7 @@ These proposals were assigned to you and should be evaluated. <br />
                             <div class="row">
                                 <div class="col-xs-9">
                                     <h3 class='panel-title'>
-                                       <b>Proposal:</b> @submission.Title
+                                        <b>Proposal:</b> @submission.Title
                                     </h3>
                                 </div>
                             </div>
@@ -26,7 +79,7 @@ These proposals were assigned to you and should be evaluated. <br />
                             <b>Author: </b>
                             @foreach (var author in @submission.Authors)
                             {
-                                @author.Name 
+                                @author.Name
                             } <br />
                             <b>Meta: </b> @submission.Meta <br />
                             <b>Type: </b> @submission.Type <br />
@@ -70,13 +123,13 @@ These proposals were assigned to you and should be evaluated. <br />
                                         }
                                     }
                                 </select>
-                             </div>
+                            </div>
                             <div class="form-group" novalidate>
                                 <label for="recommendation">Recommendations</label>
                                 @if (@submission.Recommendations.Count == 0)
                                 {
                                     <textarea class="form-control" name="recommendation" rows="4"
-                                            placeholder="Here you can give any recommendations to the author of this paper. This is optional."></textarea>
+                                              placeholder="Here you can give any recommendations to the author of this paper. This is optional."></textarea>
                                 }
                                 else
                                 {
@@ -92,5 +145,6 @@ These proposals were assigned to you and should be evaluated. <br />
             </div>
         </div>
     </form>
-}
+    }
 
+</div>

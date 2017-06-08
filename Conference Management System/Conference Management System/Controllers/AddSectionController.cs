@@ -20,6 +20,7 @@ namespace Conference_Management_System.Controllers
         [HttpGet]
         public ActionResult AddSection()
         {
+            ViewBag.Role = Helpers.GetUserRole(Request);
             if (!HasPermission())
                 return View("~/Views/Shared/Forbidden.cshtml");
             Section section = new Section();

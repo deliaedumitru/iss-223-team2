@@ -15,6 +15,7 @@ namespace Conference_Management_System.Controllers
         [HttpGet]
         public ActionResult GetAllSections()
         {
+            ViewBag.Role = Helpers.GetUserRole(Request);
             List<Section> allSections = new List<Section>();
             List<Section> sections;
             List<Section> userSections = new List<Section>();
@@ -52,6 +53,7 @@ namespace Conference_Management_System.Controllers
         [HttpGet]
         public ActionResult Add(int sectionId)
         {
+            ViewBag.Role = Helpers.GetUserRole(Request);
             List<Section> sections;
             using (var context = new CMS())
             {
@@ -93,6 +95,7 @@ namespace Conference_Management_System.Controllers
         [HttpGet]
         public ActionResult Delete(int sectionId)
         {
+            ViewBag.Role = Helpers.GetUserRole(Request);
             List<Section> sections;
             using (var context = new CMS())
             {

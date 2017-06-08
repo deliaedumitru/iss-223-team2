@@ -1,87 +1,142 @@
 ﻿ @model IEnumerable<Conference_Management_System.Models.Submission>
  
 @{
-    ViewBag.Title = "GetAllBids";
+    ViewBag.Title = "Assign proposals";
 }
 
-<h2>Assign proposals for review</h2>
 
-@foreach (var item in Model)
-{
-    <h4 style="text-align:center">
-        Submission: @item.Meta <br />
-        Type : @item.Type
-    </h4>
-    <div style="display:inline-flex;width:100%;">
-        <table style="float:left;">
-            <tr>
-                <th>Reviewer</th>
-                <th>Bid</th>
-                <th></th>
-            </tr>
-            @foreach (var bid in @item.Bids)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => bid.Reviewer.Name)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => bid.Value)
-                    </td>
-                    <td>
-                        @Html.ActionLink("Add", "Add", "AssignProposals", new { reviewerId = @bid.Reviewer.Id, submissionId = @item.Id }, null)
-                    </td>
-                </tr>
-            }
-        </table>
-
-        <table style="text-align: center;">
-            <tr>
-                <th style="text-align: center;">Reviewer</th>
-                <th></th>
-            </tr>
-            @foreach (var reviewer in @item.Reviewers)
-            {
-                <tr>
-                    <td style="text-align: center;">
-                        @Html.DisplayFor(modelItem => reviewer.Name)
-                    </td>
-                    <td>
-                        @Html.ActionLink("Delete", "Delete", "AssignProposals", new { reviewerId = @reviewer.Id, submissionId = @item.Id }, null)
-                    </td>
-                </tr>
-            }
-        </table>
+<nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand logo"></a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav header-nav">
+                @if (ViewBag.Role == null)
+                {
+                    Html.RenderPartial("~/Views/Menus/NotLoggedIn.cshtml");
+                }
+                else
+                {
+                    if ((Conference_Management_System.Models.Role)ViewBag.Role.CompareTo(Conference_Management_System.Models.Role.AUTHOR) == 0)
+                    {
+                        Html.RenderPartial("~/Views/Menus/Author.cshtml");
+                    }
+                    if ((Conference_Management_System.Models.Role)ViewBag.Role.CompareTo(Conference_Management_System.Models.Role.LISTENER) == 0)
+                    {
+                        Html.RenderPartial("~/Views/Menus/Listener.cshtml");
+                    }
+                    if ((Conference_Management_System.Models.Role)ViewBag.Role.CompareTo(Conference_Management_System.Models.Role.PCM) == 0)
+                    {
+                        Html.RenderPartial("~/Views/Menus/PCM.cshtml");
+                    }
+                    if ((Conference_Management_System.Models.Role)ViewBag.Role.CompareTo(Conference_Management_System.Models.Role.CHAIR) == 0)
+                    {
+                        Html.RenderPartial("~/Views/Menus/Chair.cshtml");
+                    }
+                    if ((Conference_Management_System.Models.Role)ViewBag.Role.CompareTo(Conference_Management_System.Models.Role.CO_CHAIR) == 0)
+                    {
+                        Html.RenderPartial("~/Views/Menus/CoChair.cshtml");
+                    }
+                    if ((Conference_Management_System.Models.Role)ViewBag.Role.CompareTo(Conference_Management_System.Models.Role.SCM) == 0)
+                    {
+                        Html.RenderPartial("~/Views/Menus/SCM.cshtml");
+                    }
+                }
+            </ul>
+        </div>
     </div>
-    <hr />
-}
-<script>
+</nav>
 
-</script>
 
-<style>
-    table, td, th {
-        border: 1px solid #ddd;
-        text-align: left;
+<div class="container body-content">
+
+    <h2>Assign proposals for review</h2>
+
+    @foreach (var item in Model)
+    {
+        <h4 style="text-align:center">
+            Submission: @item.Meta <br />
+            Type : @item.Type
+        </h4>
+        <div style="display:inline-flex;width:100%;">
+            <table style="float:left;">
+                <tr>
+                    <th>Reviewer</th>
+                    <th>Bid</th>
+                    <th></th>
+                </tr>
+                @foreach (var bid in @item.Bids)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => bid.Reviewer.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => bid.Value)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Add", "Add", "AssignProposals", new { reviewerId = @bid.Reviewer.Id, submissionId = @item.Id }, null)
+                        </td>
+                    </tr>
+                }
+            </table>
+
+            <table style="text-align: center;">
+                <tr>
+                    <th style="text-align: center;">Reviewer</th>
+                    <th></th>
+                </tr>
+                @foreach (var reviewer in @item.Reviewers)
+                {
+                    <tr>
+                        <td style="text-align: center;">
+                            @Html.DisplayFor(modelItem => reviewer.Name)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Delete", "Delete", "AssignProposals", new { reviewerId = @reviewer.Id, submissionId = @item.Id }, null)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+        <hr />
     }
+    <script>
 
-    table {
-        border-collapse: collapse;
-        width: 45%;
-        margin: 30px;
-    }
+    </script>
 
-    th, td {
-        text-align: left;
-        padding: 8px;
-    }
+    <style>
+        table, td, th {
+            border: 1px solid #ddd;
+            text-align: left;
+        }
 
-    tr:nth-child(even) {
-        background-color: #f2f2f2;
-    }
+        table {
+            border-collapse: collapse;
+            width: 45%;
+            margin: 30px;
+        }
 
-    th {
-        background-color: #ADD8E6;
-        color: white;
-    }
-</style>
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        th {
+            background-color: #ADD8E6;
+            color: white;
+        }
+    </style>
+
+</div>

@@ -19,6 +19,7 @@ namespace Conference_Management_System.Controllers
 
         public ActionResult Bid()
         {
+            ViewBag.Role = Helpers.GetUserRole(Request);
             if (!HasPermission())
                 return View("~/Views/Shared/Forbidden.cshtml");
             using (var context = new CMS())
@@ -73,7 +74,8 @@ namespace Conference_Management_System.Controllers
                     }
                 }
 
-                return View(submisions);
+                Response.Redirect("/Proposals/Bid");
+                return null;
             }
 
         }
