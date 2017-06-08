@@ -75,7 +75,8 @@ namespace Conference_Management_System.Controllers
                 Console.WriteLine(ex.Message);
                 return View();
             }
-            return Redirect("/");
+            Response.Redirect("/DisplayAuthorPapers/Papers");
+            return null;
         }
 
 	}
