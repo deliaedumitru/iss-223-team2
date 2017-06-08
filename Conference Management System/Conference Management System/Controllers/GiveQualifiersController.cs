@@ -13,6 +13,7 @@ namespace Conference_Management_System.Controllers
     {
         public ActionResult Proposals()
         {
+            ViewBag.Role = Helpers.GetUserRole(Request);
             try
             {
                 using (var context = new CMS())
@@ -49,7 +50,6 @@ namespace Conference_Management_System.Controllers
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-                Response.Redirect("/Shared/Error");
             }
             return null;
         }
@@ -88,7 +88,6 @@ namespace Conference_Management_System.Controllers
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-                Response.Redirect("/Shared/Error");
             }
         }
 
@@ -145,7 +144,6 @@ namespace Conference_Management_System.Controllers
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-                Response.Redirect("/Shared/Error");
             }
         }
 
@@ -179,7 +177,6 @@ namespace Conference_Management_System.Controllers
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-                Response.Redirect("/Shared/Error");
             }
             return null;
         }
@@ -204,7 +201,6 @@ namespace Conference_Management_System.Controllers
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-                Response.Redirect("/Shared/Error");
             }
         }
     }

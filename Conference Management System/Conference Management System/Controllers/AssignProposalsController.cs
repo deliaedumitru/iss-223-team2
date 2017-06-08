@@ -20,6 +20,7 @@ namespace Conference_Management_System.Controllers
         [HttpGet]
         public ActionResult GetAllBids()
         {
+            ViewBag.Role = Helpers.GetUserRole(Request);
             if (!HasPermission())
                 return View("~/Views/Shared/Forbidden.cshtml");
             List<Bid> bids;
@@ -51,6 +52,7 @@ namespace Conference_Management_System.Controllers
         [HttpGet]
         public ActionResult Add(int reviewerId, int submissionId)
         {
+            ViewBag.Role = Helpers.GetUserRole(Request);
             if (!HasPermission())
                 return View("~/Views/Shared/Forbidden.cshtml");
             List<Submission> submissions;
@@ -87,6 +89,7 @@ namespace Conference_Management_System.Controllers
         [HttpGet]
         public ActionResult Delete(int reviewerId, int submissionId)
         {
+            ViewBag.Role = Helpers.GetUserRole(Request);
             if (!HasPermission())
                 return View("~/Views/Shared/Forbidden.cshtml");
             List<Submission> submissions;

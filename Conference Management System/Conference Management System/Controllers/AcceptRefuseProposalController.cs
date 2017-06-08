@@ -13,6 +13,7 @@ namespace Conference_Management_System.Controllers
         // GET: AcceptRefuseProposal
         public ActionResult Index()
         {
+            ViewBag.Role = Helpers.GetUserRole(Request);
             return View();
         }
         private bool HasPermission()
@@ -68,6 +69,7 @@ namespace Conference_Management_System.Controllers
         [HttpGet]
         public ActionResult GetFinalPapers()
         {
+            ViewBag.Role = Helpers.GetUserRole(Request);
             List<Submission> submissions = new List<Submission>();
             using (var context = new CMS())
             {
@@ -94,6 +96,7 @@ namespace Conference_Management_System.Controllers
         [HttpGet]
         public ActionResult ChangeStatus(int id, StatusValues status)
         {
+            ViewBag.Role = Helpers.GetUserRole(Request);
             using (var context = new CMS())
             {
                

@@ -23,6 +23,7 @@ namespace Conference_Management_System.Controllers
         [HttpGet]
         public ActionResult Index()
         {
+            ViewBag.Role = Helpers.GetUserRole(Request);
             return RedirectToAction("GetAll");
         }
 
@@ -31,6 +32,8 @@ namespace Conference_Management_System.Controllers
         {
             using (var context = new CMS())
             {
+                ViewBag.Role = Helpers.GetUserRole(Request);
+
                 var repo = new AbstractCrudRepo<int, Conference>(context);
                 return View(repo.FindAll().ToList());
             }
@@ -41,6 +44,8 @@ namespace Conference_Management_System.Controllers
         [HttpGet]
         public ActionResult PostInfo()
         {
+            ViewBag.Role = Helpers.GetUserRole(Request);
+            ViewBag.Role = Helpers.GetUserRole(Request);
             if (!HasPermission())
                 return View("~/Views/Shared/Forbidden.cshtml");
             return View();

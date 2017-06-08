@@ -1,40 +1,63 @@
 ﻿@model Conference_Management_System.Models.User
 @{
-    ViewBag.Title = "Add";
+    ViewBag.Title = "Sign up";
 }
 
-<h2>Add</h2>
-
-@using (Html.BeginForm())
-{
-
-    <div>
-        @Html.LabelFor(model => model.Username)
-        @Html.TextBoxFor(model => model.Username)
+<nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand logo"></a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav header-nav">
+                @{Html.RenderPartial("~/Views/Menus/NotLoggedIn.cshtml"); }
+            </ul>
+        </div>
     </div>
-    <br />
-    <div>
-        @Html.LabelFor(model => model.Password)
-        @Html.TextBoxFor(model => model.Password)
-    </div>
-    <br />
-    <div>
-        @Html.LabelFor(model => model.Name)
-        @Html.TextBoxFor(model => model.Name)
-    </div>
-    <br />
-    <div>
-        @Html.LabelFor(model => model.Email)
-        @Html.TextBoxFor(model => model.Email)
-    </div>
-    <br />
-    <div>
-        @Html.LabelFor(model => model.Affiliation)
-        @Html.TextBoxFor(model => model.Affiliation)
-    </div>
-    <br />
-    <input id="sign-up-submit" type="submit" value="Create account" />
-
-}
+</nav>
 
 
+<div class="container body-content">
+    <div style="text-align:center">
+        <h2>Add</h2>
+
+        @using (Html.BeginForm())
+        {
+
+            <div>
+                @Html.LabelFor(model => model.Username)
+                @Html.TextBoxFor(model => model.Username)
+            </div>
+            <br />
+            <div>
+                @Html.LabelFor(model => model.Password)
+                @Html.TextBoxFor(model => model.Password)
+            </div>
+            <br />
+            <div>
+                @Html.LabelFor(model => model.Name)
+                @Html.TextBoxFor(model => model.Name)
+            </div>
+            <br />
+            <div>
+                @Html.LabelFor(model => model.Email)
+                @Html.TextBoxFor(model => model.Email)
+            </div>
+            <br />
+            <div>
+                @Html.LabelFor(model => model.Affiliation)
+                @Html.TextBoxFor(model => model.Affiliation)
+            </div>
+            <br />
+            <input id="sign-up-submit" type="submit" value="Create account" class="btn btn-default" />
+
+        }
+
+        </div>
+    </div>

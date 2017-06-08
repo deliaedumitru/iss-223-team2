@@ -1,60 +1,116 @@
 ﻿@model IEnumerable<Conference_Management_System.Models.Conference>
 
 @{
-    ViewBag.Title = "GetAll";
+    ViewBag.Title = "Conferences";
 }
 
-<h2>GetAll</h2>
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Date)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.StartTime)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EndTime)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SubmissionDeadline)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Location)
-        </th>
-        <th></th>
-    </tr>
+<nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand logo"></a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav header-nav">
+                @if (ViewBag.Role == null)
+                {
+                    Html.RenderPartial("~/Views/Menus/NotLoggedIn.cshtml");
+                }
+                else
+                {
+                    if ((Conference_Management_System.Models.Role)ViewBag.Role.CompareTo(Conference_Management_System.Models.Role.AUTHOR) == 0)
+                    {
+                        Html.RenderPartial("~/Views/Menus/Author.cshtml");
+                    }
+                    if ((Conference_Management_System.Models.Role)ViewBag.Role.CompareTo(Conference_Management_System.Models.Role.LISTENER) == 0)
+                    {
+                        Html.RenderPartial("~/Views/Menus/Listener.cshtml");
+                    }
+                    if ((Conference_Management_System.Models.Role)ViewBag.Role.CompareTo(Conference_Management_System.Models.Role.PCM) == 0)
+                    {
+                        Html.RenderPartial("~/Views/Menus/PCM.cshtml");
+                    }
+                    if ((Conference_Management_System.Models.Role)ViewBag.Role.CompareTo(Conference_Management_System.Models.Role.CHAIR) == 0)
+                    {
+                        Html.RenderPartial("~/Views/Menus/Chair.cshtml");
+                    }
+                    if ((Conference_Management_System.Models.Role)ViewBag.Role.CompareTo(Conference_Management_System.Models.Role.CO_CHAIR) == 0)
+                    {
+                        Html.RenderPartial("~/Views/Menus/CoChair.cshtml");
+                    }
+                    if ((Conference_Management_System.Models.Role)ViewBag.Role.CompareTo(Conference_Management_System.Models.Role.SCM) == 0)
+                    {
+                        Html.RenderPartial("~/Views/Menus/SCM.cshtml");
+                    }
+                }
+            </ul>
+        </div>
+    </div>
+</nav>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Date)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.StartTime)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EndTime)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SubmissionDeadline)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Location)
-        </td>
-@*        <td>*@
-@*            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |*@
-@*            @Html.ActionLink("Details", "Details", new { id=item.Id }) |*@
-@*            @Html.ActionLink("Delete", "Delete", new { id=item.Id })*@
-@*        </td>*@
-    </tr>
-}
 
-</table>
+<div class="container body-content">
+
+    <h2>GetAll</h2>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubmissionDeadline)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+                {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EndTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SubmissionDeadline)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Location)
+                </td>
+                @*        <td>*@
+                @*            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |*@
+                @*            @Html.ActionLink("Details", "Details", new { id=item.Id }) |*@
+                @*            @Html.ActionLink("Delete", "Delete", new { id=item.Id })*@
+                @*        </td>*@
+            </tr>
+        }
+
+    </table>
+
+</div>
