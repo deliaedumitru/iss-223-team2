@@ -7,6 +7,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI;
 
 namespace Conference_Management_System.Controllers
 {
@@ -56,6 +57,9 @@ namespace Conference_Management_System.Controllers
                     Response.Cookies["user"].Expires = DateTime.Now.AddDays(1);
                     return Redirect("/");  //redirect to user page after login
                 }
+
+
+                TempData["notice"] = "Incorrect username or password";
                 return View();
             }
         }
