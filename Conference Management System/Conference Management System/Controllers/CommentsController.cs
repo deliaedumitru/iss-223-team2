@@ -54,7 +54,6 @@ namespace Conference_Management_System.Controllers
                 catch (Exception e)
                 {
                     Console.WriteLine(e.Message);
-                    Response.Redirect("/Shared/Error");
                 }
             }
             return View();

@@ -301,6 +301,7 @@
     <Content Include="Views\GiveQualifiers\Proposals.cshtml" />
     <Content Include="Views\Conference\GetAll.cshtml" />
     <Content Include="Views\Conferences\View.cshtml" />
+    <Content Include="Views\Fees\Pay.cshtml" />
     <Content Include="Views\Shared\Forbidden.cshtml" />
     <Content Include="Views\SignupForSection\GetAllSections.cshtml" />
   </ItemGroup>
