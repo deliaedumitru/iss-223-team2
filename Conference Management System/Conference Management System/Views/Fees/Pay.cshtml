@@ -7,7 +7,9 @@
 <script>
     $(document).ready(function () {
         $(document.body).on('change', '#conferenceId', function () {
-            $("#feeText").text("You will be charged " + ($('#conferenceId').find(":selected").val()));
+            var t = $('#conferenceId').find(":selected").text();
+            var arr = t.split("-");
+            $("#feeText").text("You will be charged " + arr[1]);
         });
     });
 </script>
@@ -21,7 +23,7 @@
             <option disabled selected></option>
             @foreach (var conference in Model)
             {
-                <option value="@conference.Id">@conference.Name - @conference.AuthorFee</option>
+                <option value="@conference.Id">@conference.Name-@conference.AuthorFee RON</option>
             }
         </select>
     }
