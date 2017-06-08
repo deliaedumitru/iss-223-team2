@@ -25,10 +25,8 @@ namespace Conference_Management_System.Controllers
             return View();
         }
 
-        public ActionResult AddProposal(Submission submission)
+        public void AddProposal(Submission submission)
         {
-            if (!HasPermission())
-                return View("~/Views/Shared/Forbidden.cshtml");
             using (var context = new CMS())
             {
                 try
@@ -49,12 +47,14 @@ namespace Conference_Management_System.Controllers
                     Console.WriteLine(e.Message);
                 }
             }
-            return null;      
+           // return null;      
         }
 
         [HttpPost]
         public ActionResult Submit(Submission submission, HttpPostedFileBase proposal)
         {
+			if (!HasPermission())
+                return View("~/Views/Shared/Forbidden.cshtml");
             try
             {
                 string folder = Server.MapPath("~/Submissions/");

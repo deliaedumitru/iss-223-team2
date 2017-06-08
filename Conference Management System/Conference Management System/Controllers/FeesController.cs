@@ -55,7 +55,13 @@ namespace Conference_Management_System.Controllers
                     Conference conference = conferencesRepo.FindBy(c => c.Id == conferenceId).First();
                     Fee fee = null;
                     var fees = feeRepo.FindBy(f => f.User.Id == userId && f.Conference.Id == conferenceId).ToList();
+
                     if (fees.Count() != 0)
+
+                    if (fees.Count != 0)
+                        fee = fees.First();
+                    if(fee != null)
+
                     {
                         TempData["notice"] = "You already paid the fee for conference "+fees.First().Conference.Name;
                     }
