@@ -197,7 +197,7 @@
     <Compile Include="Controllers\Helpers.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ConferenceController.cs" />
-    <Compile Include="Controllers\ConferencesController.cs" />
+    <Compile Include="Controllers\LogoutController.cs" />
     <Compile Include="Controllers\ProposalsController.cs" />
     <Compile Include="Controllers\SeeOtherReviewsController.cs" />
     <Compile Include="Controllers\SignupController.cs" />

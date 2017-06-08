@@ -54,7 +54,9 @@ namespace Conference_Management_System.Controllers
                     User user = usersRepo.FindBy(u => u.Id == userId).First();
                     Conference conference = conferencesRepo.FindBy(c => c.Id == conferenceId).First();
                     Fee fee = null;
-                    fee = feeRepo.FindBy(f => f.User.Id == userId && f.Conference.Id == conferenceId).First();
+                    var fees = feeRepo.FindBy(f => f.User.Id == userId && f.Conference.Id == conferenceId).ToList();
+                    if (fees.Count != 0)
+                        fee = fees.First();
                     if(fee != null)
                     {
                         Response.Redirect("/");
