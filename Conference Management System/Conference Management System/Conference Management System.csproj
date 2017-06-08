@@ -192,6 +192,7 @@
     <Compile Include="Controllers\AddSectionController.cs" />
     <Compile Include="Controllers\AssignProposalsController.cs" />
     <Compile Include="Controllers\CommentsController.cs" />
+    <Compile Include="Controllers\DisplayAuthorPapersController.cs" />
     <Compile Include="Controllers\GiveQualifiersController.cs" />
     <Compile Include="Controllers\FeesController.cs" />
     <Compile Include="Controllers\Helpers.cs" />
@@ -305,6 +306,7 @@
     <Content Include="Views\Fees\Pay.cshtml" />
     <Content Include="Views\Shared\Forbidden.cshtml" />
     <Content Include="Views\SignupForSection\GetAllSections.cshtml" />
+    <Content Include="Views\DisplayAuthorPapers\Papers.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Start\App_Data\" />

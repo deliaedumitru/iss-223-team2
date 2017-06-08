@@ -7,7 +7,9 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Web;
 using System.Web.Mvc;
+
 using System.Web.UI;
+
 
 namespace Conference_Management_System.Controllers
 {
@@ -45,6 +47,7 @@ namespace Conference_Management_System.Controllers
             {
                 var userRepo = new AbstractCrudRepo<int, User>(context);
 
+
                 Func<User, bool> findRole = delegate (User s)
                 { return s.Username.Equals(username) & s.Password.Equals(password); };
                 IQueryable<User> result = userRepo.FindBy(s => s.Username.Equals(username) && s.Password.Equals(password));
@@ -60,6 +63,7 @@ namespace Conference_Management_System.Controllers
 
 
                 TempData["notice"] = "Incorrect username or password";
+
                 return View();
             }
         }

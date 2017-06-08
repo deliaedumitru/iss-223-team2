@@ -58,12 +58,12 @@ namespace Conference_Management_System.Controllers
 
                     if (fees.Count() != 0)
 
-                    if (fees.Count != 0)
-                        fee = fees.First();
-                    if(fee != null)
+                        if (fees.Count != 0)
+                            fee = fees.First();
+                    if (fee != null)
 
                     {
-                        TempData["notice"] = "You already paid the fee for conference "+fees.First().Conference.Name;
+                        TempData["notice"] = "You already paid the fee for conference " + fees.First().Conference.Name;
                     }
                     else
                     {
@@ -78,7 +78,7 @@ namespace Conference_Management_System.Controllers
 
                         feeRepo.Add(fee);
                         feeRepo.Save();
-                        TempData["notice"] = "Succes! The fee for conference "+fee.Conference.Name+" is paid";
+                        TempData["notice"] = "Succes! The fee for conference " + fee.Conference.Name + " is paid";
                     }
                     Response.Redirect("/Fees/Pay");
                 }
@@ -89,5 +89,6 @@ namespace Conference_Management_System.Controllers
             }
             return null;
         }
+
     }
 }
