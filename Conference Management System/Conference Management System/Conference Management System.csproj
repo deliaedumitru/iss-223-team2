@@ -192,12 +192,16 @@
     <Compile Include="Controllers\AssignProposalsController.cs" />
     <Compile Include="Controllers\CommentsController.cs" />
     <Compile Include="Controllers\ConferencesController.cs" />
+    <Compile Include="Controllers\GiveQualifiersController.cs" />
+    <Compile Include="Controllers\FeesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PostsConferenceInformationController.cs" />
+    <Compile Include="Controllers\ConferenceController.cs" />
+    <Compile Include="Controllers\ConferencesController.cs" />
     <Compile Include="Controllers\ProposalsController.cs" />
     <Compile Include="Controllers\SeeOtherReviewsController.cs" />
     <Compile Include="Controllers\SignupController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\SignupForSectionController.cs" />
     <Compile Include="Controllers\SubmitProposalController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -207,9 +211,17 @@
     <Compile Include="Migrations\201706051501387_Initial.Designer.cs">
       <DependentUpon>201706051501387_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201706051446530_migrate.cs" />
-    <Compile Include="Migrations\201706051446530_migrate.Designer.cs">
-      <DependentUpon>201706051446530_migrate.cs</DependentUpon>
+    <Compile Include="Migrations\201706061757145_added-fees.cs" />
+    <Compile Include="Migrations\201706061757145_added-fees.Designer.cs">
+      <DependentUpon>201706061757145_added-fees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706061830114_made-fee-per-conference.cs" />
+    <Compile Include="Migrations\201706061830114_made-fee-per-conference.Designer.cs">
+      <DependentUpon>201706061830114_made-fee-per-conference.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706062118389_user-section-mtm.cs" />
+    <Compile Include="Migrations\201706062118389_user-section-mtm.Designer.cs">
+      <DependentUpon>201706062118389_user-section-mtm.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Bid.cs" />
@@ -219,17 +231,19 @@
     <Compile Include="Models\Conference.cs" />
     <Compile Include="Models\DTO\ConferenceDTO.cs" />
     <Compile Include="Models\Entity.cs" />
+    <Compile Include="Models\Fee.cs" />
+    <Compile Include="Models\FeeType.cs" />
     <Compile Include="Models\Qualifier.cs" />
     <Compile Include="Models\QualifierValues.cs" />
     <Compile Include="Models\Recommendation.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\Section.cs" />
     <Compile Include="Models\SectionConference.cs" />
+    <Compile Include="Models\SectionsListeners.cs" />
     <Compile Include="Models\StatusValues.cs" />
     <Compile Include="Models\Submission.cs" />
     <Compile Include="Models\SubmissionType.cs" />
     <Compile Include="Models\User.cs" />
-    <Compile Include="Models\StatusValues.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\AbstractCrudRepo.cs" />
     <Compile Include="Repositories\ICrudRepo.cs" />
@@ -292,10 +306,14 @@
     <Content Include="Views\SubmitProposal\Submit.cshtml" />
     <Content Include="Views\AddSection\AddSection.cshtml" />
     <Content Include="Views\AcceptRefuseProposal\GetFinalPapers.cshtml" />
-    <Content Include="Views\PostsConferenceInformation\PostInfo.cshtml" />
+    <Content Include="Views\Conference\PostInfo.cshtml" />
     <Content Include="Views\SeeOtherReviews\GetReviewsForPaper.cshtml" />
     <Content Include="Views\SeeOtherReviews\PaperList.cshtml" />
     <Content Include="Views\Submissions\Bid.cshtml" />
+    <Content Include="Views\GiveQualifiers\Proposals.cshtml" />
+    <Content Include="Views\Conference\GetAll.cshtml" />
+    <Content Include="Views\Conferences\View.cshtml" />
+    <Content Include="Views\SignupForSection\GetAllSections.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Start\App_Data\" />
@@ -319,8 +337,14 @@
     <EmbeddedResource Include="Migrations\201706051501387_Initial.resx">
       <DependentUpon>201706051501387_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706051446530_migrate.resx">
-      <DependentUpon>201706051446530_migrate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706061757145_added-fees.resx">
+      <DependentUpon>201706061757145_added-fees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706061830114_made-fee-per-conference.resx">
+      <DependentUpon>201706061830114_made-fee-per-conference.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706062118389_user-section-mtm.resx">
+      <DependentUpon>201706062118389_user-section-mtm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
