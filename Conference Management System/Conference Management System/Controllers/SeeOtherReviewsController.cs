@@ -16,13 +16,20 @@ namespace Conference_Management_System.Controllers
             return View();
         }
 
+        private bool HasPermission()
+        {
+            return Helpers.DoesUserHaveRoles(Request, new Role[] { Role.PCM });
+        }
+
         [ActionName("PaperList"), HttpGet]
         public ActionResult GetPapers()
         {
+            if (!HasPermission())
+                return View("~/Views/Shared/Forbidden.cshtml");
             List<Submission> submissions = new List<Submission>();
             using (var context = new CMS())
             {
-                int userId = Int32.Parse(Request.Cookies["user"]["id"]);
+                int? userId = Helpers.GetUserId(Request);
                 var qualifierRepo = new AbstractCrudRepo<int, Qualifier>(context);
                 var submissionRepo = new AbstractCrudRepo<int, Submission>(context);
 
@@ -40,14 +47,15 @@ namespace Conference_Management_System.Controllers
         [HttpGet]
         public ActionResult GetReviewsForPaper(int paperId)
         {
-
+            if (!HasPermission())
+                return View("~/Views/Shared/Forbidden.cshtml");
             List<Recommendation> recommendations = new List<Recommendation>();
 
             using (var context = new CMS())
             {
                 try
                 { 
-                    int userId = Int32.Parse(Request.Cookies["user"]["id"]);
+                    int? userId = Helpers.GetUserId(Request);
                     ViewBag.userId = userId;
                     var recommendationRepo = new AbstractCrudRepo<int, Recommendation>(context);
 

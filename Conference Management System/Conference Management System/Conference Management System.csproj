@@ -194,6 +194,7 @@
     <Compile Include="Controllers\ConferencesController.cs" />
     <Compile Include="Controllers\GiveQualifiersController.cs" />
     <Compile Include="Controllers\FeesController.cs" />
+    <Compile Include="Controllers\Helpers.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ConferenceController.cs" />
     <Compile Include="Controllers\ProposalsController.cs" />
@@ -312,6 +313,7 @@
     <Content Include="Views\GiveQualifiers\Proposals.cshtml" />
     <Content Include="Views\Conference\GetAll.cshtml" />
     <Content Include="Views\Conferences\View.cshtml" />
+    <Content Include="Views\Shared\Forbidden.cshtml" />
     <Content Include="Views\SignupForSection\GetAllSections.cshtml" />
   </ItemGroup>
   <ItemGroup>
