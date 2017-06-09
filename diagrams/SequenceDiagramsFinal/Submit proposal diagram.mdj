@@ -1,0 +1,2814 @@
+{
+	"_type": "Project",
+	"_id": "AAAAAAFF+h6SjaM2Hec=",
+	"name": "Untitled",
+	"ownedElements": [
+		{
+			"_type": "UMLModel",
+			"_id": "AAAAAAFF+qBWK6M3Z8Y=",
+			"_parent": {
+				"$ref": "AAAAAAFF+h6SjaM2Hec="
+			},
+			"name": "Model",
+			"ownedElements": [
+				{
+					"_type": "UMLClassDiagram",
+					"_id": "AAAAAAFF+qBtyKM79qY=",
+					"_parent": {
+						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
+					},
+					"name": "Main",
+					"visible": true,
+					"defaultDiagram": true
+				},
+				{
+					"_type": "UMLCollaboration",
+					"_id": "AAAAAAFbwxBtYwKGcMs=",
+					"_parent": {
+						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
+					},
+					"name": "Collaboration1",
+					"ownedElements": [
+						{
+							"_type": "UMLInteraction",
+							"_id": "AAAAAAFbwxBtYwKHJiY=",
+							"_parent": {
+								"$ref": "AAAAAAFbwxBtYwKGcMs="
+							},
+							"name": "Interaction1",
+							"ownedElements": [
+								{
+									"_type": "UMLSequenceDiagram",
+									"_id": "AAAAAAFbwxBtYwKIHdk=",
+									"_parent": {
+										"$ref": "AAAAAAFbwxBtYwKHJiY="
+									},
+									"name": "sequence diagram",
+									"visible": true,
+									"defaultDiagram": false,
+									"ownedViews": [
+										{
+											"_type": "UMLFrameView",
+											"_id": "AAAAAAFbwxBtZAKJiNw=",
+											"_parent": {
+												"$ref": "AAAAAAFbwxBtYwKIHdk="
+											},
+											"model": {
+												"$ref": "AAAAAAFbwxBtYwKIHdk="
+											},
+											"subViews": [
+												{
+													"_type": "LabelView",
+													"_id": "AAAAAAFbwxBtZAKK564=",
+													"_parent": {
+														"$ref": "AAAAAAFbwxBtZAKJiNw="
+													},
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 70.97900390625,
+													"top": 5,
+													"width": 107.9580078125,
+													"height": 13,
+													"autoResize": false,
+													"underline": false,
+													"text": "sequence diagram",
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5
+												},
+												{
+													"_type": "LabelView",
+													"_id": "AAAAAAFbwxBtZAKLMRY=",
+													"_parent": {
+														"$ref": "AAAAAAFbwxBtZAKJiNw="
+													},
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;1",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 5,
+													"top": 5,
+													"width": 60.97900390625,
+													"height": 13,
+													"autoResize": false,
+													"underline": false,
+													"text": "interaction",
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5
+												}
+											],
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 0,
+											"top": 0,
+											"width": 1172,
+											"height": 595,
+											"autoResize": false,
+											"nameLabel": {
+												"$ref": "AAAAAAFbwxBtZAKK564="
+											},
+											"frameTypeLabel": {
+												"$ref": "AAAAAAFbwxBtZAKLMRY="
+											}
+										},
+										{
+											"_type": "UMLSeqLifelineView",
+											"_id": "AAAAAAFbwxCo6QKXtL8=",
+											"_parent": {
+												"$ref": "AAAAAAFbwxBtYwKIHdk="
+											},
+											"model": {
+												"$ref": "AAAAAAFbwxCo6QKWagU="
+											},
+											"subViews": [
+												{
+													"_type": "UMLNameCompartmentView",
+													"_id": "AAAAAAFbwxCo6QKYku4=",
+													"_parent": {
+														"$ref": "AAAAAAFbwxCo6QKXtL8="
+													},
+													"model": {
+														"$ref": "AAAAAAFbwxCo6QKWagU="
+													},
+													"subViews": [
+														{
+															"_type": "LabelView",
+															"_id": "AAAAAAFbwxCo6QKZ4JM=",
+															"_parent": {
+																"$ref": "AAAAAAFbwxCo6QKYku4="
+															},
+															"visible": false,
+															"enabled": true,
+															"lineColor": "#000000",
+															"fillColor": "#ffffff",
+															"fontColor": "#000000",
+															"font": "Arial;13;0",
+															"showShadow": true,
+															"containerChangeable": false,
+															"containerExtending": false,
+															"left": -16,
+															"top": 0,
+															"width": 0,
+															"height": 13,
+															"autoResize": false,
+															"underline": false,
+															"horizontalAlignment": 2,
+															"verticalAlignment": 5
+														},
+														{
+															"_type": "LabelView",
+															"_id": "AAAAAAFbwxCo6QKaBao=",
+															"_parent": {
+																"$ref": "AAAAAAFbwxCo6QKYku4="
+															},
+															"visible": true,
+															"enabled": true,
+															"lineColor": "#000000",
+															"fillColor": "#ffffff",
+															"fontColor": "#000000",
+															"font": "Arial;13;1",
+															"showShadow": true,
+															"containerChangeable": false,
+															"containerExtending": false,
+															"left": 45,
+															"top": 47,
+															"width": 62.736328125,
+															"height": 13,
+															"autoResize": false,
+															"underline": false,
+															"text": ":Author",
+															"horizontalAlignment": 2,
+															"verticalAlignment": 5
+														},
+														{
+															"_type": "LabelView",
+															"_id": "AAAAAAFbwxCo6QKbigg=",
+															"_parent": {
+																"$ref": "AAAAAAFbwxCo6QKYku4="
+															},
+															"visible": false,
+															"enabled": true,
+															"lineColor": "#000000",
+															"fillColor": "#ffffff",
+															"fontColor": "#000000",
+															"font": "Arial;13;0",
+															"showShadow": true,
+															"containerChangeable": false,
+															"containerExtending": false,
+															"left": -16,
+															"top": 0,
+															"width": 106.20263671875,
+															"height": 13,
+															"autoResize": false,
+															"underline": false,
+															"text": "(from Interaction1)",
+															"horizontalAlignment": 2,
+															"verticalAlignment": 5
+														},
+														{
+															"_type": "LabelView",
+															"_id": "AAAAAAFbwxCo6QKchpw=",
+															"_parent": {
+																"$ref": "AAAAAAFbwxCo6QKYku4="
+															},
+															"visible": false,
+															"enabled": true,
+															"lineColor": "#000000",
+															"fillColor": "#ffffff",
+															"fontColor": "#000000",
+															"font": "Arial;13;0",
+															"showShadow": true,
+															"containerChangeable": false,
+															"containerExtending": false,
+															"left": -16,
+															"top": 0,
+															"width": 0,
+															"height": 13,
+															"autoResize": false,
+															"underline": false,
+															"horizontalAlignment": 1,
+															"verticalAlignment": 5
+														}
+													],
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 40,
+													"top": 40,
+													"width": 72.736328125,
+													"height": 40,
+													"autoResize": false,
+													"stereotypeLabel": {
+														"$ref": "AAAAAAFbwxCo6QKZ4JM="
+													},
+													"nameLabel": {
+														"$ref": "AAAAAAFbwxCo6QKaBao="
+													},
+													"namespaceLabel": {
+														"$ref": "AAAAAAFbwxCo6QKbigg="
+													},
+													"propertyLabel": {
+														"$ref": "AAAAAAFbwxCo6QKchpw="
+													}
+												},
+												{
+													"_type": "UMLLinePartView",
+													"_id": "AAAAAAFbwxCo6QKda5g=",
+													"_parent": {
+														"$ref": "AAAAAAFbwxCo6QKXtL8="
+													},
+													"model": {
+														"$ref": "AAAAAAFbwxCo6QKWagU="
+													},
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 76,
+													"top": 80,
+													"width": 1,
+													"height": 471,
+													"autoResize": false
+												}
+											],
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 40,
+											"top": 40,
+											"width": 72.736328125,
+											"height": 511,
+											"autoResize": false,
+											"stereotypeDisplay": "label",
+											"showVisibility": true,
+											"showNamespace": false,
+											"showProperty": true,
+											"showType": true,
+											"nameCompartment": {
+												"$ref": "AAAAAAFbwxCo6QKYku4="
+											},
+											"wordWrap": false,
+											"linePart": {
+												"$ref": "AAAAAAFbwxCo6QKda5g="
+											}
+										},
+										{
+											"_type": "UMLSeqLifelineView",
+											"_id": "AAAAAAFbwxDjbgK3Fkc=",
+											"_parent": {
+												"$ref": "AAAAAAFbwxBtYwKIHdk="
+											},
+											"model": {
+												"$ref": "AAAAAAFbwxDjbgK28Ac="
+											},
+											"subViews": [
+												{
+													"_type": "UMLNameCompartmentView",
+													"_id": "AAAAAAFbwxDjbgK4ZNQ=",
+													"_parent": {
+														"$ref": "AAAAAAFbwxDjbgK3Fkc="
+													},
+													"model": {
+														"$ref": "AAAAAAFbwxDjbgK28Ac="
+													},
+													"subViews": [
+														{
+															"_type": "LabelView",
+															"_id": "AAAAAAFbwxDjbgK5Boo=",
+															"_parent": {
+																"$ref": "AAAAAAFbwxDjbgK4ZNQ="
+															},
+															"visible": false,
+															"enabled": true,
+															"lineColor": "#000000",
+															"fillColor": "#ffffff",
+															"fontColor": "#000000",
+															"font": "Arial;13;0",
+															"showShadow": true,
+															"containerChangeable": false,
+															"containerExtending": false,
+															"left": 0,
+															"top": 0,
+															"width": 0,
+															"height": 13,
+															"autoResize": false,
+															"underline": false,
+															"horizontalAlignment": 2,
+															"verticalAlignment": 5
+														},
+														{
+															"_type": "LabelView",
+															"_id": "AAAAAAFbwxDjbgK63Gc=",
+															"_parent": {
+																"$ref": "AAAAAAFbwxDjbgK4ZNQ="
+															},
+															"visible": true,
+															"enabled": true,
+															"lineColor": "#000000",
+															"fillColor": "#ffffff",
+															"fontColor": "#000000",
+															"font": "Arial;13;1",
+															"showShadow": true,
+															"containerChangeable": false,
+															"containerExtending": false,
+															"left": 229,
+															"top": 47,
+															"width": 78.6181640625,
+															"height": 13,
+															"autoResize": false,
+															"underline": false,
+															"text": ":Submit",
+															"horizontalAlignment": 2,
+															"verticalAlignment": 5
+														},
+														{
+															"_type": "LabelView",
+															"_id": "AAAAAAFbwxDjbgK7Fdk=",
+															"_parent": {
+																"$ref": "AAAAAAFbwxDjbgK4ZNQ="
+															},
+															"visible": false,
+															"enabled": true,
+															"lineColor": "#000000",
+															"fillColor": "#ffffff",
+															"fontColor": "#000000",
+															"font": "Arial;13;0",
+															"showShadow": true,
+															"containerChangeable": false,
+															"containerExtending": false,
+															"left": 0,
+															"top": 0,
+															"width": 106.20263671875,
+															"height": 13,
+															"autoResize": false,
+															"underline": false,
+															"text": "(from Interaction1)",
+															"horizontalAlignment": 2,
+															"verticalAlignment": 5
+														},
+														{
+															"_type": "LabelView",
+															"_id": "AAAAAAFbwxDjbgK8s60=",
+															"_parent": {
+																"$ref": "AAAAAAFbwxDjbgK4ZNQ="
+															},
+															"visible": false,
+															"enabled": true,
+															"lineColor": "#000000",
+															"fillColor": "#ffffff",
+															"fontColor": "#000000",
+															"font": "Arial;13;0",
+															"showShadow": true,
+															"containerChangeable": false,
+															"containerExtending": false,
+															"left": 0,
+															"top": 0,
+															"width": 0,
+															"height": 13,
+															"autoResize": false,
+															"underline": false,
+															"horizontalAlignment": 1,
+															"verticalAlignment": 5
+														}
+													],
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 224,
+													"top": 40,
+													"width": 88.6181640625,
+													"height": 40,
+													"autoResize": false,
+													"stereotypeLabel": {
+														"$ref": "AAAAAAFbwxDjbgK5Boo="
+													},
+													"nameLabel": {
+														"$ref": "AAAAAAFbwxDjbgK63Gc="
+													},
+													"namespaceLabel": {
+														"$ref": "AAAAAAFbwxDjbgK7Fdk="
+													},
+													"propertyLabel": {
+														"$ref": "AAAAAAFbwxDjbgK8s60="
+													}
+												},
+												{
+													"_type": "UMLLinePartView",
+													"_id": "AAAAAAFbwxDjbgK9FaQ=",
+													"_parent": {
+														"$ref": "AAAAAAFbwxDjbgK3Fkc="
+													},
+													"model": {
+														"$ref": "AAAAAAFbwxDjbgK28Ac="
+													},
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 268,
+													"top": 80,
+													"width": 1,
+													"height": 471,
+													"autoResize": false
+												}
+											],
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 224,
+											"top": 40,
+											"width": 88.6181640625,
+											"height": 511,
+											"autoResize": false,
+											"stereotypeDisplay": "label",
+											"showVisibility": true,
+											"showNamespace": false,
+											"showProperty": true,
+											"showType": true,
+											"nameCompartment": {
+												"$ref": "AAAAAAFbwxDjbgK4ZNQ="
+											},
+											"wordWrap": false,
+											"linePart": {
+												"$ref": "AAAAAAFbwxDjbgK9FaQ="
+											}
+										},
+										{
+											"_type": "UMLSeqMessageView",
+											"_id": "AAAAAAFbwxHB8wLWuhM=",
+											"_parent": {
+												"$ref": "AAAAAAFbwxBtYwKIHdk="
+											},
+											"model": {
+												"$ref": "AAAAAAFbwxHB8wLVcf4="
+											},
+											"subViews": [
+												{
+													"_type": "EdgeLabelView",
+													"_id": "AAAAAAFbwxHB8wLX5fs=",
+													"_parent": {
+														"$ref": "AAAAAAFbwxHB8wLWuhM="
+													},
+													"model": {
+														"$ref": "AAAAAAFbwxHB8wLVcf4="
+													},
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 104,
+													"top": 95,
+													"width": 122.84619140625,
+													"height": 13,
+													"autoResize": false,
+													"alpha": -4.4209331033382675,
+													"distance": 10.44030650891055,
+													"hostEdge": {
+														"$ref": "AAAAAAFbwxHB8wLWuhM="
+													},
+													"edgePosition": 1,
+													"underline": false,
+													"text": "1 : AddProposalInfo()",
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5
+												},
+												{
+													"_type": "EdgeLabelView",
+													"_id": "AAAAAAFbwxHB8wLY9Pw=",
+													"_parent": {
+														"$ref": "AAAAAAFbwxHB8wLWuhM="
+													},
+													"model": {
+														"$ref": "AAAAAAFbwxHB8wLVcf4="
+													},
+													"visible": false,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 168,
+													"top": 81,
+													"width": 0,
+													"height": 13,
+													"autoResize": false,
+													"alpha": 1.5707963267948966,
+													"distance": 25,
+													"hostEdge": {
+														"$ref": "AAAAAAFbwxHB8wLWuhM="
+													},
+													"edgePosition": 1,
+													"underline": false,
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5
+												},
+												{
+													"_type": "EdgeLabelView",
+													"_id": "AAAAAAFbwxHB8wLZ95s=",
+													"_parent": {
+														"$ref": "AAAAAAFbwxHB8wLWuhM="
+													},
+													"model": {
+														"$ref": "AAAAAAFbwxHB8wLVcf4="
+													},
+													"visible": false,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 168,
+													"top": 116,
+													"width": 0,
+													"height": 13,
+													"autoResize": false,
+													"alpha": -1.5707963267948966,
+													"distance": 10,
+													"hostEdge": {
+														"$ref": "AAAAAAFbwxHB8wLWuhM="
+													},
+													"edgePosition": 1,
+													"underline": false,
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5
+												},
+												{
+													"_type": "UMLActivationView",
+													"_id": "AAAAAAFbwxHB9ALaEwk=",
+													"_parent": {
+														"$ref": "AAAAAAFbwxHB8wLWuhM="
+													},
+													"model": {
+														"$ref": "AAAAAAFbwxHB8wLVcf4="
+													},
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 261,
+													"top": 112,
+													"width": 14,
+													"height": 345,
+													"autoResize": false
+												}
+											],
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"head": {
+												"$ref": "AAAAAAFbwxDjbgK9FaQ="
+											},
+											"tail": {
+												"$ref": "AAAAAAFbwxCo6QKda5g="
+											},
+											"lineStyle": 0,
+											"points": "76:112;261:112",
+											"nameLabel": {
+												"$ref": "AAAAAAFbwxHB8wLX5fs="
+											},
+											"stereotypeLabel": {
+												"$ref": "AAAAAAFbwxHB8wLY9Pw="
+											},
+											"propertyLabel": {
+												"$ref": "AAAAAAFbwxHB8wLZ95s="
+											},
+											"activation": {
+												"$ref": "AAAAAAFbwxHB9ALaEwk="
+											},
+											"showProperty": true,
+											"showType": true
+										},
+										{
+											"_type": "UMLSeqLifelineView",
+											"_id": "AAAAAAFbwyn2uQOgzC4=",
+											"_parent": {
+												"$ref": "AAAAAAFbwxBtYwKIHdk="
+											},
+											"model": {
+												"$ref": "AAAAAAFbwyn2uAOfIIo="
+											},
+											"subViews": [
+												{
+													"_type": "UMLNameCompartmentView",
+													"_id": "AAAAAAFbwyn2uQOhKIA=",
+													"_parent": {
+														"$ref": "AAAAAAFbwyn2uQOgzC4="
+													},
+													"model": {
+														"$ref": "AAAAAAFbwyn2uAOfIIo="
+													},
+													"subViews": [
+														{
+															"_type": "LabelView",
+															"_id": "AAAAAAFbwyn2uQOiEW4=",
+															"_parent": {
+																"$ref": "AAAAAAFbwyn2uQOhKIA="
+															},
+															"visible": false,
+															"enabled": true,
+															"lineColor": "#000000",
+															"fillColor": "#ffffff",
+															"fontColor": "#000000",
+															"font": "Arial;13;0",
+															"showShadow": true,
+															"containerChangeable": false,
+															"containerExtending": false,
+															"left": -232,
+															"top": 0,
+															"width": 0,
+															"height": 13,
+															"autoResize": false,
+															"underline": false,
+															"horizontalAlignment": 2,
+															"verticalAlignment": 5
+														},
+														{
+															"_type": "LabelView",
+															"_id": "AAAAAAFbwyn2uQOjJ/k=",
+															"_parent": {
+																"$ref": "AAAAAAFbwyn2uQOhKIA="
+															},
+															"visible": true,
+															"enabled": true,
+															"lineColor": "#000000",
+															"fillColor": "#ffffff",
+															"fontColor": "#000000",
+															"font": "Arial;13;1",
+															"showShadow": true,
+															"containerChangeable": false,
+															"containerExtending": false,
+															"left": 645,
+															"top": 47,
+															"width": 241.86083984375,
+															"height": 13,
+															"autoResize": false,
+															"underline": false,
+															"text": ":AbstractCrudRepo<int, Submission>",
+															"horizontalAlignment": 2,
+															"verticalAlignment": 5
+														},
+														{
+															"_type": "LabelView",
+															"_id": "AAAAAAFbwyn2ugOkOTU=",
+															"_parent": {
+																"$ref": "AAAAAAFbwyn2uQOhKIA="
+															},
+															"visible": false,
+															"enabled": true,
+															"lineColor": "#000000",
+															"fillColor": "#ffffff",
+															"fontColor": "#000000",
+															"font": "Arial;13;0",
+															"showShadow": true,
+															"containerChangeable": false,
+															"containerExtending": false,
+															"left": -232,
+															"top": 0,
+															"width": 106.20263671875,
+															"height": 13,
+															"autoResize": false,
+															"underline": false,
+															"text": "(from Interaction1)",
+															"horizontalAlignment": 2,
+															"verticalAlignment": 5
+														},
+														{
+															"_type": "LabelView",
+															"_id": "AAAAAAFbwyn2ugOlazo=",
+															"_parent": {
+																"$ref": "AAAAAAFbwyn2uQOhKIA="
+															},
+															"visible": false,
+															"enabled": true,
+															"lineColor": "#000000",
+															"fillColor": "#ffffff",
+															"fontColor": "#000000",
+															"font": "Arial;13;0",
+															"showShadow": true,
+															"containerChangeable": false,
+															"containerExtending": false,
+															"left": -232,
+															"top": 0,
+															"width": 0,
+															"height": 13,
+															"autoResize": false,
+															"underline": false,
+															"horizontalAlignment": 1,
+															"verticalAlignment": 5
+														}
+													],
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 640,
+													"top": 40,
+													"width": 251.86083984375,
+													"height": 40,
+													"autoResize": false,
+													"stereotypeLabel": {
+														"$ref": "AAAAAAFbwyn2uQOiEW4="
+													},
+													"nameLabel": {
+														"$ref": "AAAAAAFbwyn2uQOjJ/k="
+													},
+													"namespaceLabel": {
+														"$ref": "AAAAAAFbwyn2ugOkOTU="
+													},
+													"propertyLabel": {
+														"$ref": "AAAAAAFbwyn2ugOlazo="
+													}
+												},
+												{
+													"_type": "UMLLinePartView",
+													"_id": "AAAAAAFbwyn2ugOmxu0=",
+													"_parent": {
+														"$ref": "AAAAAAFbwyn2uQOgzC4="
+													},
+													"model": {
+														"$ref": "AAAAAAFbwyn2uAOfIIo="
+													},
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 766,
+													"top": 80,
+													"width": 1,
+													"height": 473,
+													"autoResize": false
+												}
+											],
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 640,
+											"top": 40,
+											"width": 251.86083984375,
+											"height": 513,
+											"autoResize": false,
+											"stereotypeDisplay": "label",
+											"showVisibility": true,
+											"showNamespace": false,
+											"showProperty": true,
+											"showType": true,
+											"nameCompartment": {
+												"$ref": "AAAAAAFbwyn2uQOhKIA="
+											},
+											"wordWrap": false,
+											"linePart": {
+												"$ref": "AAAAAAFbwyn2ugOmxu0="
+											}
+										},
+										{
+											"_type": "UMLSeqLifelineView",
+											"_id": "AAAAAAFbwyunowP5SZ8=",
+											"_parent": {
+												"$ref": "AAAAAAFbwxBtYwKIHdk="
+											},
+											"model": {
+												"$ref": "AAAAAAFbwyunowP45cc="
+											},
+											"subViews": [
+												{
+													"_type": "UMLNameCompartmentView",
+													"_id": "AAAAAAFbwyunowP6PlA=",
+													"_parent": {
+														"$ref": "AAAAAAFbwyunowP5SZ8="
+													},
+													"model": {
+														"$ref": "AAAAAAFbwyunowP45cc="
+													},
+													"subViews": [
+														{
+															"_type": "LabelView",
+															"_id": "AAAAAAFbwyunowP74Nc=",
+															"_parent": {
+																"$ref": "AAAAAAFbwyunowP6PlA="
+															},
+															"visible": false,
+															"enabled": true,
+															"lineColor": "#000000",
+															"fillColor": "#ffffff",
+															"fontColor": "#000000",
+															"font": "Arial;13;0",
+															"showShadow": true,
+															"containerChangeable": false,
+															"containerExtending": false,
+															"left": 80,
+															"top": 0,
+															"width": 0,
+															"height": 13,
+															"autoResize": false,
+															"underline": false,
+															"horizontalAlignment": 2,
+															"verticalAlignment": 5
+														},
+														{
+															"_type": "LabelView",
+															"_id": "AAAAAAFbwyunowP849Y=",
+															"_parent": {
+																"$ref": "AAAAAAFbwyunowP6PlA="
+															},
+															"visible": true,
+															"enabled": true,
+															"lineColor": "#000000",
+															"fillColor": "#ffffff",
+															"fontColor": "#000000",
+															"font": "Arial;13;1",
+															"showShadow": true,
+															"containerChangeable": false,
+															"containerExtending": false,
+															"left": 997,
+															"top": 47,
+															"width": 62.736328125,
+															"height": 13,
+															"autoResize": false,
+															"underline": false,
+															"text": ":DB",
+															"horizontalAlignment": 2,
+															"verticalAlignment": 5
+														},
+														{
+															"_type": "LabelView",
+															"_id": "AAAAAAFbwyunowP97MY=",
+															"_parent": {
+																"$ref": "AAAAAAFbwyunowP6PlA="
+															},
+															"visible": false,
+															"enabled": true,
+															"lineColor": "#000000",
+															"fillColor": "#ffffff",
+															"fontColor": "#000000",
+															"font": "Arial;13;0",
+															"showShadow": true,
+															"containerChangeable": false,
+															"containerExtending": false,
+															"left": 80,
+															"top": 0,
+															"width": 106.20263671875,
+															"height": 13,
+															"autoResize": false,
+															"underline": false,
+															"text": "(from Interaction1)",
+															"horizontalAlignment": 2,
+															"verticalAlignment": 5
+														},
+														{
+															"_type": "LabelView",
+															"_id": "AAAAAAFbwyunowP+4Iw=",
+															"_parent": {
+																"$ref": "AAAAAAFbwyunowP6PlA="
+															},
+															"visible": false,
+															"enabled": true,
+															"lineColor": "#000000",
+															"fillColor": "#ffffff",
+															"fontColor": "#000000",
+															"font": "Arial;13;0",
+															"showShadow": true,
+															"containerChangeable": false,
+															"containerExtending": false,
+															"left": 80,
+															"top": 0,
+															"width": 0,
+															"height": 13,
+															"autoResize": false,
+															"underline": false,
+															"horizontalAlignment": 1,
+															"verticalAlignment": 5
+														}
+													],
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 992,
+													"top": 40,
+													"width": 72.736328125,
+													"height": 40,
+													"autoResize": false,
+													"stereotypeLabel": {
+														"$ref": "AAAAAAFbwyunowP74Nc="
+													},
+													"nameLabel": {
+														"$ref": "AAAAAAFbwyunowP849Y="
+													},
+													"namespaceLabel": {
+														"$ref": "AAAAAAFbwyunowP97MY="
+													},
+													"propertyLabel": {
+														"$ref": "AAAAAAFbwyunowP+4Iw="
+													}
+												},
+												{
+													"_type": "UMLLinePartView",
+													"_id": "AAAAAAFbwyunowP/KxA=",
+													"_parent": {
+														"$ref": "AAAAAAFbwyunowP5SZ8="
+													},
+													"model": {
+														"$ref": "AAAAAAFbwyunowP45cc="
+													},
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 1028,
+													"top": 80,
+													"width": 1,
+													"height": 473,
+													"autoResize": false
+												}
+											],
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 992,
+											"top": 40,
+											"width": 72.736328125,
+											"height": 513,
+											"autoResize": false,
+											"stereotypeDisplay": "label",
+											"showVisibility": true,
+											"showNamespace": false,
+											"showProperty": true,
+											"showType": true,
+											"nameCompartment": {
+												"$ref": "AAAAAAFbwyunowP6PlA="
+											},
+											"wordWrap": false,
+											"linePart": {
+												"$ref": "AAAAAAFbwyunowP/KxA="
+											}
+										},
+										{
+											"_type": "UMLSeqMessageView",
+											"_id": "AAAAAAFbw281agVVxgA=",
+											"_parent": {
+												"$ref": "AAAAAAFbwxBtYwKIHdk="
+											},
+											"model": {
+												"$ref": "AAAAAAFbw281agVUbVs="
+											},
+											"subViews": [
+												{
+													"_type": "EdgeLabelView",
+													"_id": "AAAAAAFbw281agVWJH0=",
+													"_parent": {
+														"$ref": "AAAAAAFbw281agVVxgA="
+													},
+													"model": {
+														"$ref": "AAAAAAFbw281agVUbVs="
+													},
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 283,
+													"top": 128,
+													"width": 185.68798828125,
+													"height": 13,
+													"autoResize": false,
+													"alpha": 1.3733998054067393,
+													"distance": 10.198039027185569,
+													"hostEdge": {
+														"$ref": "AAAAAAFbw281agVVxgA="
+													},
+													"edgePosition": 1,
+													"underline": false,
+													"text": "2 : Submit(submission,proposal)",
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5
+												},
+												{
+													"_type": "EdgeLabelView",
+													"_id": "AAAAAAFbw281agVXtZI=",
+													"_parent": {
+														"$ref": "AAAAAAFbw281agVVxgA="
+													},
+													"model": {
+														"$ref": "AAAAAAFbw281agVUbVs="
+													},
+													"visible": false,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 373,
+													"top": 113,
+													"width": 0,
+													"height": 13,
+													"autoResize": false,
+													"alpha": 1.5707963267948966,
+													"distance": 25,
+													"hostEdge": {
+														"$ref": "AAAAAAFbw281agVVxgA="
+													},
+													"edgePosition": 1,
+													"underline": false,
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5
+												},
+												{
+													"_type": "EdgeLabelView",
+													"_id": "AAAAAAFbw281agVYVH4=",
+													"_parent": {
+														"$ref": "AAAAAAFbw281agVVxgA="
+													},
+													"model": {
+														"$ref": "AAAAAAFbw281agVUbVs="
+													},
+													"visible": false,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 373,
+													"top": 148,
+													"width": 0,
+													"height": 13,
+													"autoResize": false,
+													"alpha": -1.5707963267948966,
+													"distance": 10,
+													"hostEdge": {
+														"$ref": "AAAAAAFbw281agVVxgA="
+													},
+													"edgePosition": 1,
+													"underline": false,
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5
+												},
+												{
+													"_type": "UMLActivationView",
+													"_id": "AAAAAAFbw281agVZKF4=",
+													"_parent": {
+														"$ref": "AAAAAAFbw281agVVxgA="
+													},
+													"model": {
+														"$ref": "AAAAAAFbw281agVUbVs="
+													},
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 472,
+													"top": 144,
+													"width": 14,
+													"height": 313,
+													"autoResize": false
+												}
+											],
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"head": {
+												"$ref": "AAAAAAFbw2z3zQUgDbs="
+											},
+											"tail": {
+												"$ref": "AAAAAAFbwxDjbgK9FaQ="
+											},
+											"lineStyle": 0,
+											"points": "274:144;472:144",
+											"nameLabel": {
+												"$ref": "AAAAAAFbw281agVWJH0="
+											},
+											"stereotypeLabel": {
+												"$ref": "AAAAAAFbw281agVXtZI="
+											},
+											"propertyLabel": {
+												"$ref": "AAAAAAFbw281agVYVH4="
+											},
+											"activation": {
+												"$ref": "AAAAAAFbw281agVZKF4="
+											},
+											"showProperty": true,
+											"showType": true
+										},
+										{
+											"_type": "UMLSeqLifelineView",
+											"_id": "AAAAAAFbw2z3zQUaem8=",
+											"_parent": {
+												"$ref": "AAAAAAFbwxBtYwKIHdk="
+											},
+											"model": {
+												"$ref": "AAAAAAFbw2z3zQUZerQ="
+											},
+											"subViews": [
+												{
+													"_type": "UMLNameCompartmentView",
+													"_id": "AAAAAAFbw2z3zQUbT0U=",
+													"_parent": {
+														"$ref": "AAAAAAFbw2z3zQUaem8="
+													},
+													"model": {
+														"$ref": "AAAAAAFbw2z3zQUZerQ="
+													},
+													"subViews": [
+														{
+															"_type": "LabelView",
+															"_id": "AAAAAAFbw2z3zQUcTkg=",
+															"_parent": {
+																"$ref": "AAAAAAFbw2z3zQUbT0U="
+															},
+															"visible": false,
+															"enabled": true,
+															"lineColor": "#000000",
+															"fillColor": "#ffffff",
+															"fontColor": "#000000",
+															"font": "Arial;13;0",
+															"showShadow": true,
+															"containerChangeable": false,
+															"containerExtending": false,
+															"left": -264,
+															"top": 0,
+															"width": 0,
+															"height": 13,
+															"autoResize": false,
+															"underline": false,
+															"horizontalAlignment": 2,
+															"verticalAlignment": 5
+														},
+														{
+															"_type": "LabelView",
+															"_id": "AAAAAAFbw2z3zQUdt2I=",
+															"_parent": {
+																"$ref": "AAAAAAFbw2z3zQUbT0U="
+															},
+															"visible": true,
+															"enabled": true,
+															"lineColor": "#000000",
+															"fillColor": "#ffffff",
+															"fontColor": "#000000",
+															"font": "Arial;13;1",
+															"showShadow": true,
+															"containerChangeable": false,
+															"containerExtending": false,
+															"left": 389,
+															"top": 47,
+															"width": 179.72998046875,
+															"height": 13,
+															"autoResize": false,
+															"underline": false,
+															"text": ":SubmitProposalController ",
+															"horizontalAlignment": 2,
+															"verticalAlignment": 5
+														},
+														{
+															"_type": "LabelView",
+															"_id": "AAAAAAFbw2z3zQUev/U=",
+															"_parent": {
+																"$ref": "AAAAAAFbw2z3zQUbT0U="
+															},
+															"visible": false,
+															"enabled": true,
+															"lineColor": "#000000",
+															"fillColor": "#ffffff",
+															"fontColor": "#000000",
+															"font": "Arial;13;0",
+															"showShadow": true,
+															"containerChangeable": false,
+															"containerExtending": false,
+															"left": -264,
+															"top": 0,
+															"width": 106.20263671875,
+															"height": 13,
+															"autoResize": false,
+															"underline": false,
+															"text": "(from Interaction1)",
+															"horizontalAlignment": 2,
+															"verticalAlignment": 5
+														},
+														{
+															"_type": "LabelView",
+															"_id": "AAAAAAFbw2z3zQUf4fY=",
+															"_parent": {
+																"$ref": "AAAAAAFbw2z3zQUbT0U="
+															},
+															"visible": false,
+															"enabled": true,
+															"lineColor": "#000000",
+															"fillColor": "#ffffff",
+															"fontColor": "#000000",
+															"font": "Arial;13;0",
+															"showShadow": true,
+															"containerChangeable": false,
+															"containerExtending": false,
+															"left": -264,
+															"top": 0,
+															"width": 0,
+															"height": 13,
+															"autoResize": false,
+															"underline": false,
+															"horizontalAlignment": 1,
+															"verticalAlignment": 5
+														}
+													],
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 384,
+													"top": 40,
+													"width": 189.72998046875,
+													"height": 40,
+													"autoResize": false,
+													"stereotypeLabel": {
+														"$ref": "AAAAAAFbw2z3zQUcTkg="
+													},
+													"nameLabel": {
+														"$ref": "AAAAAAFbw2z3zQUdt2I="
+													},
+													"namespaceLabel": {
+														"$ref": "AAAAAAFbw2z3zQUev/U="
+													},
+													"propertyLabel": {
+														"$ref": "AAAAAAFbw2z3zQUf4fY="
+													}
+												},
+												{
+													"_type": "UMLLinePartView",
+													"_id": "AAAAAAFbw2z3zQUgDbs=",
+													"_parent": {
+														"$ref": "AAAAAAFbw2z3zQUaem8="
+													},
+													"model": {
+														"$ref": "AAAAAAFbw2z3zQUZerQ="
+													},
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 479,
+													"top": 80,
+													"width": 1,
+													"height": 391,
+													"autoResize": false
+												}
+											],
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 384,
+											"top": 40,
+											"width": 189.72998046875,
+											"height": 431,
+											"autoResize": false,
+											"stereotypeDisplay": "label",
+											"showVisibility": true,
+											"showNamespace": false,
+											"showProperty": true,
+											"showType": true,
+											"nameCompartment": {
+												"$ref": "AAAAAAFbw2z3zQUbT0U="
+											},
+											"wordWrap": false,
+											"linePart": {
+												"$ref": "AAAAAAFbw2z3zQUgDbs="
+											}
+										},
+										{
+											"_type": "UMLSeqMessageView",
+											"_id": "AAAAAAFci4ZWjqK6NPk=",
+											"_parent": {
+												"$ref": "AAAAAAFbwxBtYwKIHdk="
+											},
+											"model": {
+												"$ref": "AAAAAAFci4ZWjqK55kc="
+											},
+											"subViews": [
+												{
+													"_type": "EdgeLabelView",
+													"_id": "AAAAAAFci4ZWj6K7YY4=",
+													"_parent": {
+														"$ref": "AAAAAAFci4ZWjqK6NPk="
+													},
+													"model": {
+														"$ref": "AAAAAAFci4ZWjqK55kc="
+													},
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 510,
+													"top": 200,
+													"width": 166.18798828125,
+													"height": 13,
+													"autoResize": false,
+													"alpha": 1.3228405120951485,
+													"distance": 81.49233092751734,
+													"hostEdge": {
+														"$ref": "AAAAAAFci4ZWjqK6NPk="
+													},
+													"edgePosition": 1,
+													"underline": false,
+													"text": "3 : AddProposal(submission)",
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5
+												},
+												{
+													"_type": "EdgeLabelView",
+													"_id": "AAAAAAFci4ZWj6K8Z5M=",
+													"_parent": {
+														"$ref": "AAAAAAFci4ZWjqK6NPk="
+													},
+													"model": {
+														"$ref": "AAAAAAFci4ZWjqK55kc="
+													},
+													"visible": false,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 539,
+													"top": 179,
+													"width": 0,
+													"height": 13,
+													"autoResize": false,
+													"alpha": 1.5707963267948966,
+													"distance": 25,
+													"hostEdge": {
+														"$ref": "AAAAAAFci4ZWjqK6NPk="
+													},
+													"edgePosition": 1,
+													"underline": false,
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5
+												},
+												{
+													"_type": "EdgeLabelView",
+													"_id": "AAAAAAFci4ZWj6K9HuY=",
+													"_parent": {
+														"$ref": "AAAAAAFci4ZWjqK6NPk="
+													},
+													"model": {
+														"$ref": "AAAAAAFci4ZWjqK55kc="
+													},
+													"visible": false,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 505,
+													"top": 180,
+													"width": 0,
+													"height": 13,
+													"autoResize": false,
+													"alpha": -1.5707963267948966,
+													"distance": 10,
+													"hostEdge": {
+														"$ref": "AAAAAAFci4ZWjqK6NPk="
+													},
+													"edgePosition": 1,
+													"underline": false,
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5
+												},
+												{
+													"_type": "UMLActivationView",
+													"_id": "AAAAAAFci4ZWj6K+nAc=",
+													"_parent": {
+														"$ref": "AAAAAAFci4ZWjqK6NPk="
+													},
+													"model": {
+														"$ref": "AAAAAAFci4ZWjqK55kc="
+													},
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 479,
+													"top": 196,
+													"width": 14,
+													"height": 29,
+													"autoResize": false
+												}
+											],
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"head": {
+												"$ref": "AAAAAAFbw2z3zQUgDbs="
+											},
+											"tail": {
+												"$ref": "AAAAAAFbw2z3zQUgDbs="
+											},
+											"lineStyle": 0,
+											"points": "485:176;515:176;515:196;492:196",
+											"nameLabel": {
+												"$ref": "AAAAAAFci4ZWj6K7YY4="
+											},
+											"stereotypeLabel": {
+												"$ref": "AAAAAAFci4ZWj6K8Z5M="
+											},
+											"propertyLabel": {
+												"$ref": "AAAAAAFci4ZWj6K9HuY="
+											},
+											"activation": {
+												"$ref": "AAAAAAFci4ZWj6K+nAc="
+											},
+											"showProperty": true,
+											"showType": true
+										},
+										{
+											"_type": "UMLSeqMessageView",
+											"_id": "AAAAAAFci4bqjqLSMkA=",
+											"_parent": {
+												"$ref": "AAAAAAFbwxBtYwKIHdk="
+											},
+											"model": {
+												"$ref": "AAAAAAFci4bqjqLRSz8="
+											},
+											"subViews": [
+												{
+													"_type": "EdgeLabelView",
+													"_id": "AAAAAAFci4bqjqLT3zs=",
+													"_parent": {
+														"$ref": "AAAAAAFci4bqjqLSMkA="
+													},
+													"model": {
+														"$ref": "AAAAAAFci4bqjqLRSz8="
+													},
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 565,
+													"top": 240,
+													"width": 114.8798828125,
+													"height": 13,
+													"autoResize": false,
+													"alpha": 1.5707963267948966,
+													"distance": 10,
+													"hostEdge": {
+														"$ref": "AAAAAAFci4bqjqLSMkA="
+													},
+													"edgePosition": 1,
+													"underline": false,
+													"text": "4 : Add(submission)",
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5
+												},
+												{
+													"_type": "EdgeLabelView",
+													"_id": "AAAAAAFci4bqj6LUAF0=",
+													"_parent": {
+														"$ref": "AAAAAAFci4bqjqLSMkA="
+													},
+													"model": {
+														"$ref": "AAAAAAFci4bqjqLRSz8="
+													},
+													"visible": false,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 622,
+													"top": 225,
+													"width": 0,
+													"height": 13,
+													"autoResize": false,
+													"alpha": 1.5707963267948966,
+													"distance": 25,
+													"hostEdge": {
+														"$ref": "AAAAAAFci4bqjqLSMkA="
+													},
+													"edgePosition": 1,
+													"underline": false,
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5
+												},
+												{
+													"_type": "EdgeLabelView",
+													"_id": "AAAAAAFci4bqj6LVLHs=",
+													"_parent": {
+														"$ref": "AAAAAAFci4bqjqLSMkA="
+													},
+													"model": {
+														"$ref": "AAAAAAFci4bqjqLRSz8="
+													},
+													"visible": false,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 622,
+													"top": 260,
+													"width": 0,
+													"height": 13,
+													"autoResize": false,
+													"alpha": -1.5707963267948966,
+													"distance": 10,
+													"hostEdge": {
+														"$ref": "AAAAAAFci4bqjqLSMkA="
+													},
+													"edgePosition": 1,
+													"underline": false,
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5
+												},
+												{
+													"_type": "UMLActivationView",
+													"_id": "AAAAAAFci4bqj6LW97U=",
+													"_parent": {
+														"$ref": "AAAAAAFci4bqjqLSMkA="
+													},
+													"model": {
+														"$ref": "AAAAAAFci4bqjqLRSz8="
+													},
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 759,
+													"top": 256,
+													"width": 14,
+													"height": 129,
+													"autoResize": false
+												}
+											],
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"head": {
+												"$ref": "AAAAAAFbwyn2ugOmxu0="
+											},
+											"tail": {
+												"$ref": "AAAAAAFbw2z3zQUgDbs="
+											},
+											"lineStyle": 0,
+											"points": "485:256;759:256",
+											"nameLabel": {
+												"$ref": "AAAAAAFci4bqjqLT3zs="
+											},
+											"stereotypeLabel": {
+												"$ref": "AAAAAAFci4bqj6LUAF0="
+											},
+											"propertyLabel": {
+												"$ref": "AAAAAAFci4bqj6LVLHs="
+											},
+											"activation": {
+												"$ref": "AAAAAAFci4bqj6LW97U="
+											},
+											"showProperty": true,
+											"showType": true
+										},
+										{
+											"_type": "UMLSeqMessageView",
+											"_id": "AAAAAAFci4dCgaLqQ7U=",
+											"_parent": {
+												"$ref": "AAAAAAFbwxBtYwKIHdk="
+											},
+											"model": {
+												"$ref": "AAAAAAFci4dCgaLpROo="
+											},
+											"subViews": [
+												{
+													"_type": "EdgeLabelView",
+													"_id": "AAAAAAFci4dCgaLr7cw=",
+													"_parent": {
+														"$ref": "AAAAAAFci4dCgaLqQ7U="
+													},
+													"model": {
+														"$ref": "AAAAAAFci4dCgaLpROo="
+													},
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 839,
+													"top": 263,
+													"width": 114.8798828125,
+													"height": 13,
+													"autoResize": false,
+													"alpha": 1.5707963267948966,
+													"distance": 10,
+													"hostEdge": {
+														"$ref": "AAAAAAFci4dCgaLqQ7U="
+													},
+													"edgePosition": 1,
+													"underline": false,
+													"text": "5 : Add(submission)",
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5
+												},
+												{
+													"_type": "EdgeLabelView",
+													"_id": "AAAAAAFci4dCgqLswSw=",
+													"_parent": {
+														"$ref": "AAAAAAFci4dCgaLqQ7U="
+													},
+													"model": {
+														"$ref": "AAAAAAFci4dCgaLpROo="
+													},
+													"visible": false,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 896,
+													"top": 248,
+													"width": 0,
+													"height": 13,
+													"autoResize": false,
+													"alpha": 1.5707963267948966,
+													"distance": 25,
+													"hostEdge": {
+														"$ref": "AAAAAAFci4dCgaLqQ7U="
+													},
+													"edgePosition": 1,
+													"underline": false,
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5
+												},
+												{
+													"_type": "EdgeLabelView",
+													"_id": "AAAAAAFci4dCgqLtp/k=",
+													"_parent": {
+														"$ref": "AAAAAAFci4dCgaLqQ7U="
+													},
+													"model": {
+														"$ref": "AAAAAAFci4dCgaLpROo="
+													},
+													"visible": false,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 896,
+													"top": 283,
+													"width": 0,
+													"height": 13,
+													"autoResize": false,
+													"alpha": -1.5707963267948966,
+													"distance": 10,
+													"hostEdge": {
+														"$ref": "AAAAAAFci4dCgaLqQ7U="
+													},
+													"edgePosition": 1,
+													"underline": false,
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5
+												},
+												{
+													"_type": "UMLActivationView",
+													"_id": "AAAAAAFci4dCgqLu6jU=",
+													"_parent": {
+														"$ref": "AAAAAAFci4dCgaLqQ7U="
+													},
+													"model": {
+														"$ref": "AAAAAAFci4dCgaLpROo="
+													},
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 1021,
+													"top": 279,
+													"width": 14,
+													"height": 74,
+													"autoResize": false
+												}
+											],
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"head": {
+												"$ref": "AAAAAAFbwyunowP/KxA="
+											},
+											"tail": {
+												"$ref": "AAAAAAFbwyn2ugOmxu0="
+											},
+											"lineStyle": 0,
+											"points": "772:279;1021:279",
+											"nameLabel": {
+												"$ref": "AAAAAAFci4dCgaLr7cw="
+											},
+											"stereotypeLabel": {
+												"$ref": "AAAAAAFci4dCgqLswSw="
+											},
+											"propertyLabel": {
+												"$ref": "AAAAAAFci4dCgqLtp/k="
+											},
+											"activation": {
+												"$ref": "AAAAAAFci4dCgqLu6jU="
+											},
+											"showProperty": true,
+											"showType": true
+										},
+										{
+											"_type": "UMLSeqMessageView",
+											"_id": "AAAAAAFci4eX9KMDMFU=",
+											"_parent": {
+												"$ref": "AAAAAAFbwxBtYwKIHdk="
+											},
+											"model": {
+												"$ref": "AAAAAAFci4eX9KMCu9E="
+											},
+											"subViews": [
+												{
+													"_type": "EdgeLabelView",
+													"_id": "AAAAAAFci4eX9aMEF5M=",
+													"_parent": {
+														"$ref": "AAAAAAFci4eX9KMDMFU="
+													},
+													"model": {
+														"$ref": "AAAAAAFci4eX9KMCu9E="
+													},
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 862,
+													"top": 335,
+													"width": 67.1962890625,
+													"height": 13,
+													"autoResize": false,
+													"alpha": 1.5707963267948966,
+													"distance": 10,
+													"hostEdge": {
+														"$ref": "AAAAAAFci4eX9KMDMFU="
+													},
+													"edgePosition": 1,
+													"underline": false,
+													"text": "6 : Success",
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5
+												},
+												{
+													"_type": "EdgeLabelView",
+													"_id": "AAAAAAFci4eX9aMFwS0=",
+													"_parent": {
+														"$ref": "AAAAAAFci4eX9KMDMFU="
+													},
+													"model": {
+														"$ref": "AAAAAAFci4eX9KMCu9E="
+													},
+													"visible": false,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 895,
+													"top": 350,
+													"width": 0,
+													"height": 13,
+													"autoResize": false,
+													"alpha": 1.5707963267948966,
+													"distance": 25,
+													"hostEdge": {
+														"$ref": "AAAAAAFci4eX9KMDMFU="
+													},
+													"edgePosition": 1,
+													"underline": false,
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5
+												},
+												{
+													"_type": "EdgeLabelView",
+													"_id": "AAAAAAFci4eX9aMGs58=",
+													"_parent": {
+														"$ref": "AAAAAAFci4eX9KMDMFU="
+													},
+													"model": {
+														"$ref": "AAAAAAFci4eX9KMCu9E="
+													},
+													"visible": false,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 896,
+													"top": 315,
+													"width": 0,
+													"height": 13,
+													"autoResize": false,
+													"alpha": -1.5707963267948966,
+													"distance": 10,
+													"hostEdge": {
+														"$ref": "AAAAAAFci4eX9KMDMFU="
+													},
+													"edgePosition": 1,
+													"underline": false,
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5
+												},
+												{
+													"_type": "UMLActivationView",
+													"_id": "AAAAAAFci4eX9aMHXhs=",
+													"_parent": {
+														"$ref": "AAAAAAFci4eX9KMDMFU="
+													},
+													"model": {
+														"$ref": "AAAAAAFci4eX9KMCu9E="
+													},
+													"visible": false,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 759,
+													"top": 331,
+													"width": 14,
+													"height": 25,
+													"autoResize": false
+												}
+											],
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"head": {
+												"$ref": "AAAAAAFbwyn2ugOmxu0="
+											},
+											"tail": {
+												"$ref": "AAAAAAFbwyunowP/KxA="
+											},
+											"lineStyle": 0,
+											"points": "1021:331;772:331",
+											"nameLabel": {
+												"$ref": "AAAAAAFci4eX9aMEF5M="
+											},
+											"stereotypeLabel": {
+												"$ref": "AAAAAAFci4eX9aMFwS0="
+											},
+											"propertyLabel": {
+												"$ref": "AAAAAAFci4eX9aMGs58="
+											},
+											"activation": {
+												"$ref": "AAAAAAFci4eX9aMHXhs="
+											},
+											"showProperty": true,
+											"showType": true
+										},
+										{
+											"_type": "UMLSeqMessageView",
+											"_id": "AAAAAAFci4fEcKMZ078=",
+											"_parent": {
+												"$ref": "AAAAAAFbwxBtYwKIHdk="
+											},
+											"model": {
+												"$ref": "AAAAAAFci4fEb6MYd9I="
+											},
+											"subViews": [
+												{
+													"_type": "EdgeLabelView",
+													"_id": "AAAAAAFci4fEcKMaVcc=",
+													"_parent": {
+														"$ref": "AAAAAAFci4fEcKMZ078="
+													},
+													"model": {
+														"$ref": "AAAAAAFci4fEb6MYd9I="
+													},
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 588,
+													"top": 365,
+													"width": 67.1962890625,
+													"height": 13,
+													"autoResize": false,
+													"alpha": 1.5707963267948966,
+													"distance": 10,
+													"hostEdge": {
+														"$ref": "AAAAAAFci4fEcKMZ078="
+													},
+													"edgePosition": 1,
+													"underline": false,
+													"text": "7 : Success",
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5
+												},
+												{
+													"_type": "EdgeLabelView",
+													"_id": "AAAAAAFci4fEcKMb7HE=",
+													"_parent": {
+														"$ref": "AAAAAAFci4fEcKMZ078="
+													},
+													"model": {
+														"$ref": "AAAAAAFci4fEb6MYd9I="
+													},
+													"visible": false,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 621,
+													"top": 380,
+													"width": 0,
+													"height": 13,
+													"autoResize": false,
+													"alpha": 1.5707963267948966,
+													"distance": 25,
+													"hostEdge": {
+														"$ref": "AAAAAAFci4fEcKMZ078="
+													},
+													"edgePosition": 1,
+													"underline": false,
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5
+												},
+												{
+													"_type": "EdgeLabelView",
+													"_id": "AAAAAAFci4fEcKMcBbs=",
+													"_parent": {
+														"$ref": "AAAAAAFci4fEcKMZ078="
+													},
+													"model": {
+														"$ref": "AAAAAAFci4fEb6MYd9I="
+													},
+													"visible": false,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 622,
+													"top": 345,
+													"width": 0,
+													"height": 13,
+													"autoResize": false,
+													"alpha": -1.5707963267948966,
+													"distance": 10,
+													"hostEdge": {
+														"$ref": "AAAAAAFci4fEcKMZ078="
+													},
+													"edgePosition": 1,
+													"underline": false,
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5
+												},
+												{
+													"_type": "UMLActivationView",
+													"_id": "AAAAAAFci4fEcKMdSsg=",
+													"_parent": {
+														"$ref": "AAAAAAFci4fEcKMZ078="
+													},
+													"model": {
+														"$ref": "AAAAAAFci4fEb6MYd9I="
+													},
+													"visible": false,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 472,
+													"top": 361,
+													"width": 14,
+													"height": 25,
+													"autoResize": false
+												}
+											],
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"head": {
+												"$ref": "AAAAAAFbw2z3zQUgDbs="
+											},
+											"tail": {
+												"$ref": "AAAAAAFbwyn2ugOmxu0="
+											},
+											"lineStyle": 0,
+											"points": "759:361;485:361",
+											"nameLabel": {
+												"$ref": "AAAAAAFci4fEcKMaVcc="
+											},
+											"stereotypeLabel": {
+												"$ref": "AAAAAAFci4fEcKMb7HE="
+											},
+											"propertyLabel": {
+												"$ref": "AAAAAAFci4fEcKMcBbs="
+											},
+											"activation": {
+												"$ref": "AAAAAAFci4fEcKMdSsg="
+											},
+											"showProperty": true,
+											"showType": true
+										},
+										{
+											"_type": "UMLSeqMessageView",
+											"_id": "AAAAAAFci4hK1aMvaUE=",
+											"_parent": {
+												"$ref": "AAAAAAFbwxBtYwKIHdk="
+											},
+											"model": {
+												"$ref": "AAAAAAFci4hK1aMud98="
+											},
+											"subViews": [
+												{
+													"_type": "EdgeLabelView",
+													"_id": "AAAAAAFci4hK1qMwCg0=",
+													"_parent": {
+														"$ref": "AAAAAAFci4hK1aMvaUE="
+													},
+													"model": {
+														"$ref": "AAAAAAFci4hK1aMud98="
+													},
+													"visible": true,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 319,
+													"top": 404,
+													"width": 106.96435546875,
+													"height": 13,
+													"autoResize": false,
+													"alpha": 1.5707963267948966,
+													"distance": 10,
+													"hostEdge": {
+														"$ref": "AAAAAAFci4hK1aMvaUE="
+													},
+													"edgePosition": 1,
+													"underline": false,
+													"text": "8 : ProposalAdded",
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5
+												},
+												{
+													"_type": "EdgeLabelView",
+													"_id": "AAAAAAFci4hK1qMxh0Y=",
+													"_parent": {
+														"$ref": "AAAAAAFci4hK1aMvaUE="
+													},
+													"model": {
+														"$ref": "AAAAAAFci4hK1aMud98="
+													},
+													"visible": false,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 372,
+													"top": 419,
+													"width": 0,
+													"height": 13,
+													"autoResize": false,
+													"alpha": 1.5707963267948966,
+													"distance": 25,
+													"hostEdge": {
+														"$ref": "AAAAAAFci4hK1aMvaUE="
+													},
+													"edgePosition": 1,
+													"underline": false,
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5
+												},
+												{
+													"_type": "EdgeLabelView",
+													"_id": "AAAAAAFci4hK1qMyrlM=",
+													"_parent": {
+														"$ref": "AAAAAAFci4hK1aMvaUE="
+													},
+													"model": {
+														"$ref": "AAAAAAFci4hK1aMud98="
+													},
+													"visible": false,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 373,
+													"top": 384,
+													"width": 0,
+													"height": 13,
+													"autoResize": false,
+													"alpha": -1.5707963267948966,
+													"distance": 10,
+													"hostEdge": {
+														"$ref": "AAAAAAFci4hK1aMvaUE="
+													},
+													"edgePosition": 1,
+													"underline": false,
+													"horizontalAlignment": 2,
+													"verticalAlignment": 5
+												},
+												{
+													"_type": "UMLActivationView",
+													"_id": "AAAAAAFci4hK1qMzOCo=",
+													"_parent": {
+														"$ref": "AAAAAAFci4hK1aMvaUE="
+													},
+													"model": {
+														"$ref": "AAAAAAFci4hK1aMud98="
+													},
+													"visible": false,
+													"enabled": true,
+													"lineColor": "#000000",
+													"fillColor": "#ffffff",
+													"fontColor": "#000000",
+													"font": "Arial;13;0",
+													"showShadow": true,
+													"containerChangeable": false,
+													"containerExtending": false,
+													"left": 261,
+													"top": 400,
+													"width": 14,
+													"height": 25,
+													"autoResize": false
+												}
+											],
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"head": {
+												"$ref": "AAAAAAFbwxDjbgK9FaQ="
+											},
+											"tail": {
+												"$ref": "AAAAAAFbw2z3zQUgDbs="
+											},
+											"lineStyle": 0,
+											"points": "472:400;274:400",
+											"nameLabel": {
+												"$ref": "AAAAAAFci4hK1qMwCg0="
+											},
+											"stereotypeLabel": {
+												"$ref": "AAAAAAFci4hK1qMxh0Y="
+											},
+											"propertyLabel": {
+												"$ref": "AAAAAAFci4hK1qMyrlM="
+											},
+											"activation": {
+												"$ref": "AAAAAAFci4hK1qMzOCo="
+											},
+											"showProperty": true,
+											"showType": true
+										}
+									],
+									"showSequenceNumber": true,
+									"showSignature": true,
+									"showActivation": true
+								}
+							],
+							"visibility": "public",
+							"isReentrant": true,
+							"messages": [
+								{
+									"_type": "UMLMessage",
+									"_id": "AAAAAAFbwxHB8wLVcf4=",
+									"_parent": {
+										"$ref": "AAAAAAFbwxBtYwKHJiY="
+									},
+									"name": "AddProposalInfo()",
+									"source": {
+										"$ref": "AAAAAAFbwxCo6QKWagU="
+									},
+									"target": {
+										"$ref": "AAAAAAFbwxDjbgK28Ac="
+									},
+									"visibility": "public",
+									"messageSort": "synchCall",
+									"isConcurrentIteration": false
+								},
+								{
+									"_type": "UMLMessage",
+									"_id": "AAAAAAFbw281agVUbVs=",
+									"_parent": {
+										"$ref": "AAAAAAFbwxBtYwKHJiY="
+									},
+									"name": "Submit",
+									"source": {
+										"$ref": "AAAAAAFbwxDjbgK28Ac="
+									},
+									"target": {
+										"$ref": "AAAAAAFbw2z3zQUZerQ="
+									},
+									"visibility": "public",
+									"messageSort": "synchCall",
+									"arguments": "submission,proposal",
+									"isConcurrentIteration": false
+								},
+								{
+									"_type": "UMLMessage",
+									"_id": "AAAAAAFci4ZWjqK55kc=",
+									"_parent": {
+										"$ref": "AAAAAAFbwxBtYwKHJiY="
+									},
+									"name": "AddProposal",
+									"source": {
+										"$ref": "AAAAAAFbw2z3zQUZerQ="
+									},
+									"target": {
+										"$ref": "AAAAAAFbw2z3zQUZerQ="
+									},
+									"visibility": "public",
+									"messageSort": "synchCall",
+									"arguments": "submission",
+									"isConcurrentIteration": false
+								},
+								{
+									"_type": "UMLMessage",
+									"_id": "AAAAAAFci4bqjqLRSz8=",
+									"_parent": {
+										"$ref": "AAAAAAFbwxBtYwKHJiY="
+									},
+									"name": "Add",
+									"source": {
+										"$ref": "AAAAAAFbw2z3zQUZerQ="
+									},
+									"target": {
+										"$ref": "AAAAAAFbwyn2uAOfIIo="
+									},
+									"visibility": "public",
+									"messageSort": "synchCall",
+									"arguments": "submission",
+									"isConcurrentIteration": false
+								},
+								{
+									"_type": "UMLMessage",
+									"_id": "AAAAAAFci4dCgaLpROo=",
+									"_parent": {
+										"$ref": "AAAAAAFbwxBtYwKHJiY="
+									},
+									"name": "Add",
+									"source": {
+										"$ref": "AAAAAAFbwyn2uAOfIIo="
+									},
+									"target": {
+										"$ref": "AAAAAAFbwyunowP45cc="
+									},
+									"visibility": "public",
+									"messageSort": "synchCall",
+									"arguments": "submission",
+									"isConcurrentIteration": false
+								},
+								{
+									"_type": "UMLMessage",
+									"_id": "AAAAAAFci4eX9KMCu9E=",
+									"_parent": {
+										"$ref": "AAAAAAFbwxBtYwKHJiY="
+									},
+									"name": "Success",
+									"source": {
+										"$ref": "AAAAAAFbwyunowP45cc="
+									},
+									"target": {
+										"$ref": "AAAAAAFbwyn2uAOfIIo="
+									},
+									"visibility": "public",
+									"messageSort": "reply",
+									"isConcurrentIteration": false
+								},
+								{
+									"_type": "UMLMessage",
+									"_id": "AAAAAAFci4fEb6MYd9I=",
+									"_parent": {
+										"$ref": "AAAAAAFbwxBtYwKHJiY="
+									},
+									"name": "Success",
+									"source": {
+										"$ref": "AAAAAAFbwyn2uAOfIIo="
+									},
+									"target": {
+										"$ref": "AAAAAAFbw2z3zQUZerQ="
+									},
+									"visibility": "public",
+									"messageSort": "reply",
+									"isConcurrentIteration": false
+								},
+								{
+									"_type": "UMLMessage",
+									"_id": "AAAAAAFci4hK1aMud98=",
+									"_parent": {
+										"$ref": "AAAAAAFbwxBtYwKHJiY="
+									},
+									"name": "ProposalAdded",
+									"source": {
+										"$ref": "AAAAAAFbw2z3zQUZerQ="
+									},
+									"target": {
+										"$ref": "AAAAAAFbwxDjbgK28Ac="
+									},
+									"visibility": "public",
+									"messageSort": "reply",
+									"isConcurrentIteration": false
+								}
+							],
+							"participants": [
+								{
+									"_type": "UMLLifeline",
+									"_id": "AAAAAAFbwxCo6QKWagU=",
+									"_parent": {
+										"$ref": "AAAAAAFbwxBtYwKHJiY="
+									},
+									"name": ":Author",
+									"visibility": "public",
+									"represent": {
+										"$ref": "AAAAAAFbwxCo6QKVh8I="
+									},
+									"isMultiInstance": false
+								},
+								{
+									"_type": "UMLLifeline",
+									"_id": "AAAAAAFbwxDjbgK28Ac=",
+									"_parent": {
+										"$ref": "AAAAAAFbwxBtYwKHJiY="
+									},
+									"name": ":Submit",
+									"visibility": "public",
+									"represent": {
+										"$ref": "AAAAAAFbwxDjbgK1tZQ="
+									},
+									"isMultiInstance": false
+								},
+								{
+									"_type": "UMLLifeline",
+									"_id": "AAAAAAFbwyn2uAOfIIo=",
+									"_parent": {
+										"$ref": "AAAAAAFbwxBtYwKHJiY="
+									},
+									"name": ":AbstractCrudRepo<int, Submission>",
+									"visibility": "public",
+									"represent": {
+										"$ref": "AAAAAAFbwyn2uAOesu8="
+									},
+									"isMultiInstance": false
+								},
+								{
+									"_type": "UMLLifeline",
+									"_id": "AAAAAAFbwyunowP45cc=",
+									"_parent": {
+										"$ref": "AAAAAAFbwxBtYwKHJiY="
+									},
+									"name": ":DB",
+									"visibility": "public",
+									"represent": {
+										"$ref": "AAAAAAFbwyunowP3HX0="
+									},
+									"isMultiInstance": false
+								},
+								{
+									"_type": "UMLLifeline",
+									"_id": "AAAAAAFbw2z3zQUZerQ=",
+									"_parent": {
+										"$ref": "AAAAAAFbwxBtYwKHJiY="
+									},
+									"name": ":SubmitProposalController ",
+									"visibility": "public",
+									"represent": {
+										"$ref": "AAAAAAFbw2z3zQUYOjc="
+									},
+									"isMultiInstance": false
+								}
+							]
+						}
+					],
+					"visibility": "public",
+					"attributes": [
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAFbwxCo6QKVh8I=",
+							"_parent": {
+								"$ref": "AAAAAAFbwxBtYwKGcMs="
+							},
+							"name": "Role1",
+							"visibility": "public",
+							"isStatic": false,
+							"isLeaf": false,
+							"type": "",
+							"isReadOnly": false,
+							"isOrdered": false,
+							"isUnique": false,
+							"isDerived": false,
+							"aggregation": "none",
+							"isID": false
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAFbwxDjbgK1tZQ=",
+							"_parent": {
+								"$ref": "AAAAAAFbwxBtYwKGcMs="
+							},
+							"name": "Role2",
+							"visibility": "public",
+							"isStatic": false,
+							"isLeaf": false,
+							"type": "",
+							"isReadOnly": false,
+							"isOrdered": false,
+							"isUnique": false,
+							"isDerived": false,
+							"aggregation": "none",
+							"isID": false
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAFbwxOb/wLsF3U=",
+							"_parent": {
+								"$ref": "AAAAAAFbwxBtYwKGcMs="
+							},
+							"name": "Role3",
+							"visibility": "public",
+							"isStatic": false,
+							"isLeaf": false,
+							"type": "Submission",
+							"isReadOnly": false,
+							"isOrdered": false,
+							"isUnique": false,
+							"isDerived": false,
+							"aggregation": "none",
+							"isID": false
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAFbwxXLUQNCmmc=",
+							"_parent": {
+								"$ref": "AAAAAAFbwxBtYwKGcMs="
+							},
+							"name": "Role4",
+							"visibility": "public",
+							"isStatic": false,
+							"isLeaf": false,
+							"type": "",
+							"isReadOnly": false,
+							"isOrdered": false,
+							"isUnique": false,
+							"isDerived": false,
+							"aggregation": "none",
+							"isID": false
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAFbwyn2uAOesu8=",
+							"_parent": {
+								"$ref": "AAAAAAFbwxBtYwKGcMs="
+							},
+							"name": "Role5",
+							"visibility": "public",
+							"isStatic": false,
+							"isLeaf": false,
+							"type": "",
+							"isReadOnly": false,
+							"isOrdered": false,
+							"isUnique": false,
+							"isDerived": false,
+							"aggregation": "none",
+							"isID": false
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAFbwyunowP3HX0=",
+							"_parent": {
+								"$ref": "AAAAAAFbwxBtYwKGcMs="
+							},
+							"name": "Role6",
+							"visibility": "public",
+							"isStatic": false,
+							"isLeaf": false,
+							"type": "",
+							"isReadOnly": false,
+							"isOrdered": false,
+							"isUnique": false,
+							"isDerived": false,
+							"aggregation": "none",
+							"isID": false
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAFbw2z3zQUYOjc=",
+							"_parent": {
+								"$ref": "AAAAAAFbwxBtYwKGcMs="
+							},
+							"name": "Role7",
+							"visibility": "public",
+							"isStatic": false,
+							"isLeaf": false,
+							"type": "",
+							"isReadOnly": false,
+							"isOrdered": false,
+							"isUnique": false,
+							"isDerived": false,
+							"aggregation": "none",
+							"isID": false
+						}
+					],
+					"isAbstract": false,
+					"isFinalSpecialization": false,
+					"isLeaf": false
+				}
+			],
+			"visibility": "public"
+		}
+	]
+}
