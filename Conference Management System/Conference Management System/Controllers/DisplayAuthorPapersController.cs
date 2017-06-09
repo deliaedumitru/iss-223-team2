@@ -14,6 +14,7 @@ namespace Conference_Management_System.Controllers
     {
         public void openPaper(String submissionTitle)
         {
+
             try
             {
                 int userId = Int32.Parse(Request.Cookies["user"]["id"]);
@@ -28,7 +29,6 @@ namespace Conference_Management_System.Controllers
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-                Response.Redirect("/Shared/Error");
             }
         }
 
@@ -36,6 +36,7 @@ namespace Conference_Management_System.Controllers
         [HttpGet]
         public ActionResult Papers()
         {
+            ViewBag.Role = Helpers.GetUserRole(Request);
             try
             {
                 int userId = Int32.Parse(Request.Cookies["user"]["id"]);
@@ -62,7 +63,6 @@ namespace Conference_Management_System.Controllers
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-                Response.Redirect("/Shared/Error");
             }
             return null;
         }
@@ -70,6 +70,7 @@ namespace Conference_Management_System.Controllers
         // GET: DisplayAuthorPapers
         public ActionResult Index()
         {
+            ViewBag.Role = Helpers.GetUserRole(Request);
             return View();
         }
     }

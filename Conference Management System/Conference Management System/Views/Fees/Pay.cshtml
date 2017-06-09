@@ -63,54 +63,6 @@
                 }
             </ul>
         </div>
-
-<h2>Pay</h2>
-@if (TempData["notice"] != null)
-{
-    <h3>@TempData["notice"]</h3>
-}
-<form method="post">
-    Please select the conference in which you want to participate:<br />
-    @if (ViewBag.loggedUserRole.CompareTo("AUTHOR") == 0)
-    {
-        <select name="conferenceId" id="conferenceId">
-            <option disabled selected></option>
-            @foreach (var conference in Model)
-            {
-                <option value="@conference.Id">@conference.Name-@conference.AuthorFee RON</option>
-            }
-        </select>
-    }
-    else
-    {
-        <select name="conferenceId" id="conferenceId">
-            <option disabled selected></option>
-            @foreach (var conference in Model)
-            {
-                <option value="@conference.Id">@conference.Name - @conference.ListenerFee</option>
-            }
-        </select>
-    }
-
-     <br />
-    <p></p>
-    <p id="feeText"></p>
-    <p></p>
-    <div class="form-group" novalidate>
-        <label for="cardName">Name on card</label>
-        <input type="text" class="form-control" name="cardName">
-    </div>
-    <div class="form-group" novalidate>
-        <label for="cardNr">Card Number</label>
-        <input type="text" class="form-control" name="cardNr">
-    </div>
-    <div class="form-group" novalidate>
-        <label for="cvv">Security Code (CVV)</label>
-        <input type="text" class="form-control" name="cvv">
-    </div>
-    <div class="form-group" novalidate>
-        <label for="exp">Expiration date</label>
-        <input type="text" class="form-control" name="exp" placeholder="MM/yy">
     </div>
 </nav>
 
@@ -119,6 +71,10 @@
 
     <h2>Pay</h2>
 
+    @if (TempData["notice"] != null)
+    {
+        <h3>@TempData["notice"]</h3>
+    }
     <form method="post">
         Please select the conference in which you want to participate:<br />
         @if (ViewBag.loggedUserRole.CompareTo("AUTHOR") == 0)
